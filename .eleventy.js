@@ -4,6 +4,7 @@ export default function (eleventyConfig) {
     '__static': '__static',
     'bundle': 'bundle',
     'favicons': 'favicons',
+    'js': 'js',
     'styles': 'styles',
   });
   eleventyConfig.addGlobalData('site_title', 'Hancock Plumbing Co. Inc.');
