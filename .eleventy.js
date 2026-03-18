@@ -1,10 +1,11 @@
 export default function (eleventyConfig) {
+  eleventyConfig.ignores.add('_rendered');
+  eleventyConfig.ignores.add('_cleaned');
   eleventyConfig.addPassthroughCopy({
     '__fonts': '__fonts',
     '__static': '__static',
     'bundle': 'bundle',
     'favicons': 'favicons',
-    'js': 'js',
     'styles': 'styles',
   });
   eleventyConfig.addGlobalData('site_title', 'Hancock Plumbing Co. Inc.');

@@ -1,0 +1,49 @@
+/**
+ * Fixes for rendering without bundle.js / glide.js initialization.
+ */
+
+/* Make carousel slides lay out horizontally */
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slides {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.glide__slide {
+  flex-shrink: 0;
+}
+
+/* Override the full-page min-height that publish.css sets on all slides —
+   only full-height slider sections should use it */
+.s-section__slider-bg:not(.s-section_full-height) .glide__slide {
+  min-height: 0;
+}
+
+/* Section background images: bundle.js normally reads data-iesrc and sets
+   background-image CSS on the section. Without it, we need the <picture>
+   inside .section_bg to fill and display as a cover image. */
+.section_bg-img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.section_bg-img img {
+  display: block;
+  width: 101%;
+  height: 101%;
+  top: -0.5%;
+  left: -0.5%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Lazy-loaded images: hide any <img> with no src set */
+.lazy img:not([src]) {
+  display: none;
+}
