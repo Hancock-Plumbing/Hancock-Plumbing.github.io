@@ -47,3 +47,84 @@
 .lazy img:not([src]) {
   display: none;
 }
+
+/* ============================================================
+   Match live site: hide elements that appear locally but not
+   on the production site (JS-dependent UI or unused sections)
+   ============================================================ */
+
+/* Hide Google Reviews logo/text only in the "Reliable Plumber" section (homepage).
+   The testimonial sections ("What Our Customers Are Saying" / "Reviews from
+   satisfied clients") should keep the Google G logo visible. */
+#s-c042fc60-477c-4b66-b1aa-7e865abcba87 .row__item:has(img[alt="Google Reviews"]) {
+  display: none !important;
+}
+
+/* Hide Brand Logos image section (homepage) */
+.s-section:has(img[alt="Brand Logos"]) {
+  display: none !important;
+}
+
+/* Hide the dark promotional banner section (homepage) */
+#s-5d729cc8-a61d-41df-a2df-301a7435b244 {
+  display: none !important;
+}
+
+/* Hide Plumber image column next to contact form on desktop only.
+   On mobile, the image stacks above the form and IS visible on the live site. */
+@media (min-width: 768px) {
+  .picture__item-container:has(img[alt="Plumber"]) {
+    display: none !important;
+  }
+
+  /* Hide section background images in contact form sections
+     (live site shows clean white background for form areas on desktop) */
+  .s-section:has(.form__box) .section_bg {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   Mobile responsive header
+   bundle.js normally handles this by adding/removing classes
+   and toggling display. We replicate that here with CSS.
+   ============================================================ */
+@media (max-width: 1024px) {
+  /* Hide topbar row ("Seminole, Orange & Volusia Co." + Facebook) */
+  .template .topbar__header {
+    display: none !important;
+  }
+
+  /* Hide full desktop nav row */
+  .template .subheader__header {
+    display: none !important;
+  }
+
+  /* Hide desktop-only CTA buttons in main header (CALL US TODAY!, phone) */
+  .main__header .header-layout-wrapper:not(._left):not(._right) {
+    display: none !important;
+  }
+
+  /* Show the hamburger button (inline style="display:none" set in HTML) */
+  .template .burger__box {
+    display: flex !important;
+  }
+
+  /* Show the collapsed slogan bar ("10% Discount for Veterans & Seniors") */
+  .template .sloganCollapsed__wrapper {
+    display: flex !important;
+  }
+
+  /* Fix template top padding: only main header (60px) + slogan bar (40px) + border (1px) = 101px */
+  .template {
+    padding-top: 101px !important;
+  }
+}
+
+/* Tablet breakpoint adjustments */
+@media (max-width: 767px) {
+  /* Ensure burger stays visible on small phones */
+  .template .burger__box {
+    display: flex !important;
+  }
+}
