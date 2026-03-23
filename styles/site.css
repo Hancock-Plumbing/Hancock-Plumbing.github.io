@@ -210,12 +210,61 @@ body {
 }
 
 .clean .section--dark {
+  position: relative;
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+  padding: 125px 0;
+  min-height: 686px;
+}
+
+.clean .section--reliable {
+  padding: 61px 0;
+}
+
+.clean .reliable__intro {
+  margin-bottom: 50px;
+}
+
+.clean .reliable__review-cta {
+  margin-top: 25px;
+}
+
+.clean .reliable__google-link {
+  display: block;
+  margin-top: 15px;
+}
+
+.clean .reliable__google-link img {
+  max-height: 82px;
+  width: auto !important;
+}
+
+.clean .section--services {
+  padding: 65px 0 60px;
+}
+
+.template .clean .section--services h2,
+.template .clean .section--services h2 span {
+  font-size: 36px !important;
+}
+
+.clean .section--services .row + .row {
+  margin-top: 22px;
+}
+
+.clean .section--logos {
+  padding: 68px 0;
 }
 
 .clean .section--brand {
   background: rgb(var(--preColor_altBrand));
+  padding: 114px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.clean .section--brand h3 {
+  font-weight: 400;
 }
 
 .clean .section--gray {
@@ -563,7 +612,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
+  padding: 30px 20px;
   border: 1px solid rgb(var(--preColor_text), 0.3);
   text-align: center;
   align-items: center;
@@ -719,6 +768,11 @@ body {
   flex: 5;
 }
 
+.template .clean .reviews-heading h2,
+.template .clean .reviews-heading h2 span {
+  font-size: 45px !important;
+}
+
 .clean .reviews-heading img {
   max-height: 82px;
   width: auto !important;
@@ -771,6 +825,51 @@ body {
 
   .clean .hero__title {
     font-size: 57px;
+  }
+
+  .clean .section--brand {
+    padding: 94px 0;
+  }
+
+  .clean .section--reliable {
+    padding: 46px 0;
+  }
+
+  .clean .reliable__intro {
+    margin-bottom: 30px;
+  }
+
+  .clean .reliable__review-cta {
+    margin-top: 18px;
+  }
+
+  .clean .reliable__google-link {
+    margin-top: 10px;
+  }
+
+  .clean .section--services {
+    padding: 40px 0 32px;
+  }
+
+  .clean .section--services h2 {
+    margin-bottom: 18px !important;
+  }
+
+  .clean .section--services .row + .row {
+    margin-top: 16px;
+  }
+
+  .clean .reviews-heading {
+    padding: 28px 0;
+  }
+
+  .clean .section--dark {
+    padding: 94px 0;
+    min-height: 488px;
+  }
+
+  .clean .section--logos {
+    padding: 12px 0;
   }
 
   .clean .why-choose {

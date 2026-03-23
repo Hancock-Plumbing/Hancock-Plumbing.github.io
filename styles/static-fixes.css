@@ -43,9 +43,43 @@
   object-position: center;
 }
 
-/* Lazy-loaded images: hide any <img> with no src set */
-.lazy img:not([src]) {
+/* Native loading="lazy" is used instead of JS-dependent lazy loading.
+   Hide any legacy <img> without src to prevent broken image icons. */
+img:not([src]) {
   display: none;
+}
+
+/* ============================================================
+   Spacing utility — extracted from per-page inline styles.
+   The builder uses font-size on .space__block elements as a
+   pseudo-spacing unit that scales across breakpoints.
+   ============================================================ */
+.space__block {
+  font-size: 1px;
+}
+
+@media (width >= 1921px) {
+  .template .space__block {
+    font-size: 1.2px;
+  }
+}
+
+@media (width <= 1366px) {
+  .template .space__block {
+    font-size: 0.5px;
+  }
+}
+
+@media (width <= 1024px) {
+  .template .space__block {
+    font-size: 0.5px;
+  }
+}
+
+@media (width <= 767px) {
+  .template .space__block {
+    font-size: 0.3px;
+  }
 }
 
 /* ============================================================
@@ -56,17 +90,17 @@
 /* Hide Google Reviews logo/text only in the "Reliable Plumber" section (homepage).
    The testimonial sections ("What Our Customers Are Saying" / "Reviews from
    satisfied clients") should keep the Google G logo visible. */
-#s-c042fc60-477c-4b66-b1aa-7e865abcba87 .row__item:has(img[alt="Google Reviews"]) {
+#s-c042fc60-477c-4b66-b1aa-7e865abcba87
+  .row__item:has(img[alt="Google Reviews"]) {
   display: none !important;
 }
-
 
 /* ============================================================
    Mobile responsive header
    bundle.js normally handles this by adding/removing classes
    and toggling display. We replicate that here with CSS.
    ============================================================ */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   /* Hide topbar row ("Seminole, Orange & Volusia Co." + Facebook) */
   .template .topbar__header {
     display: none !important;
@@ -78,7 +112,7 @@
   }
 
   /* Hide desktop-only CTA buttons in main header (CALL US TODAY!, phone) */
-  .main__header .header-layout-wrapper:not(._left):not(._right) {
+  .main__header .header-layout-wrapper:not(._left, ._right) {
     display: none !important;
   }
 
@@ -99,9 +133,283 @@
 }
 
 /* Tablet breakpoint adjustments */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   /* Ensure burger stays visible on small phones */
   .template .burger__box {
     display: flex !important;
   }
+}
+
+/* ============================================================
+   CSS for shared Liquid includes (_includes/).
+   Extracted from per-page inline styles when sections were
+   deduplicated into shared partials.
+   ============================================================ */
+
+/* --- testimonial-slider.html --- */
+
+/* Slides: zero padding at all breakpoints */
+.slide-b1ad4168-cb31-42c3-93f0-68a9d65318f9,
+.slide-c826e231-6370-4e1c-b27d-4af8af10d9da,
+.slide-3cd06fea-8455-4da2-8d29-157b8cecf252 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Shapes: responsive padding */
+.shape-db436d42-2271-40d0-ad5e-c0ce0f680ba0,
+.shape-43fa4217-8470-4bae-9b13-b64f8bd820f6,
+.shape-b55f133e-58a8-43e3-a3f6-235136b0182b {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media screen and (width <= 2560px) {
+  .shape-db436d42-2271-40d0-ad5e-c0ce0f680ba0,
+  .shape-43fa4217-8470-4bae-9b13-b64f8bd820f6,
+  .shape-b55f133e-58a8-43e3-a3f6-235136b0182b {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (width <= 1920px) {
+  .shape-db436d42-2271-40d0-ad5e-c0ce0f680ba0,
+  .shape-43fa4217-8470-4bae-9b13-b64f8bd820f6,
+  .shape-b55f133e-58a8-43e3-a3f6-235136b0182b {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (width <= 1366px) {
+  .shape-db436d42-2271-40d0-ad5e-c0ce0f680ba0,
+  .shape-43fa4217-8470-4bae-9b13-b64f8bd820f6,
+  .shape-b55f133e-58a8-43e3-a3f6-235136b0182b {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .shape-db436d42-2271-40d0-ad5e-c0ce0f680ba0,
+  .shape-43fa4217-8470-4bae-9b13-b64f8bd820f6,
+  .shape-b55f133e-58a8-43e3-a3f6-235136b0182b {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .shape-db436d42-2271-40d0-ad5e-c0ce0f680ba0,
+  .shape-43fa4217-8470-4bae-9b13-b64f8bd820f6,
+  .shape-b55f133e-58a8-43e3-a3f6-235136b0182b {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+/* --- why-choose-us.html --- */
+.section-8c0bd378-94fa-4b03-b6fa-3ce4792b1ab3 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+@media screen and (width <= 2560px) {
+  .section-8c0bd378-94fa-4b03-b6fa-3ce4792b1ab3 {
+    padding-top: 138px;
+    padding-bottom: 138px;
+  }
+}
+
+@media screen and (width <= 1920px) {
+  .section-8c0bd378-94fa-4b03-b6fa-3ce4792b1ab3 {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+
+@media screen and (width <= 1366px) {
+  .section-8c0bd378-94fa-4b03-b6fa-3ce4792b1ab3 {
+    padding-top: 83px;
+    padding-bottom: 83px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .section-8c0bd378-94fa-4b03-b6fa-3ce4792b1ab3 {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .section-8c0bd378-94fa-4b03-b6fa-3ce4792b1ab3 {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+.shape-9861186f-fdd0-419d-a70f-22e5969a1615,
+.shape-546cbfa2-7ff9-4bed-8cb3-431ab66655be {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (width <= 2560px) {
+  .shape-9861186f-fdd0-419d-a70f-22e5969a1615,
+  .shape-546cbfa2-7ff9-4bed-8cb3-431ab66655be {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (width <= 1920px) {
+  .shape-9861186f-fdd0-419d-a70f-22e5969a1615,
+  .shape-546cbfa2-7ff9-4bed-8cb3-431ab66655be {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (width <= 1366px) {
+  .shape-9861186f-fdd0-419d-a70f-22e5969a1615,
+  .shape-546cbfa2-7ff9-4bed-8cb3-431ab66655be {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .shape-9861186f-fdd0-419d-a70f-22e5969a1615,
+  .shape-546cbfa2-7ff9-4bed-8cb3-431ab66655be {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .shape-9861186f-fdd0-419d-a70f-22e5969a1615,
+  .shape-546cbfa2-7ff9-4bed-8cb3-431ab66655be {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+/* --- contact-form.html --- */
+.section-925aa752-bca6-457f-b6e0-4e2198fafaae {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.shape-cbca554a-52df-413c-8072-a52f2f35f47b {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (width <= 2560px) {
+  .shape-cbca554a-52df-413c-8072-a52f2f35f47b {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+@media screen and (width <= 1920px) {
+  .shape-cbca554a-52df-413c-8072-a52f2f35f47b {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (width <= 1366px) {
+  .shape-cbca554a-52df-413c-8072-a52f2f35f47b {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .shape-cbca554a-52df-413c-8072-a52f2f35f47b {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .shape-cbca554a-52df-413c-8072-a52f2f35f47b {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+/* Contact form plumber image */
+.image-ec2317c9-554e-4d47-970f-f5aaccf3ffb7 {
+  height: 361px;
+}
+
+.image-ec2317c9-554e-4d47-970f-f5aaccf3ffb7 img.picture__fill {
+  width: auto !important;
+  height: auto !important;
+}
+
+.image-ec2317c9-554e-4d47-970f-f5aaccf3ffb7 .img__container-one {
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
+}
+
+@media screen and (width >= 1025px) and (width <= 1366px) {
+  .image-ec2317c9-554e-4d47-970f-f5aaccf3ffb7 {
+    height: 332px;
+  }
+}
+
+/* ============================================================
+   Utility classes — extracted from repeated inline styles.
+   ============================================================ */
+
+/* Text colors */
+.text-brand {
+  color: rgb(var(--preColor_brand));
+}
+
+.text-alt {
+  color: rgb(var(--preColor_textAlt));
+}
+
+.text-muted {
+  color: rgb(var(--preColor_text), 0.5);
+}
+
+/* Typography */
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  font-variant: none;
+}
+
+.font-script {
+  font-family: Caveat, script;
+}
+
+/* SVG / icon colors */
+.fill-brand {
+  fill: var(--color_brand);
+}
+
+.fill-alt {
+  fill: rgb(var(--preColor_textAlt));
+}
+
+/* Shape backgrounds */
+.bg-gray-light {
+  background: rgb(245, 245, 245, 0.25);
+}
+
+.bg-gray-transparent {
+  background: rgb(245, 245, 245, 0);
 }
