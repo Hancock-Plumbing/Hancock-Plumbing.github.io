@@ -691,7 +691,7 @@
     padding: 95px 0 53px;
   }
 
-  .hero__title {
+  .clean .hero__title {
     font-size: 48px;
   }
 
@@ -710,8 +710,8 @@
     width: 100% !important;
   }
 
-  .col-3,
-  .col-4 {
+  .clean .col-3,
+  .clean .col-4 {
     width: 50% !important;
   }
 
@@ -723,11 +723,11 @@
     padding: 75px 0 42px;
   }
 
-  .hero__title {
+  .clean .hero__title {
     font-size: 40px;
   }
 
-  .hero__subtitle {
+  .clean .hero__subtitle {
     font-size: 28px;
   }
 
@@ -735,7 +735,7 @@
     padding: 66px 0;
   }
 
-  .why-choose__cards {
+  .clean .why-choose__cards {
     flex-direction: column;
   }
 
@@ -754,9 +754,9 @@
     padding: 0 20px;
   }
 
-  .col-2,
-  .col-3,
-  .col-4 {
+  .clean .col-2,
+  .clean .col-3,
+  .clean .col-4 {
     width: 100% !important;
   }
 
@@ -768,19 +768,19 @@
     padding: 50px 0 28px;
   }
 
-  .hero__company {
+  .clean .hero__company {
     font-size: 28px;
   }
 
-  .hero__title {
+  .clean .hero__title {
     font-size: 32px;
   }
 
-  .hero__subtitle {
+  .clean .hero__subtitle {
     font-size: 22px;
   }
 
-  h2 {
+  .clean h2 {
     font-size: 28px;
   }
 
