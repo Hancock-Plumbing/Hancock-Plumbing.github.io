@@ -1,0 +1,76 @@
+---
+layout: base
+hide_why_choose_intro: true
+---
+
+<main class="clean service-page">
+  <section class="hero hero--short">
+    <div class="section__bg section__bg--dim">
+      <picture>
+        <source
+          media="(max-width: 500px)"
+          srcset="{{ hero_image }}/image_laptop"
+        />
+        <source
+          media="(max-width: 1500px)"
+          srcset="{{ hero_image }}/image_desktop"
+        />
+        <img
+          src="/__static/production-webdotcom-4/534/1673534/sFhHq9Wy/f2ad0a384c1748afbcbbf893c617275c"
+          alt="{{ hero_alt | default: 'Plumbing tools' }}"
+        />
+      </picture>
+    </div>
+    <div class="container">
+      <h4 class="hero__company">Hancock Plumbing Co. Inc.</h4>
+      <h1 class="hero__title">{{ hero_title }}</h1>
+      <p class="hero__subtitle">
+        Greater Sanford, FL, Orange &amp; Seminole Counties
+      </p>
+      <div class="hero__actions">
+        <a href="tel:+14073223568" class="btn btn--primary">
+          <svg class="icon"><use xlink:href="#templates/_global/popular/5"></use></svg>
+          407-322-3568
+        </a>
+        <a href="/services/" class="btn btn--primary">
+          <svg class="icon"><use xlink:href="#global/circle"></use></svg>
+          See services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="container">
+      <h2 class="service-detail__heading">{{ service_heading }}</h2>
+
+      <div class="row">
+        <div class="col-6">
+          {{ content }}
+        </div>
+        <div class="col-6">
+          <img
+            class="service-detail__image"
+            src="{{ service_image }}"
+            alt="Plumbing Services"
+            loading="lazy"
+          />
+          <p class="service-detail__experience">
+            35 + years of plumbing experience
+          </p>
+        </div>
+      </div>
+
+      {% if closing_html %}
+      <div class="service-detail__closing">
+        {{ closing_html }}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  {% include 'why-choose-us.html' %}
+  {% include 'reviews-heading.html' %}
+  {% include 'testimonial-slider.html' %}
+  {% include 'contact-form.html' %}
+</main>

@@ -296,7 +296,7 @@ body {
    Hero
    ============================================================ */
 
-/* Production hero: 585px at 1366, black bg, full-bleed image,
+/* Production hero: black bg, full-bleed image,
    left-side dark overlay (54% width, rgba(43,43,43,0.75)) */
 .clean .hero {
   position: relative;
@@ -308,6 +308,12 @@ body {
   overflow: hidden;
   z-index: 1;
   isolation: isolate;
+}
+
+/* Short hero for service pages */
+.clean .hero--short {
+  min-height: 546px;
+  padding: 0;
 }
 
 /* Left-side dark overlay matching production shape */
@@ -336,6 +342,12 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 695px;
+  padding-top: 62px;
+  padding-bottom: 36px;
+}
+
+.clean .hero--short .container {
+  min-height: 546px;
   padding-top: 62px;
   padding-bottom: 36px;
 }
@@ -608,6 +620,15 @@ body {
 /* ============================================================
    Service grid (services index page)
    ============================================================ */
+.clean .section--services-grid {
+  padding: 0;
+  background: rgb(255, 255, 255);
+}
+
+.clean .section--services-grid .row + .row {
+  margin-top: 0;
+}
+
 .clean .service-card {
   display: flex;
   flex-direction: column;
@@ -627,6 +648,34 @@ body {
 .clean .service-card__title {
   font-size: 18px;
   font-weight: 500;
+}
+
+/* ============================================================
+   Service detail (individual service pages)
+   ============================================================ */
+.clean .service-detail {
+  padding: 88px 0;
+}
+
+.clean .service-detail__heading {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.clean .service-detail__image {
+  display: block;
+  max-width: 100%;
+  height: 408px;
+  object-fit: cover;
+}
+
+.clean .service-detail__experience {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.clean .service-detail__closing {
+  margin-top: 30px;
 }
 
 /* ============================================================
@@ -798,6 +847,26 @@ body {
 }
 
 /* ============================================================
+   Service page shared-section overrides
+   (scoped to .service-page to avoid affecting homepage)
+   ============================================================ */
+.clean.service-page .testimonials {
+  padding: 58px 0;
+}
+
+.clean.service-page .contact__inner {
+  padding: 69px 0;
+}
+
+.clean.service-page .reviews-heading {
+  padding: 48px 0;
+}
+
+.clean.service-page .why-choose {
+  padding: 94px 0;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (width <= 1366px) {
@@ -823,8 +892,27 @@ body {
     padding-bottom: 30px;
   }
 
+  .clean .hero--short {
+    min-height: 432px;
+    padding: 0;
+  }
+
+  .clean .hero--short .container {
+    min-height: 432px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
   .clean .hero__title {
     font-size: 57px;
+  }
+
+  .clean .service-detail {
+    padding: 46px 0;
+  }
+
+  .clean .service-detail__image {
+    height: 345px;
   }
 
   .clean .section--brand {
@@ -874,6 +962,23 @@ body {
 
   .clean .why-choose {
     padding: 83px 0;
+  }
+
+  /* Service page shared-section overrides at 1366 */
+  .clean.service-page .testimonials {
+    padding: 58px 0;
+  }
+
+  .clean.service-page .contact__inner {
+    padding: 69px 0;
+  }
+
+  .clean.service-page .reviews-heading {
+    padding: 38px 0;
+  }
+
+  .clean.service-page .why-choose {
+    padding: 67px 0;
   }
 }
 
