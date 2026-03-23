@@ -60,29 +60,6 @@
   display: none !important;
 }
 
-/* Hide Brand Logos image section (homepage) */
-.s-section:has(img[alt="Brand Logos"]) {
-  display: none !important;
-}
-
-/* Hide the dark promotional banner section (homepage) */
-#s-5d729cc8-a61d-41df-a2df-301a7435b244 {
-  display: none !important;
-}
-
-/* Hide Plumber image column next to contact form on desktop only.
-   On mobile, the image stacks above the form and IS visible on the live site. */
-@media (min-width: 768px) {
-  .picture__item-container:has(img[alt="Plumber"]) {
-    display: none !important;
-  }
-
-  /* Hide section background images in contact form sections
-     (live site shows clean white background for form areas on desktop) */
-  .s-section:has(.form__box) .section_bg {
-    display: none !important;
-  }
-}
 
 /* ============================================================
    Mobile responsive header

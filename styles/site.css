@@ -1,0 +1,1092 @@
+/**
+ * site.css — Clean replacement for publish.css bundle (231KB → ~5KB)
+ *
+ * Computed values extracted from the live rendered site.
+ * Uses the same CSS custom properties from 857e023f...css for theming.
+ */
+
+/* ============================================================
+   Reset — scoped to .clean pages only
+   ============================================================ */
+.clean *,
+.clean *::before,
+.clean *::after {
+  box-sizing: border-box;
+}
+
+.clean img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* ============================================================
+   Layout — 12-column flexbox grid (scoped to .clean)
+   ============================================================ */
+.clean .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.clean .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.clean [class*="col-"] {
+  position: relative;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.clean .col-1 {
+  width: 8.3333%;
+}
+
+.clean .col-2 {
+  width: 16.6667%;
+}
+
+.clean .col-3 {
+  width: 25%;
+}
+
+.clean .col-4 {
+  width: 33.3333%;
+}
+
+.clean .col-5 {
+  width: 41.6667%;
+}
+
+.clean .col-6 {
+  width: 50%;
+}
+
+.clean .col-7 {
+  width: 58.3333%;
+}
+
+.clean .col-8 {
+  width: 66.6667%;
+}
+
+.clean .col-9 {
+  width: 75%;
+}
+
+.clean .col-10 {
+  width: 83.3333%;
+}
+
+.clean .col-11 {
+  width: 91.6667%;
+}
+
+.clean .col-12 {
+  width: 100%;
+}
+
+/* ============================================================
+   Typography
+   Font families from CSS variables: --font_primary (Roboto),
+   --font_secondary (Bai Jamjuree), --font_complementary (PT Sans)
+   ============================================================ */
+
+/* Typography — scoped to .clean */
+.clean {
+  font-family: var(--font_primary);
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(var(--preColor_text));
+}
+
+.clean h1,
+.clean h2,
+.clean h3,
+.clean h4,
+.clean h5,
+.clean h6 {
+  font-family: var(--font_secondary);
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Override publish.css "font-size: 1px !important" on headings.
+   Scoped to .clean (new rewritten pages). Uses high specificity to beat
+   .template h2:not(.MuiTypography-root) from publish.css */
+.template .clean h1,
+.template .clean h1 span {
+  font-size: 60px !important;
+  line-height: 1.25 !important;
+}
+
+.template .clean h2,
+.template .clean h2 span {
+  font-size: 60px !important;
+  line-height: 1.25 !important;
+}
+
+.template .clean h3,
+.template .clean h3 span {
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+}
+
+.template .clean h4,
+.template .clean h4 span {
+  font-size: 36px !important;
+  line-height: 1.25 !important;
+}
+
+.template .clean h5,
+.template .clean h5 span {
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+
+.template .clean h6,
+.template .clean h6 span {
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+}
+
+/* Override publish.css text size on body/form text */
+.template .clean p,
+.template .clean li {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* Preserve utility class colors inside headings */
+.template .clean .text-brand {
+  color: rgb(var(--preColor_brand)) !important;
+}
+
+.template .clean .text-alt {
+  color: rgb(var(--preColor_textAlt)) !important;
+}
+
+.template .clean .form-input,
+.template .clean .form-textarea {
+  font-size: 17px !important;
+}
+
+.template .clean .btn {
+  font-size: 16px !important;
+}
+
+.clean p {
+  margin: 0 0 1em;
+}
+
+.clean a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.clean ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.clean .section {
+  position: relative;
+  padding: 70px 0;
+}
+
+.clean .section--no-padding {
+  padding: 0;
+}
+
+.clean .section--dark {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.clean .section--brand {
+  background: rgb(var(--preColor_altBrand));
+}
+
+.clean .section--gray {
+  background: rgb(245, 245, 245);
+}
+
+.clean .section__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.clean .section__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.clean .section__bg--dim {
+  opacity: 0.75;
+}
+
+.clean .section__bg--faint {
+  opacity: 0.25;
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+
+/* Hero padding: live has 125px space__block top + 70px section padding + 10px spacers */
+.clean .hero {
+  position: relative;
+  padding: 195px 0 80px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.clean .hero .container {
+  position: relative;
+  z-index: 1;
+  color: rgb(var(--preColor_textAlt));
+}
+
+.clean .hero__title,
+.clean .hero__subtitle,
+.clean .hero__actions {
+  max-width: 75%;
+}
+
+.clean .hero__company {
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(var(--preColor_textAlt));
+  margin-bottom: 10px;
+}
+
+.clean .hero__title {
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(var(--preColor_textAlt));
+  margin-bottom: 10px;
+}
+
+.clean .hero__subtitle {
+  font-family: Caveat, cursive;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(var(--preColor_textAlt));
+  margin-bottom: 20px;
+}
+
+.template .clean .hero__subtitle {
+  font-size: 36px !important;
+  line-height: 1.3 !important;
+  font-family: Caveat, cursive !important;
+}
+
+.clean .hero__serving {
+  font-size: 18px;
+  color: rgb(var(--preColor_textAlt));
+  margin-bottom: 10px;
+}
+
+.clean .hero__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.clean .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 34px;
+  border: 0;
+  border-radius: 0;
+  font-family: var(--font_secondary);
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.clean .btn:hover {
+  opacity: 0.85;
+}
+
+.clean .btn--primary {
+  background: var(--btn_primary_background);
+  color: var(--btn_primary_color);
+}
+
+.clean .btn--outline {
+  background: none;
+  border: 1px solid currentColor;
+}
+
+.clean .btn .icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ============================================================
+   Forms
+   ============================================================ */
+.clean .form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.clean .form__row {
+  display: flex;
+  gap: 14px;
+}
+
+.clean .form__row > * {
+  flex: 1;
+}
+
+.clean .form-input,
+.clean .form-textarea {
+  width: 100%;
+  padding: 0 13px;
+  height: 43px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 0;
+  font-family: var(--font_primary);
+  font-size: 17px;
+  color: rgb(var(--preColor_text));
+  background: rgb(255, 255, 255);
+  outline: none;
+}
+
+.clean .form-textarea {
+  height: 140px;
+  padding: 13px;
+  resize: vertical;
+}
+
+.clean .form-input::placeholder,
+.clean .form-textarea::placeholder {
+  color: rgb(var(--preColor_text), 0.5);
+}
+
+/* ============================================================
+   Contact section
+   ============================================================ */
+.clean .contact {
+  background: rgb(43, 43, 43);
+  padding: 0;
+  color: rgb(var(--preColor_textAlt));
+}
+
+.clean .contact__inner {
+  background: rgb(255, 255, 255);
+  padding: 30px 0;
+  color: rgb(var(--preColor_text));
+}
+
+.clean .contact__heading {
+  margin-bottom: 10px;
+}
+
+.clean .contact__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.clean .contact__meta {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-page .site-footer {
+  background: rgb(var(--preColor_altBrand));
+  padding: 27px 0;
+  color: rgb(var(--preColor_textAlt));
+  font-size: 17px;
+}
+
+.site-page .site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.site-page .site-footer a {
+  color: rgb(var(--preColor_textAlt));
+}
+
+.site-page .site-footer__divider {
+  height: 1px;
+  background: rgba(var(--preColor_complementary), 0.2);
+}
+
+.site-page .site-footer__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 0 30px;
+}
+
+.site-page .site-footer__block {
+  flex: 1;
+  text-align: center;
+}
+
+.site-page .site-footer__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(245, 245, 245);
+  margin-bottom: 15px;
+}
+
+.site-page .site-footer__info a {
+  color: rgb(var(--preColor_textAlt));
+}
+
+.site-page .site-footer__copyright {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ============================================================
+   Cards / shapes
+   ============================================================ */
+.clean .card {
+  background: rgb(245, 245, 245, 0.25);
+  padding: 50px;
+  border-radius: 0;
+}
+
+.clean .card--bordered {
+  border: 1px solid rgb(var(--preColor_text), 0.3);
+}
+
+/* ============================================================
+   Divider
+   ============================================================ */
+.clean .divider {
+  height: 1px;
+  background: rgb(var(--preColor_text), 0.15);
+  margin: 5px 0;
+}
+
+/* ============================================================
+   Service grid (services index page)
+   ============================================================ */
+.clean .service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid rgb(var(--preColor_text), 0.3);
+  text-align: center;
+  align-items: center;
+}
+
+.clean .service-card__icon {
+  width: 35px;
+  height: 35px;
+  fill: var(--color_brand);
+}
+
+.clean .service-card__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ============================================================
+   Testimonial slider
+   ============================================================ */
+.clean .testimonials {
+  background: rgb(255, 255, 255);
+  padding: 0;
+}
+
+.clean .testimonial-card {
+  border: 1px solid rgb(var(--preColor_text), 0.3);
+  padding: 40px;
+  text-align: center;
+}
+
+.clean .testimonial-card__rating {
+  color: rgb(var(--preColor_text), 0.5);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.clean .testimonial-card__score {
+  font-size: 36px;
+  color: rgb(var(--preColor_brand));
+}
+
+.clean .testimonial-card__stars {
+  font-size: 14px;
+  color: rgb(var(--preColor_brand));
+}
+
+.clean .testimonial-card__text {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.clean .testimonial-card__author {
+  font-weight: 700;
+}
+
+/* Glide.js overrides — show single card centered without JS */
+.clean .glide__track {
+  overflow: hidden;
+}
+
+.clean .glide__slides {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.clean .glide__slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.clean .slider__box {
+  max-width: 66.6667%;
+  margin: 0 auto;
+}
+
+.clean .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.clean .slick-dots li {
+  cursor: pointer;
+}
+
+.clean .slick-dots .icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ============================================================
+   Why Choose Us
+   ============================================================ */
+.clean .why-choose {
+  position: relative;
+  padding: 110px 0;
+}
+
+.clean .why-choose__cards {
+  display: flex;
+  gap: 30px;
+}
+
+.clean .why-choose__card {
+  flex: 1;
+  background: rgb(245, 245, 245, 0.25);
+  padding: 50px;
+}
+
+.clean .why-choose__card h5 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.clean .why-choose__card li {
+  margin-bottom: 15px;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.clean .why-choose__card li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+}
+
+/* ============================================================
+   Reviews heading
+   ============================================================ */
+.clean .reviews-heading {
+  display: flex;
+  align-items: center;
+  padding: 37px 0;
+}
+
+.clean .reviews-heading__title {
+  flex: 7;
+  text-align: center;
+}
+
+.clean .reviews-heading__badge {
+  flex: 5;
+}
+
+.clean .reviews-heading img {
+  max-height: 82px;
+  width: auto !important;
+}
+
+.clean .reviews-heading__badge img {
+  max-height: 82px;
+  width: auto !important;
+}
+
+/* ============================================================
+   Picture / responsive images
+   ============================================================ */
+.clean .responsive-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.clean .responsive-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (width <= 1366px) {
+  .clean .container {
+    max-width: 1024px;
+  }
+
+  .clean .section {
+    padding: 53px 0;
+  }
+
+  .clean .hero {
+    padding: 95px 0 53px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .clean .why-choose {
+    padding: 83px 0;
+  }
+}
+
+@media (width <= 1024px) {
+  .clean .container {
+    padding: 0 30px;
+  }
+
+  /* Stack columns */
+  .clean [class*="col-"] {
+    width: 100% !important;
+  }
+
+  .col-3,
+  .col-4 {
+    width: 50% !important;
+  }
+
+  .clean .section {
+    padding: 42px 0;
+  }
+
+  .clean .hero {
+    padding: 75px 0 42px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .hero__subtitle {
+    font-size: 28px;
+  }
+
+  .clean .why-choose {
+    padding: 66px 0;
+  }
+
+  .why-choose__cards {
+    flex-direction: column;
+  }
+
+  .clean .reviews-heading {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .clean .slider__box {
+    max-width: 100%;
+  }
+}
+
+@media (width <= 767px) {
+  .clean .container {
+    padding: 0 20px;
+  }
+
+  .col-2,
+  .col-3,
+  .col-4 {
+    width: 100% !important;
+  }
+
+  .clean .section {
+    padding: 28px 0;
+  }
+
+  .clean .hero {
+    padding: 50px 0 28px;
+  }
+
+  .hero__company {
+    font-size: 28px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .hero__subtitle {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .clean .why-choose {
+    padding: 44px 0;
+  }
+
+  .clean .form__row {
+    flex-direction: column;
+  }
+
+  .site-page .site-footer__info {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Site Header
+   ============================================================ */
+.hidden {
+  display: none !important;
+}
+
+.site-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font_primary);
+  background: var(--template_background);
+  fill: var(--template_fill);
+  padding-top: 287px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1005;
+}
+
+.site-header .container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Topbar */
+.site-header__topbar {
+  height: 60px;
+  background: rgb(43, 43, 43);
+  display: flex;
+  align-items: center;
+}
+
+.site-header__topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__location {
+  color: rgb(var(--preColor_brand));
+  font-family: var(--font_secondary);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-header__social-link {
+  color: rgb(var(--preColor_textAlt));
+  text-decoration: none;
+}
+
+/* Main header */
+.site-header__main {
+  height: 146px;
+  background: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+}
+
+.site-header__main-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__logo img {
+  max-width: 360px;
+  height: auto;
+}
+
+.site-header__cta {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.site-header__cta-label {
+  font-family: var(--font_secondary);
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(var(--preColor_brand));
+  text-decoration: none;
+}
+
+.site-header__phone {
+  font-family: var(--font_secondary);
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(var(--preColor_brand));
+  text-decoration: none;
+}
+
+.site-header__burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.site-header__burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: rgb(var(--preColor_text));
+}
+
+/* Nav bar — white bg with dark text (matches live site) */
+.site-header__nav-bar {
+  height: 81px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
+
+.site-header__nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.site-nav__item {
+  position: relative;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 0 10px;
+  font-family: var(--font_secondary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav__item--active > .site-nav__link {
+  background: rgb(32, 32, 32);
+  color: rgb(255, 255, 255);
+}
+
+/* Dropdown */
+.site-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: rgb(var(--preColor_textAlt));
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+}
+
+.site-nav__item--has-children:hover .site-nav__dropdown {
+  display: block;
+}
+
+.site-nav__dropdown a {
+  display: block;
+  padding: 10px 15px;
+  font-family: var(--font_secondary);
+  font-size: 14px;
+  color: rgb(var(--preColor_text));
+  text-decoration: none;
+}
+
+.site-nav__dropdown a:hover {
+  background: rgb(var(--preColor_brand), 0.1);
+}
+
+.site-nav__link::after {
+  content: "";
+}
+
+.site-nav__item--has-children > .site-nav__link {
+  padding-right: 22px;
+  position: relative;
+}
+
+.site-nav__item--has-children > .site-nav__link::before,
+.site-nav__item--has-children > .site-nav__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 7px;
+  height: 1px;
+  background: currentColor;
+}
+
+.site-nav__item--has-children > .site-nav__link::before {
+  right: 12px;
+  transform: rotate(45deg);
+}
+
+.site-nav__item--has-children > .site-nav__link::after {
+  right: 7px;
+  transform: rotate(-45deg);
+}
+
+/* Slogan */
+.site-header__slogan {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+}
+
+/* Mobile slogan */
+.site-header__mobile-slogan {
+  display: none;
+  background: rgb(var(--preColor_textAlt));
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(var(--preColor_brand));
+  text-align: center;
+}
+
+.site-header__mobile-slogan .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   Header Responsive
+   ============================================================ */
+@media (width <= 1366px) {
+  .site-header .container {
+    max-width: 1024px;
+  }
+}
+
+@media (width <= 1024px) {
+  .site-page {
+    padding-top: 101px;
+  }
+
+  .site-header__topbar {
+    display: none;
+  }
+
+  .site-header__nav-bar {
+    display: none;
+  }
+
+  .site-header__cta {
+    display: none;
+  }
+
+  .site-header__burger {
+    display: flex;
+  }
+
+  .site-header__mobile-slogan {
+    display: flex;
+  }
+
+  .site-header__main {
+    height: 60px;
+  }
+
+  .site-header__logo img {
+    max-width: 200px;
+  }
+}
