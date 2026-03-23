@@ -867,6 +867,59 @@ body {
 }
 
 /* ============================================================
+   Privacy Policy page
+   ============================================================ */
+.clean .section--privacy {
+  padding: 68px 0;
+}
+
+.template .clean .section--privacy p {
+  font-size: 17px !important;
+  line-height: 27.2px !important;
+  margin: 0 0 14px;
+}
+
+.template .clean .section--privacy h4 {
+  font-size: 22px !important;
+  line-height: 28.5px !important;
+  margin-top: 42px;
+  margin-bottom: 14px;
+}
+
+.clean .section--privacy h4:first-child {
+  margin-top: 0;
+}
+
+.clean .section--privacy .container {
+  max-width: 994px;
+}
+
+/* ============================================================
+   About Us page
+   ============================================================ */
+.clean .section--about {
+  padding: 46px 0;
+}
+
+.template .clean .section--about h2,
+.template .clean .section--about h2 span {
+  font-size: 54px !important;
+  line-height: 1.5 !important;
+  text-transform: uppercase;
+}
+
+.clean .section--about p,
+.clean .section--about li,
+.clean .section--about blockquote {
+  font-size: 17px;
+  line-height: 27.2px;
+}
+
+.clean .section--about blockquote {
+  margin: 0;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (width <= 1366px) {
@@ -876,6 +929,10 @@ body {
 
   .clean .section {
     padding: 53px 0;
+  }
+
+  .clean .section--about {
+    padding: 46px 0;
   }
 
   .clean .hero {
