@@ -407,6 +407,7 @@
 }
 
 .clean .contact__image {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -598,6 +599,7 @@
 .clean .glide__slide {
   flex-shrink: 0;
   width: 100%;
+  list-style: none;
 }
 
 .clean .slider__box {
@@ -615,6 +617,12 @@
 
 .clean .slick-dots li {
   cursor: pointer;
+  color: rgb(var(--preColor_text), 0.3);
+  font-size: 12px;
+}
+
+.clean .slick-dots li.slick-active {
+  color: rgb(var(--preColor_text));
 }
 
 .clean .slick-dots .icon svg {
@@ -662,9 +670,11 @@
    Reviews heading
    ============================================================ */
 .clean .reviews-heading {
-  display: flex;
-  align-items: center;
   padding: 37px 0;
+}
+
+.clean .reviews-heading .row {
+  align-items: center;
 }
 
 .clean .reviews-heading__title {
