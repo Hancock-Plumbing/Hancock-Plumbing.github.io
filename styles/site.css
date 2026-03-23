@@ -487,6 +487,12 @@
   color: rgb(var(--preColor_textAlt));
 }
 
+.site-page .site-footer__block--yelp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 .site-page .site-footer__copyright {
   text-align: left;
   padding: 20px 0;
