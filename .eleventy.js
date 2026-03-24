@@ -8,6 +8,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     __fonts: "__fonts",
     __static: "__static",
+    bundle: "bundle",
     favicons: "favicons",
     styles: "styles",
   });

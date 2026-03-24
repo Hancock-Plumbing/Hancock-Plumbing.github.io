@@ -63,7 +63,7 @@
   </symbol>
   <symbol id="icons:1550021" viewBox="0 0 100 100">
     <path
-      d="M26.676,62.385c-0.396,0.661-9.68,16.251-9.68,21.731c0,5.811,4.728,10.538,10.538,10.538s10.538-4.728,10.538-10.538c0-5.48-9.284-21.07-9.68-21.731C28.031,61.781,27.037,61.781,26.676,62.385z M27.534,92.654c-4.708,0-8.538-3.83-8.538-8.538c0-3.7,5.543-14.059,8.538-19.242c2.995,5.184,8.538,15.541,8.538,19.242C36.072,88.824,32.242,92.654,27.534,92.654z M82,38h-8c-0.553,0-1,0.448-1,1v5H55.839C53.171,44,51,41.829,51,39.161V18h5c0.553,0,1-0.448,1-1V9c0-0.552-0.447-1-1-1H21c-0.553,0-1,0.448-1,1v8c0,0.552,0.447,1,1,1h5v20.783C26,55.444,39.556,69,56.217,69H73v5c0,0.553,0.447,1,1,1h8c0.553,0,1-0.447,1-1V39C83,38.448,82.553,38,82,38z"
+      d="M26.676,62.385c-0.396,0.661-9.68,16.251-9.68,21.731c0,5.811,4.728,10.538,10.538,10.538s10.538-4.728,10.538-10.538c0-5.48-9.284-21.07-9.68-21.731C28.031,61.781,27.037,61.781,26.676,62.385z M27.534,92.654c-4.708,0-8.538-3.83-8.538-8.538c0-3.7,5.543-14.059,8.538-19.242c2.995,5.184,8.538,15.541,8.538,19.242C36.072,88.824,32.242,92.654,27.534,92.654z M82,38h-8c-0.553,0-1,0.448-1,1v5H55.839C53.171,44,51,41.829,51,39.161V18h5c0.553,0,1,0.448,1,1V9c0-0.552-0.447-1-1-1H21c-0.553,0-1,0.448-1,1v8c0,0.552,0.447,1,1,1h5v20.783C26,55.444,39.556,69,56.217,69H73v5c0,0.553,0.447,1,1,1h8c0.553,0,1-0.447,1-1V39C83,38.448,82.553,38,82,38z"
     ></path>
   </symbol>
   <symbol id="icons:81170" viewBox="0 0 48 48">
@@ -106,134 +106,211 @@
   </symbol>
 </svg>
 
-<header class="site-header">
-  <!-- Topbar -->
-  <div class="site-header__topbar">
-    <div class="container">
-      <div class="site-header__topbar-inner">
-        <a href="/contact/" class="site-header__location"
-          >Seminole, Orange &amp; Volusia Co.</a
-        >
-        <a
-          href="https://www.facebook.com/profile.php?id=100063522322713"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="site-header__social-link"
-          aria-label="Facebook"
-        >
-          <svg style="width: 30px; height: 30px; fill: rgb(255, 255, 255)">
-            <use xlink:href="#templates/_global/social/facebook"></use>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main header -->
-  <div class="site-header__main">
-    <div class="container">
-      <div class="site-header__main-inner">
-        <a href="/" class="site-header__logo">
-          <img
-            src="/__static/production-webdotcom-4/534/1673534/sFhHq9Wy/e652c620c50f4a0cadce1bedc6d583f8"
-            alt="Hancock Plumbing"
-            style="max-width: 360px"
-          />
-        </a>
-        <div class="site-header__cta">
-          <a href="/contact/" class="site-header__cta-label">Call Us Today!</a>
-          <a href="tel:+14073223568" class="site-header__phone"
-            >(407)-322-3568</a
-          >
-        </div>
-        <button class="site-header__burger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Subheader / Navigation -->
-  <div class="site-header__nav-bar">
-    <div class="container">
-      <div class="site-header__nav-inner">
-        <nav class="site-nav">
-          <ul class="site-nav__list">
-            <li
-              class="site-nav__item{% if page.url == '/' %} site-nav__item--active{% endif %}"
-            >
-              <a href="/" class="site-nav__link">Home</a>
-            </li>
-            <li
-              class="site-nav__item site-nav__item--has-children{% if page.url contains '/services/' %} site-nav__item--active{% endif %}"
-            >
-              <a href="/services/" class="site-nav__link">Plumbing Services</a>
-              <ul class="site-nav__dropdown">
-                <li>
-                  <a href="/services/general-plumbing/">General Plumbing</a>
-                </li>
-                <li>
-                  <a href="/services/general-plumbing-repair/"
-                    >General Plumbing Repair</a
-                  >
-                </li>
-                <li><a href="/services/pipe-repair/">Pipe Repair</a></li>
-                <li>
-                  <a href="/services/plumbing-fixture-installation/"
-                    >Plumbing Fixture Installation</a
-                  >
-                </li>
-                <li><a href="/services/toilet-repair/">Toilet Repair</a></li>
-                <li>
-                  <a href="/services/water-heater-repair/"
-                    >Water Heater Repair</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li
-              class="site-nav__item{% if page.url == '/about-us/' %} site-nav__item--active{% endif %}"
-            >
-              <a href="/about-us/" class="site-nav__link">About</a>
-            </li>
-            <li
-              class="site-nav__item{% if page.url == '/contact/' %} site-nav__item--active{% endif %}"
-            >
-              <a href="/contact/" class="site-nav__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="site-header__slogan">
-          <svg
-            style="
-              width: 22.5px;
-              height: 22.5px;
-              fill: rgb(205, 20, 21);
-              margin-right: 8px;
-            "
-          >
-            <use xlink:href="#icons:16634"></use>
-          </svg>
-          <span>10% Discount for Veterans &amp; Seniors</span>
+<header class="header_wrapper header_top-position" style="opacity: 1;">
+  <div class="header">
+    <div class="header_fixed-wrapper">
+      <!-- Topbar -->
+      <div class="header__item topbar__header" style="background-color:transparent;border-top-color:var(--color_brand);border-bottom-color:var(--color_brand);border-top-width:0px;border-bottom-width:0px;position:relative;height:60px">
+        <div style="border-top-width:0px;background-color:rgb(43, 43, 43)" class="header_fixed-background"></div>
+        <div class="s-wrapper s-wrapper_original">
+          <div class="header__wrap">
+            <div class="header-layout-wrapper">
+              <div class="buttons__box">
+                <div class="btn__wrap">
+                  <a class="btn btn_default effect-fade-out" href="/contact/">
+                    <span>Seminole, Orange &amp; Volusia Co.</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header-layout-wrapper _right">
+              <nav class="social__box">
+                <div class="soc soc_block">
+                  <a class="soc__link" href="https://www.facebook.com/profile.php?id=100063522322713" target="_blank" rel="noopener noreferrer">
+                    <i class="icon soc__icon fb _dark">
+                      <svg style="fill:rgb(255, 255, 255)">
+                        <use xlink:href="#templates/_global/social/facebook"></use>
+                      </svg>
+                    </i>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Mobile slogan (shown on small screens) -->
-  <div class="site-header__mobile-slogan">
-    <div class="container">
-      <svg
-        style="
-          width: 20px;
-          height: 20px;
-          fill: rgb(205, 20, 21);
-          margin-right: 8px;
-        "
-      >
-        <use xlink:href="#icons:16634"></use>
-      </svg>
-      <span>10% Discount for Veterans &amp; Seniors</span>
+      <!-- Main header -->
+      <div class="header__item main__header" style="background-color:transparent;border-top-color:var(--color_brand);border-bottom-color:rgb(221, 221, 221);border-top-width:0px;border-bottom-width:1px;position:relative;height:145px">
+        <div style="border-top-width:0px;opacity:1.00;background-color:rgb(255, 255, 255)" class="header_fixed-background"></div>
+        <div class="s-wrapper s-wrapper_original">
+          <div class="header__wrap">
+            <div class="header-layout-wrapper _left header-logo crop-mode__contain">
+              <div class="logo__box logo_can-pressed">
+                <div class="logo__wrap">
+                  <a href="/" class="logo__link">
+                    <div class="crop cropped-image image-loaded mode_contain" style="width: 360px;">
+                      <div class="crop__content">
+                        <img class="crop-image" style="left: 50%; top: 50%; transform: translate(-50%, -50%); transform-origin: 50% 50%; zoom: 1; min-width: 100%; min-height: 0px;" alt="Hancock Plumbing" src="/__static/production-webdotcom-4/534/1673534/sFhHq9Wy/e652c620c50f4a0cadce1bedc6d583f8" />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header-layout-wrapper">
+              <div class="buttons__box">
+                <div class="btn__wrap">
+                  <a class="btn btn_default effect-shadow" style="text-transform:uppercase;font-variant:normal;border-radius:0;font-size:17px" href="/contact/">
+                    <span>CALL US TODAY!</span>
+                    <i class="icon">
+                      <svg style="fill:rgb(255, 255, 255)">
+                        <use xlink:href="#templates/_global/signs/70"></use>
+                      </svg>
+                    </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header-layout-wrapper">
+              <div class="buttons__box">
+                <div class="btn__wrap">
+                  <a class="btn btn_default effect-glow" style="text-transform:uppercase;font-variant:normal;border-radius:0;font-size:20px" href="tel:+14073223568">
+                    <span>(407)-322-3568</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="burger__box" class="burger__box nav__effect_1 nav_theme-1 left" style="display:none">
+              <div class="btn__burger-wrap">
+                <span class="btn__burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subheader / Navigation -->
+      <div class="header__item subheader__header" style="background-color:transparent;border-top-color:var(--color_brand);border-bottom-color:rgb(var(--preColor_textAlt));border-top-width:0px;border-bottom-width:1px;position:relative;height:80px">
+        <div style="border-top-width:0px;background-color:rgb(var(--preColor_textAlt))" class="header_fixed-background"></div>
+        <div class="s-wrapper s-wrapper_original">
+          <div class="header__wrap">
+            <div class="header-layout-wrapper _left header-nav">
+              <nav class="nav__box nav__box_1">
+                <div class="s-wrapper s-wrapper_nav">
+                  <div class="navigation__box">
+                    <ul class="nav">
+                      <li class="nav__item{% if page.url == '/' %} nav__item_active{% endif %}">
+                        <div class="nav__item-inner">
+                          <a class="nav__link" style="padding:0 10px" href="/">
+                            <span class="nav__title">Home</span>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="nav__item nav__item_has-child{% if page.url contains '/services/' %} nav__item_active{% endif %}">
+                        <div class="nav__item-inner">
+                          <a class="nav__link" style="padding:0 10px" href="/services/">
+                            <span class="nav__title">Plumbing Services</span>
+                          </a>
+                        </div>
+                        <div class="sub-menu__nav" style="right:initial;left:0">
+                          <div class="sub-menu__nav-background" style="pointer-events:none;background-color:rgb(var(--preColor_textAlt))"></div>
+                          <div class="nav-item__native-scroll">
+                            <ul>
+                              <li class="sub-menu__item">
+                                <a class="sub-menu__link" style="color:rgb(var(--function_color_altBrand_darken_20))" href="/services/general-plumbing/">
+                                  <span class="nav__title">General Plumbing</span>
+                                </a>
+                              </li>
+                              <li class="sub-menu__item">
+                                <a class="sub-menu__link" style="color:rgb(var(--function_color_altBrand_darken_20))" href="/services/general-plumbing-repair/">
+                                  <span class="nav__title">General Plumbing Repair</span>
+                                </a>
+                              </li>
+                              <li class="sub-menu__item">
+                                <a class="sub-menu__link" style="color:rgb(var(--function_color_altBrand_darken_20))" href="/services/pipe-repair/">
+                                  <span class="nav__title">Pipe Repair</span>
+                                </a>
+                              </li>
+                              <li class="sub-menu__item">
+                                <a class="sub-menu__link" style="color:rgb(var(--function_color_altBrand_darken_20))" href="/services/plumbing-fixture-installation/">
+                                  <span class="nav__title">Plumbing Fixture Installation</span>
+                                </a>
+                              </li>
+                              <li class="sub-menu__item">
+                                <a class="sub-menu__link" style="color:rgb(var(--function_color_altBrand_darken_20))" href="/services/toilet-repair/">
+                                  <span class="nav__title">Toilet Repair</span>
+                                </a>
+                              </li>
+                              <li class="sub-menu__item">
+                                <a class="sub-menu__link" style="color:rgb(var(--function_color_altBrand_darken_20))" href="/services/water-heater-repair/">
+                                  <span class="nav__title">Water Heater Repair</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav__item{% if page.url == '/about-us/' %} nav__item_active{% endif %}">
+                        <div class="nav__item-inner">
+                          <a class="nav__link" style="padding:0 10px" href="/about-us/">
+                            <span class="nav__title">About</span>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="nav__item{% if page.url == '/contact/' %} nav__item_active{% endif %}">
+                        <div class="nav__item-inner">
+                          <a class="nav__link" style="padding:0 10px" href="/contact/">
+                            <span class="nav__title">Contact</span>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="header-layout-wrapper">
+              <div class="slogan__wrapper">
+                <div class="slogan" style="font-size:18px;font-family:var(--font_primary);font-weight:400;font-style:normal;text-transform:none;color:rgb(var(--preColor_brand));text-decoration:none">
+                  <div class="slogan__container" style="flex-direction:row">
+                    <i class="icon">
+                      <svg style="width:1.25em;height:1.25em;margin-left:0.535em;margin-right:0.535em;fill:rgb(205, 20, 21)">
+                        <use xlink:href="#icons:16634"></use>
+                      </svg>
+                    </i>
+                    <span>10% Discount for Veterans &amp; Seniors</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile slogan (collapsed, shown on small screens by static-fixes.css) -->
+    <div class="header__slogan slogan sloganCollapsed__wrapper hidden" style="background:rgb(var(--preColor_textAlt))">
+      <div class="s-wrapper">
+        <div class="header__wrap">
+          <div class="slogan__wrapper">
+            <div class="slogan" style="font-size:18px;font-family:var(--font_primary);font-weight:400;font-style:normal;text-transform:none;color:rgb(var(--preColor_brand));text-decoration:none">
+              <div class="slogan__container" style="flex-direction:row">
+                <i class="icon">
+                  <svg style="width:1.25em;height:1.25em;margin-left:0.535em;margin-right:0.535em;fill:rgb(205, 20, 21)">
+                    <use xlink:href="#icons:16634"></use>
+                  </svg>
+                </i>
+                <span>10% Discount for Veterans &amp; Seniors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
