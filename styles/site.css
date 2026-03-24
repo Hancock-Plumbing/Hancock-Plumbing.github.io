@@ -512,6 +512,16 @@ body {
   margin-top: 10px;
 }
 
+/* Contact page override: white background, no dark wrapper */
+.clean.contact-page .contact {
+  background: rgb(255, 255, 255);
+  color: rgb(var(--preColor_text));
+}
+
+.clean.contact-page .contact__inner {
+  padding: 40px 0;
+}
+
 /* ============================================================
    Footer
    ============================================================ */
