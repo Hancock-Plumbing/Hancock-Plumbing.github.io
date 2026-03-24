@@ -884,31 +884,49 @@ body {
 }
 
 /* ============================================================
-   Privacy Policy page
+   publish.css overrides — section__text and section__title
+   publish.css sets font-size:1px !important on these; we must
+   override back to readable sizes inside .clean pages.
    ============================================================ */
-.clean .section--privacy {
-  padding: 68px 0;
+.template .clean .section__text {
+  font-size: 17px !important;
+  line-height: 27.2px !important;
 }
 
-.template .clean .section--privacy p {
+.template .clean .section__text p {
   font-size: 17px !important;
   line-height: 27.2px !important;
   margin: 0 0 14px;
 }
 
-.template .clean .section--privacy h4 {
+.template .clean .section__title h4 {
   font-size: 22px !important;
   line-height: 28.5px !important;
-  margin-top: 42px;
   margin-bottom: 14px;
 }
 
-.clean .section--privacy h4:first-child {
-  margin-top: 0;
+/* ============================================================
+   Privacy Policy page
+   ============================================================ */
+.clean .s-section .s-wrapper {
+  max-width: 994px;
 }
 
-.clean .section--privacy .container {
-  max-width: 994px;
+/* Reset row/layout margins inside .clean pages — publish.css adds
+   margins and flex that don't match the old simpler layout */
+.clean .s-section .row {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.clean .s-section .row > .layout {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.clean .s-section .row__item {
+  margin-top: 0;
+  padding: 0;
 }
 
 /* ============================================================
