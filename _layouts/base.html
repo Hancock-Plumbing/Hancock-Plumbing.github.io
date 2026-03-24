@@ -26,22 +26,9 @@
   <meta property="twitter:image" content="https://hancockplumbingco.com/__static/ogimage-production-webdotcom-4/534/1673534/sFhHq9Wy/e652c620c50f4a0cadce1bedc6d583f8" />
   <link href="/favicons/857e023f-98a3-419d-91e3-76f202c2402d/favicon-16x16.png" type="image/png" rel="shortcut icon" sizes="16x16">
   <link href="/favicons/857e023f-98a3-419d-91e3-76f202c2402d/favicon-32x32.png" type="image/png" rel="icon" sizes="32x32">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/3023.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/5938.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/6194.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/7311.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/8323.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/8918.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/9100.publish.css">
-  <link rel="stylesheet" href="/bundle/publish/0.57.2/9649.publish.css">
   <link rel="stylesheet" type="text/css" href="/styles/857e023f-98a3-419d-91e3-76f202c2402d.css" id="global_styles">
   <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
-  <link rel="stylesheet" type="text/css" href="/styles/static-fixes.css">
-  {% if page_styles %}<style>
-
-  {{ page_styles }}
-  </style>{% endif %}
+  <link rel="stylesheet" type="text/css" href="/styles/site.css">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9ZM8J2CRN"></script>
@@ -55,11 +42,13 @@
   gtag('config', 'G-Y9ZM8J2CRN');
 </script>
 
-<body class="_primary-dark _secondary-light _primary_border-text-dark _primary_border-dark _secondary_border-text-dark _secondary_border-dark _primary_theme-dark _secondary_theme-dark _text_theme-dark _light-text_theme-light _theme_light-text_contrast has-scroll" itemProp="mainContentOfPage">
+<body>
 
-  {% include "header.html" %}
+<div class="site-page template">
+  {% include "header-clean.html" %}
   {{ content }}
   {% include "footer.html" %}
+</div>
 </body>
 
 </html>

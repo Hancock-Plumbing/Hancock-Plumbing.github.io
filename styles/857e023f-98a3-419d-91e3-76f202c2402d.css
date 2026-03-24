@@ -10,7 +10,7 @@
   --color_textAlt: rgb(var(--preColor_textAlt));
   --color_complementary: rgb(var(--preColor_complementary));
   --font_primary: Roboto, sans-serif;
-  --font_secondary: 'Bai Jamjuree', sans-serif;
+  --font_secondary: "Bai Jamjuree", sans-serif;
   --font_complementary: PT Sans, serif;
   --menu_type: 1;
   --menu_fontSize: 18em;
@@ -39,9 +39,11 @@
   --header_main_borderTopWidth: 0;
   --header_main_borderBottomColor: rgb(221, 221, 221);
   --header_main_borderBottomWidth: 1px;
-  --header_main_opacity: 1.00;
+  --header_main_opacity: 1;
   --header_sub_background: var(--header_main_background);
-  --header_subheader_color_static: rgb(var(--function_color_altBrand_darken_20));
+  --header_subheader_color_static: rgb(
+    var(--function_color_altBrand_darken_20)
+  );
   --header_subheader_color_active: rgb(var(--preColor_textAlt));
   --header_topbar_color_static: rgb(var(--preColor_textAlt));
   --header_topbar_color_active: rgb(205, 20, 21);
@@ -252,7 +254,7 @@
   --input_preBgColor: 255, 255, 255;
   --input_background: rgb(var(--input_preBgColor));
   --input_borderWidth: 1px;
-  --input_borderColor: #cccccc;
+  --input_borderColor: #ccc;
   --input_borderRadius: 0;
   --input_textTransform: none;
   --input_textarea_fontSize: var(--input_fontSize);
@@ -346,7 +348,7 @@
   --timeline_align: center;
   --timeline_shape: circle;
   --timeline_circleColor: var(--color_brand);
-  --timeline_lineColor: rgba(var(--preColor_brand), 0.4);
+  --timeline_lineColor: rgb(var(--preColor_brand), 0.4);
   --timeline_date_fontWeight: var(--title_subHeading_fontWeight);
   --timeline_date_fontStyle: var(--title_subHeading_fontStyle);
   --timeline_date_textTransform: var(--title_subHeading_textTransform);
@@ -433,28 +435,29 @@
   --function_link_color_darken_10: 185, 18, 19;
   --function_template_fill_lighten_20: 234, 37, 38;
   --function_color_brand_darken_20: 165, 16, 17;
-  --function_color_brand_lightness: #FFF;
-  --function_color_altBrand_lightness: #FFF;
-  --function_color_text_lightness: #FFF;
+  --function_color_brand_lightness: #fff;
+  --function_color_altBrand_lightness: #fff;
+  --function_color_text_lightness: #fff;
   --function_color_textAlt_lightness: #000;
   --function_color_complementary_lightness: #000;
-  --function_menu_active_color_lightness: #FFF;
+  --function_menu_active_color_lightness: #fff;
   --function_color_altBrand_darken_20: 32, 32, 32;
   --function_color_complementary_darken_20: 196, 196, 196;
   --templateX_paddingTop: 0;
   --brandingTheme_colorTheme: custom;
-  --brandingTheme_defaultColor: #0D47FB;
-  --brandingTheme_hoverColor: #0A39C9;
-  --brandingTheme_focusColor: #0A39C9;
-  --brandingTheme_pressedColor: #4A75FC;
-  --brandingTheme_cssLogoFilter: contrast(0) sepia(100%) hue-rotate(305deg) brightness(1.32) saturate(10.75);
+  --brandingTheme_defaultColor: #0d47fb;
+  --brandingTheme_hoverColor: #0a39c9;
+  --brandingTheme_focusColor: #0a39c9;
+  --brandingTheme_pressedColor: #4a75fc;
+  --brandingTheme_cssLogoFilter: contrast(0) sepia(100%) hue-rotate(305deg)
+    brightness(1.32) saturate(10.75);
   --brandingTheme_themeApplyVariation: standard;
-  --brandingTheme_innerColor: #ffffff;
+  --brandingTheme_innerColor: #fff;
   --brandingTheme_borderRadius: 4px;
-  --brandingTheme_browserColorTheme: #ffffff;
-  --brandingTheme_defaultColor-rgb: 13,71,251;
-  --brandingTheme_hoverColor-rgb: 10,57,201;
-  --brandingTheme_focusColor-rgb: 10,57,201;
-  --brandingTheme_pressedColor-rgb: 74,117,252;
-  --brandingTheme_innerColor-rgb: 255,255,255
+  --brandingTheme_browserColorTheme: #fff;
+  --brandingTheme_defaultColor-rgb: 13, 71, 251;
+  --brandingTheme_hoverColor-rgb: 10, 57, 201;
+  --brandingTheme_focusColor-rgb: 10, 57, 201;
+  --brandingTheme_pressedColor-rgb: 74, 117, 252;
+  --brandingTheme_innerColor-rgb: 255, 255, 255;
 }

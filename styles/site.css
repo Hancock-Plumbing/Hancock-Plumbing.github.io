@@ -296,8 +296,8 @@ body {
    Hero
    ============================================================ */
 
-/* Production hero: black bg, full-bleed image,
-   left-side dark overlay (54% width, rgba(43,43,43,0.75)) */
+/* Production hero: black bg, full-bleed image dimmed to 0.75 opacity.
+   No left-side overlay — just the image over a black section bg. */
 .clean .hero {
   position: relative;
   min-height: 695px;
@@ -316,22 +316,18 @@ body {
   padding: 0;
 }
 
-/* Left-side dark overlay matching production shape (738px / 1366px = 54%) */
+/* No left-side overlay — production uses image opacity only */
 .clean .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 54%;
-  background: rgb(43, 43, 43, 0.75);
-  z-index: 1;
+  display: none;
 }
 
 .clean .hero .section__bg {
   opacity: 1;
 }
 
+/* Dim the background image to 0.75 matching production */
 .clean .hero .section__bg--dim {
-  opacity: 1;
+  opacity: 0.75;
 }
 
 .clean .hero .container {
@@ -484,16 +480,21 @@ body {
 /* ============================================================
    Contact section
    ============================================================ */
+/* Contact section — production: dark bg with centered white panel (994px wide) */
 .clean .contact {
-  background: rgb(43, 43, 43);
+  background: rgb(40, 40, 39);
   padding: 0;
   color: rgb(var(--preColor_textAlt));
+  position: relative;
+  min-height: 496px;
 }
 
 .clean .contact__inner {
+  position: relative;
   background: rgb(255, 255, 255);
-  padding: 60px 0;
+  padding: 35px 0 40px;
   color: rgb(var(--preColor_text));
+  min-height: 496px;
 }
 
 .clean .contact__heading {
@@ -501,9 +502,7 @@ body {
 }
 
 .clean .contact__image {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  display: none;
 }
 
 .clean .contact__meta {
@@ -526,10 +525,11 @@ body {
    Footer
    ============================================================ */
 .site-page .site-footer {
-  background: rgb(var(--preColor_altBrand));
-  padding: 33px 0;
+  background: rgb(40, 40, 39);
+  padding: 21px 0;
   color: rgb(var(--preColor_textAlt));
   font-size: 17px;
+  min-height: 283px;
 }
 
 .site-page .site-footer .container {
@@ -601,6 +601,7 @@ body {
 .site-page .site-footer__copyright {
   text-align: left;
   padding: 20px 0;
+  margin: 0;
   font-size: 16px;
   color: rgb(255, 255, 255, 0.5);
 }
@@ -633,6 +634,7 @@ body {
 .clean .section--services-grid {
   padding: 0;
   background: rgb(255, 255, 255);
+  min-height: 442px;
 }
 
 .clean .section--services-grid .row + .row {
@@ -778,6 +780,7 @@ body {
 .clean .why-choose {
   position: relative;
   padding: 83px 0;
+  min-height: 592px;
 }
 
 .clean .why-choose__cards {
@@ -942,16 +945,16 @@ body {
     padding: 53px 0;
   }
 
+  .clean .section--services-grid {
+    padding: 0;
+  }
+
   .clean .section--about {
     padding: 46px 0;
   }
 
   .clean .hero {
     min-height: 585px;
-  }
-
-  .clean .hero::before {
-    width: 54%;
   }
 
   .clean .hero .container {
@@ -961,14 +964,14 @@ body {
   }
 
   .clean .hero--short {
-    min-height: 432px;
-    padding: 0;
+    min-height: 434px;
+    padding: 54px 0;
   }
 
   .clean .hero--short .container {
-    min-height: 432px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .clean .hero__title {
@@ -1034,11 +1037,12 @@ body {
 
   /* Service page shared-section overrides at 1366 */
   .clean.service-page .testimonials {
-    padding: 58px 0;
+    padding: 0;
+    min-height: 528px;
   }
 
   .clean.service-page .contact__inner {
-    padding: 69px 0;
+    padding: 0;
   }
 
   .clean.service-page .reviews-heading {
