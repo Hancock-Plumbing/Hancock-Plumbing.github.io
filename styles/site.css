@@ -316,12 +316,12 @@ body {
   padding: 0;
 }
 
-/* Left-side dark overlay matching production shape */
+/* Left-side dark overlay matching production shape (738px / 1366px = 54%) */
 .clean .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 45.3%;
+  width: 54%;
   background: rgb(43, 43, 43, 0.75);
   z-index: 1;
 }
