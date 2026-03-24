@@ -100,7 +100,7 @@ img:not([src]) {
    bundle.js normally handles this by adding/removing classes
    and toggling display. We replicate that here with CSS.
    ============================================================ */
-@media (width <= 1024px) {
+@media (width <= 1023px) {
   /* Hide topbar row ("Seminole, Orange & Volusia Co." + Facebook) */
   .template .topbar__header {
     display: none !important;
@@ -132,13 +132,6 @@ img:not([src]) {
   }
 }
 
-/* Tablet breakpoint adjustments */
-@media (width <= 767px) {
-  /* Ensure burger stays visible on small phones */
-  .template .burger__box {
-    display: flex !important;
-  }
-}
 
 /* ============================================================
    CSS for shared Liquid includes (_includes/).
