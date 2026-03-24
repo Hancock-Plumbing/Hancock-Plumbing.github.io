@@ -1,8 +1,11 @@
 /**
- * site.css — Clean replacement for publish.css bundle (231KB → ~5KB)
+ * site.css — Override layer for clean HTML pages
  *
- * Computed values extracted from the live rendered site.
- * Uses the same CSS custom properties from 857e023f...css for theming.
+ * publish.css handles framework-level styling (header, nav, wrapper, grid).
+ * This file handles:
+ *   1. .clean-scoped page content styling (our simplified HTML)
+ *   2. Footer styling (custom HTML not in publish.css)
+ *   3. Typography overrides to fight publish.css "font-size: 1px" on headings
  */
 
 /* ============================================================
@@ -524,7 +527,7 @@ body {
 /* ============================================================
    Footer
    ============================================================ */
-.site-page .site-footer {
+.site-footer {
   background: rgb(40, 40, 39);
   padding: 21px 0;
   color: rgb(var(--preColor_textAlt));
@@ -532,37 +535,37 @@ body {
   min-height: 283px;
 }
 
-.site-page .site-footer .container {
+.site-footer .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.site-page .site-footer a {
+.site-footer a {
   color: rgb(var(--preColor_textAlt));
   text-decoration: none;
 }
 
-.site-page .site-footer__divider {
+.site-footer__divider {
   height: 1px;
   background: rgb(var(--preColor_complementary), 0.2);
 }
 
-.site-page .site-footer__info {
+.site-footer__info {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 14px 0;
 }
 
-.site-page .site-footer__block {
+.site-footer__block {
   width: 25%;
   padding: 0 15px;
   text-align: left;
   line-height: 1.2;
 }
 
-.site-page .site-footer__icon {
+.site-footer__icon {
   display: block;
   position: relative;
   width: 40px;
@@ -570,7 +573,7 @@ body {
   margin-bottom: 15px;
 }
 
-.site-page .site-footer__icon::after {
+.site-footer__icon::after {
   content: "";
   position: absolute;
   top: 0;
@@ -582,23 +585,23 @@ body {
   box-sizing: content-box;
 }
 
-.site-page .site-footer__icon svg {
+.site-footer__icon svg {
   position: relative;
   z-index: 1;
   padding: 10px;
 }
 
-.site-page .site-footer__info a {
+.site-footer__info a {
   color: rgb(var(--preColor_textAlt));
 }
 
-.site-page .site-footer__block--yelp {
+.site-footer__block--yelp {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.site-page .site-footer__copyright {
+.site-footer__copyright {
   text-align: left;
   padding: 20px 0;
   margin: 0;
@@ -934,7 +937,7 @@ body {
 }
 
 /* ============================================================
-   Responsive
+   Responsive — .clean page content
    ============================================================ */
 @media (width <= 1366px) {
   .clean .container {
@@ -1052,6 +1055,10 @@ body {
   .clean.service-page .why-choose {
     padding: 83px 0;
   }
+
+  .site-footer .container {
+    max-width: 1024px;
+  }
 }
 
 @media (width <= 1024px) {
@@ -1154,302 +1161,9 @@ body {
     flex-direction: column;
   }
 
-  .site-page .site-footer__info {
+  .site-footer__info {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-  }
-}
-
-/* ============================================================
-   Site Header
-   ============================================================ */
-.hidden {
-  display: none !important;
-}
-
-.site-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: var(--font_primary);
-  background: var(--template_background);
-  fill: var(--template_fill);
-  padding-top: 287px;
-}
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1005;
-}
-
-.site-header .container {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Topbar */
-.site-header__topbar {
-  height: 60px;
-  background: rgb(43, 43, 43);
-  display: flex;
-  align-items: center;
-}
-
-.site-header__topbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-header__location {
-  color: rgb(var(--preColor_brand));
-  font-family: var(--font_secondary);
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.site-header__social-link {
-  color: rgb(var(--preColor_textAlt));
-  text-decoration: none;
-}
-
-/* Main header */
-.site-header__main {
-  height: 146px;
-  box-sizing: border-box;
-  background: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(221, 221, 221);
-  display: flex;
-  align-items: center;
-}
-
-.site-header__main-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-header__logo img {
-  max-width: 360px;
-  height: auto;
-}
-
-.site-header__cta {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.site-header__cta-label {
-  font-family: var(--font_secondary);
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: rgb(var(--preColor_brand));
-  text-decoration: none;
-}
-
-.site-header__phone {
-  font-family: var(--font_secondary);
-  font-size: 20px;
-  font-weight: 700;
-  color: rgb(var(--preColor_brand));
-  text-decoration: none;
-}
-
-.site-header__burger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.site-header__burger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: rgb(var(--preColor_text));
-}
-
-/* Nav bar — white bg with dark text (matches live site) */
-.site-header__nav-bar {
-  height: 81px;
-  background: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
-}
-
-.site-header__nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-nav__list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 0;
-}
-
-.site-nav__item {
-  position: relative;
-}
-
-.site-nav__link {
-  display: block;
-  padding: 0 10px;
-  font-family: var(--font_secondary);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 36px;
-  color: rgb(32, 32, 32);
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.site-nav__item--active > .site-nav__link {
-  background: rgb(32, 32, 32);
-  color: rgb(255, 255, 255);
-}
-
-/* Dropdown */
-.site-nav__dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 220px;
-  background: rgb(var(--preColor_textAlt));
-  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.15);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 100;
-}
-
-.site-nav__item--has-children:hover .site-nav__dropdown {
-  display: block;
-}
-
-.site-nav__dropdown a {
-  display: block;
-  padding: 10px 15px;
-  font-family: var(--font_secondary);
-  font-size: 14px;
-  color: rgb(var(--preColor_text));
-  text-decoration: none;
-}
-
-.site-nav__dropdown a:hover {
-  background: rgb(var(--preColor_brand), 0.1);
-}
-
-.site-nav__link::after {
-  content: "";
-}
-
-.site-nav__item--has-children > .site-nav__link {
-  padding-right: 22px;
-  position: relative;
-}
-
-.site-nav__item--has-children > .site-nav__link::before,
-.site-nav__item--has-children > .site-nav__link::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 7px;
-  height: 1px;
-  background: currentColor;
-}
-
-.site-nav__item--has-children > .site-nav__link::before {
-  right: 12px;
-  transform: rotate(45deg);
-}
-
-.site-nav__item--has-children > .site-nav__link::after {
-  right: 7px;
-  transform: rotate(-45deg);
-}
-
-/* Slogan */
-.site-header__slogan {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: rgb(0, 0, 0);
-}
-
-/* Mobile slogan */
-.site-header__mobile-slogan {
-  display: none;
-  background: rgb(var(--preColor_textAlt));
-  padding: 10px 0;
-  font-size: 16px;
-  color: rgb(var(--preColor_brand));
-  text-align: center;
-}
-
-.site-header__mobile-slogan .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ============================================================
-   Header Responsive
-   ============================================================ */
-@media (width <= 1366px) {
-  .site-header .container {
-    max-width: 1024px;
-  }
-}
-
-@media (width <= 1024px) {
-  .site-page {
-    padding-top: 101px;
-  }
-
-  .site-header__topbar {
-    display: none;
-  }
-
-  .site-header__nav-bar {
-    display: none;
-  }
-
-  .site-header__cta {
-    display: none;
-  }
-
-  .site-header__burger {
-    display: flex;
-  }
-
-  .site-header__mobile-slogan {
-    display: flex;
-  }
-
-  .site-header__main {
-    height: 60px;
-  }
-
-  .site-header__logo img {
-    max-width: 200px;
   }
 }
