@@ -181,9 +181,6 @@ body {
   font-size: 17px !important;
 }
 
-.template .clean .btn {
-  font-size: 16px !important;
-}
 
 .clean p {
   margin: 0 0 1em;
@@ -217,21 +214,37 @@ body {
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   padding: 125px 0;
-  min-height: 686px;
 }
 
 .clean .section--dark__panel {
   position: relative;
   box-sizing: border-box;
-  max-width: 738px;
+  max-width: 83.33%;
   margin: 0 auto;
-  padding: 63px 37px;
+  padding: 126px 44px;
 }
 
-.clean .section--dark__panel img {
+.clean .section--dark__panel-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+}
+
+.clean .section--dark__panel-bg img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.clean .section--dark__panel > img {
+  position: relative;
+  width: 100%;
+  height: 184px;
   display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 .clean .section--reliable {
@@ -408,7 +421,7 @@ body {
 
 .clean .hero__actions {
   display: flex;
-  gap: 10px;
+  gap: 14px 30px;
   flex-wrap: wrap;
 }
 
@@ -429,6 +442,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  white-space: nowrap !important;
 }
 
 .clean .btn:hover {
@@ -446,8 +460,8 @@ body {
 }
 
 .clean .btn .icon {
-  width: 16px;
-  height: 16px;
+  width: 1.25em;
+  height: 1.25em;
   fill: currentColor;
 }
 
@@ -1059,11 +1073,14 @@ body {
 
   .clean .section--dark {
     padding: 94px 0;
-    min-height: 488px;
   }
 
   .clean .section--dark__panel {
-    padding: 40px 24px;
+    padding: 63px 37px;
+  }
+
+  .clean .section--dark__panel > img {
+    height: 174px;
   }
 
   .clean .section--logos {
@@ -1150,6 +1167,25 @@ body {
   .clean .slider__box {
     max-width: 100%;
   }
+
+  .clean .section--dark {
+    padding: 75px 0;
+  }
+
+  .clean .section--dark__panel {
+    max-width: 100%;
+    padding: 63px 43px;
+  }
+
+  .clean .section--dark__panel > img {
+    height: 150px;
+  }
+}
+
+@media (width <= 768px) {
+  .clean .section--dark__panel {
+    padding: 63px 32px;
+  }
 }
 
 @media (width <= 767px) {
@@ -1201,5 +1237,18 @@ body {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+
+  .clean .section--dark {
+    padding: 50px 0;
+  }
+
+  .clean .section--dark__panel {
+    max-width: 100%;
+    padding: 38px 15px;
+  }
+
+  .clean .section--dark__panel > img {
+    height: 120px;
   }
 }
