@@ -220,6 +220,20 @@ body {
   min-height: 686px;
 }
 
+.clean .section--dark__panel {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 738px;
+  margin: 0 auto;
+  padding: 63px 37px;
+}
+
+.clean .section--dark__panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .clean .section--reliable {
   padding: 61px 0;
 }
@@ -1046,6 +1060,10 @@ body {
   .clean .section--dark {
     padding: 94px 0;
     min-height: 488px;
+  }
+
+  .clean .section--dark__panel {
+    padding: 40px 24px;
   }
 
   .clean .section--logos {
