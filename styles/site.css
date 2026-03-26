@@ -346,7 +346,7 @@ body {
   padding: 0;
 }
 
-/* No left-side overlay — production uses image opacity only */
+/* No overlay pseudo-element — container bg handles text readability */
 .clean .hero::before {
   display: none;
 }
@@ -370,6 +370,7 @@ body {
   min-height: 695px;
   padding-top: 62px;
   padding-bottom: 36px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.55) 70%, transparent 70%);
 }
 
 .clean .hero--short .container {
@@ -381,7 +382,7 @@ body {
 .clean .hero__title,
 .clean .hero__subtitle,
 .clean .hero__actions {
-  max-width: 75%;
+  max-width: 65%;
 }
 
 .clean .hero__company {
@@ -423,6 +424,11 @@ body {
   display: flex;
   gap: 14px 30px;
   flex-wrap: wrap;
+}
+
+/* Vertically center CTA buttons in main header */
+.clean .main__header .header__wrap {
+  align-items: center;
 }
 
 /* ============================================================
@@ -523,9 +529,9 @@ body {
 
 .clean .contact__inner {
   position: relative;
-  background: rgb(255, 255, 255);
+  background: rgb(43, 43, 43);
   padding: 35px 0 40px;
-  color: rgb(var(--preColor_text));
+  color: rgb(var(--preColor_textAlt));
   min-height: 496px;
 }
 
@@ -550,6 +556,8 @@ body {
 }
 
 .clean.contact-page .contact__inner {
+  background: rgb(255, 255, 255);
+  color: rgb(var(--preColor_text));
   padding: 40px 0;
 }
 
@@ -630,6 +638,11 @@ body {
   align-items: flex-start;
 }
 
+.site-footer__yelp-img {
+  width: 80px;
+  height: auto;
+}
+
 .site-footer__copyright {
   text-align: left;
   padding: 20px 0;
@@ -656,7 +669,7 @@ body {
    ============================================================ */
 .clean .divider {
   height: 1px;
-  background: rgb(var(--preColor_text), 0.15);
+  background: rgb(var(--preColor_text), 0.25);
   margin: 5px 0;
 }
 
@@ -673,14 +686,20 @@ body {
   margin-top: 0;
 }
 
+.clean .section--services .col-3 {
+  display: flex;
+}
+
 .clean .service-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 30px 20px;
-  border: 1px solid rgb(var(--preColor_text), 0.3);
-  text-align: center;
-  align-items: center;
+  padding: 20px;
+  border: 1px solid rgb(var(--preColor_text), 0.15);
+  border-radius: 4px;
+  text-align: left;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .clean .service-card__icon {
@@ -692,6 +711,7 @@ body {
 .clean .service-card__title {
   font-size: 18px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 /* ============================================================
@@ -744,13 +764,13 @@ body {
 }
 
 .clean .testimonial-card__score {
-  font-size: 36px;
   color: rgb(var(--preColor_brand));
+  text-align: center;
 }
 
 .clean .testimonial-card__stars {
-  font-size: 14px;
   color: rgb(var(--preColor_brand));
+  text-align: center;
 }
 
 .clean .testimonial-card__text {
@@ -784,26 +804,39 @@ body {
 }
 
 .clean .slick-dots {
+  position: static;
   display: flex;
   justify-content: center;
   gap: 8px;
   padding: 20px 0;
   list-style: none;
+  width: auto;
 }
 
 .clean .slick-dots li {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  margin: 0 4px;
   cursor: pointer;
-  color: rgb(var(--preColor_text), 0.3);
-  font-size: 12px;
 }
 
-.clean .slick-dots li.slick-active {
-  color: rgb(var(--preColor_text));
+.clean .slick-dots .icon {
+  transition: 0.3s;
+  opacity: 0.5;
+  line-height: 0;
 }
 
+.clean .slick-dots li.slick-active .icon,
+.clean .slick-dots li:hover .icon {
+  opacity: 1;
+}
+
+.clean .slick-dots .icon,
 .clean .slick-dots .icon svg {
   width: 15px;
   height: 15px;
+  fill: #000;
 }
 
 /* ============================================================
@@ -824,11 +857,13 @@ body {
   flex: 1;
   background: rgb(245, 245, 245, 0.25);
   padding: 25px;
+  box-shadow: rgba(32, 32, 32, 0.5) 0px 0px 7px 0px;
 }
 
 .clean .why-choose__card h5 {
   font-weight: 700;
   margin-bottom: 15px;
+  color: rgb(var(--preColor_brand));
 }
 
 .clean .why-choose__card li {
@@ -1142,6 +1177,7 @@ body {
     min-height: 400px;
     padding-top: 42px;
     padding-bottom: 28px;
+    background: rgba(0, 0, 0, 0.55);
   }
 
   .clean .hero__title {

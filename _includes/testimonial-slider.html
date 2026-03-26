@@ -9,8 +9,8 @@
                 <div class="testimonial-card">
                   <div class="divider"></div>
                   <p class="testimonial-card__rating">Review rating</p>
-                  <p class="testimonial-card__score">5</p>
-                  <p class="testimonial-card__stars">★★★★★</p>
+                  <h2 class="testimonial-card__score">5</h2>
+                  <h6 class="testimonial-card__stars">★★★★★</h6>
                   <p class="testimonial-card__text">
                     A+ experience. Water heater busted. Got to house at 330.
                     Done by 6. Friendly and professional
@@ -22,8 +22,8 @@
                 <div class="testimonial-card">
                   <div class="divider"></div>
                   <p class="testimonial-card__rating">Review rating</p>
-                  <p class="testimonial-card__score">5</p>
-                  <p class="testimonial-card__stars">★★★★★</p>
+                  <h2 class="testimonial-card__score">5</h2>
+                  <h6 class="testimonial-card__stars">★★★★★</h6>
                   <p class="testimonial-card__text">
                     Called in the morning and explained my leak issue. In the
                     afternoon a polite and professional plumber turned up. He
@@ -37,8 +37,8 @@
                 <div class="testimonial-card">
                   <div class="divider"></div>
                   <p class="testimonial-card__rating">Review rating</p>
-                  <p class="testimonial-card__score">5</p>
-                  <p class="testimonial-card__stars">★★★★★</p>
+                  <h2 class="testimonial-card__score">5</h2>
+                  <h6 class="testimonial-card__stars">★★★★★</h6>
                   <p class="testimonial-card__text">
                     Very fair priced plumbing company and was able to come out
                     quickly to do a few faucet repairs and descale my tankless
@@ -51,12 +51,61 @@
             </ul>
           </div>
           <ul class="slick-dots" data-glide-el="controls[nav]">
-            <li class="slick-active" data-glide-dir="=0">●</li>
-            <li data-glide-dir="=1">●</li>
-            <li data-glide-dir="=2">●</li>
+            <li class="slick-active" data-glide-dir="=0">
+              <i class="icon">
+                <svg viewBox="-301 391 12 12">
+                  <path d="M-295 400.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5m0-8.5c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5"/>
+                </svg>
+              </i>
+            </li>
+            <li data-glide-dir="=1">
+              <i class="icon">
+                <svg viewBox="-301 391 12 12">
+                  <path d="M-295 400.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5m0-8.5c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5"/>
+                </svg>
+              </i>
+            </li>
+            <li data-glide-dir="=2">
+              <i class="icon">
+                <svg viewBox="-301 391 12 12">
+                  <path d="M-295 400.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5m0-8.5c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5"/>
+                </svg>
+              </i>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+<script>
+(function () {
+  var glide = document.querySelector('.testimonials .glide');
+  if (!glide) return;
+  var track = glide.querySelector('.glide__slides');
+  var slides = glide.querySelectorAll('.glide__slide');
+  var dots = glide.querySelectorAll('.slick-dots li');
+  var current = 0;
+  var total = slides.length;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + current * 100 + '%)';
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('slick-active', i === current);
+    }
+  }
+
+  track.style.transition = 'transform 0.4s ease';
+
+  for (var i = 0; i < dots.length; i++) {
+    (function (idx) {
+      dots[idx].addEventListener('click', function () {
+        goTo(idx);
+      });
+    })(i);
+  }
+
+  goTo(0);
+})();
+</script>
