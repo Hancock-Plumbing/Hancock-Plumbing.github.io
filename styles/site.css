@@ -251,21 +251,46 @@ body {
   padding: 61px 0;
 }
 
+.template .clean .section--reliable h1,
+.template .clean .section--reliable h1 span {
+  font-size: 54px !important;
+  line-height: 1 !important;
+}
+
+.template .clean .section--reliable h4 {
+  font-size: 28px !important;
+  font-style: normal;
+}
+
+.clean .reliable__bullet-box {
+  border-left: 1px solid rgba(40, 40, 39, 0.3);
+  padding: 16px 18px;
+}
+
 .clean .reliable__intro {
-  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.clean .reliable__divider {
+  height: 1px;
+  background: rgb(var(--preColor_brand));
+  margin: 30px 0;
 }
 
 .clean .reliable__review-cta {
   margin-top: 25px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .clean .reliable__google-link {
   display: block;
   margin-top: 15px;
+  text-align: center;
 }
 
 .clean .reliable__google-link img {
-  max-height: 82px;
+  max-height: 200px;
   width: auto !important;
 }
 
@@ -288,13 +313,41 @@ body {
 
 .clean .section--brand {
   background: rgb(var(--preColor_brand));
-  padding: 94px 0;
-  text-align: center;
+  padding: 90.5px 0;
   color: #fff;
+  overflow: hidden;
 }
 
+.clean .section--brand .container {
+  position: relative;
+  padding-left: 100.33px;
+}
+
+.clean .section--brand .container::before {
+  content: "";
+  position: absolute;
+  left: 100.33px;
+  top: -90.5px;
+  height: 80px;
+  width: 1px;
+  background: #fff;
+}
+
+.clean .section--brand .container::after {
+  content: "";
+  position: absolute;
+  left: 100.33px;
+  bottom: -90.5px;
+  height: 80px;
+  width: 1px;
+  background: #fff;
+}
+
+.template .clean .section--brand h3,
 .clean .section--brand h3 {
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 28.5px !important;
+  line-height: 35.5px !important;
 }
 
 .clean .section--gray {
@@ -427,8 +480,16 @@ body {
 }
 
 /* Vertically center CTA buttons in main header */
-.clean .main__header .header__wrap {
+.main__header .header-layout-wrapper:not(._left) .btn {
+  display: inline-flex;
   align-items: center;
+  gap: 8px;
+  height: auto;
+}
+
+.header-cta-arrow {
+  fill: rgb(0, 0, 0);
+  flex-shrink: 0;
 }
 
 /* ============================================================
@@ -747,13 +808,13 @@ body {
    ============================================================ */
 .clean .testimonials {
   background: rgb(255, 255, 255);
-  padding: 20px 0;
+  padding: 50px 0 20px;
   min-height: 478px;
 }
 
 .clean .testimonial-card {
-  border: 1px solid rgb(var(--preColor_text), 0.3);
-  padding: 40px;
+  border: 1px solid rgba(40, 40, 39, 0.3);
+  padding: 10px 33px;
   text-align: center;
 }
 
@@ -900,7 +961,8 @@ body {
 
 .template .clean .reviews-heading h2,
 .template .clean .reviews-heading h2 span {
-  font-size: 45px !important;
+  font-size: 57px !important;
+  line-height: 1 !important;
 }
 
 .clean .reviews-heading img {
@@ -1072,7 +1134,7 @@ body {
   }
 
   .clean .section--brand {
-    padding: 94px 0;
+    padding: 90.5px 0;
   }
 
   .clean .section--reliable {
@@ -1080,7 +1142,7 @@ body {
   }
 
   .clean .reliable__intro {
-    margin-bottom: 30px;
+    margin-top: 25px;
   }
 
   .clean .reliable__review-cta {
@@ -1201,6 +1263,11 @@ body {
     text-align: center;
   }
 
+  .template .clean .reviews-heading h2,
+  .template .clean .reviews-heading h2 span {
+    font-size: 51px !important;
+  }
+
   .clean .slider__box {
     max-width: 100%;
   }
@@ -1241,25 +1308,59 @@ body {
   }
 
   .clean .hero .container {
-    min-height: 300px;
-    padding-top: 28px;
-    padding-bottom: 20px;
+    min-height: auto;
+    padding: 15px 35px;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .clean .hero__title,
+  .clean .hero__subtitle,
+  .clean .hero__actions {
+    max-width: 100%;
+  }
+
+  .template .clean .hero__company {
+    font-size: 27.3px !important;
+    line-height: 1 !important;
+  }
+
+  .template .clean .hero__title {
+    font-size: 39px !important;
+    line-height: 1 !important;
+  }
+
+  .template .clean .hero__subtitle {
+    font-size: 19.5px !important;
+    line-height: 1 !important;
   }
 
   .clean .hero__company {
-    font-size: 28px;
+    margin-bottom: 13px;
   }
 
   .clean .hero__title {
-    font-size: 32px;
+    margin-bottom: 31px;
   }
 
   .clean .hero__subtitle {
-    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  .clean .hero__actions {
+    margin-top: 77px;
+  }
+
+  .clean .hero__actions a {
+    font-size: 16px;
   }
 
   .clean h2 {
     font-size: 28px;
+  }
+
+  .template .clean .reviews-heading h2,
+  .template .clean .reviews-heading h2 span {
+    font-size: 39px !important;
   }
 
   .clean .why-choose {
