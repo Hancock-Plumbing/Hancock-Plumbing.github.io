@@ -1,4 +1,8 @@
+import markdownIt from "markdown-it";
+const md = markdownIt();
+
 export default function (eleventyConfig) {
+  eleventyConfig.addFilter("md", (value) => value ? md.render(value) : "");
   eleventyConfig.ignores.add("_rendered");
   eleventyConfig.ignores.add("_cleaned");
   eleventyConfig.ignores.add("playwright-report");

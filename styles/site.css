@@ -1278,6 +1278,20 @@ img:not([src]) {
   margin-top: 30px;
 }
 
+.clean .service-detail__closing p {
+  text-align: center;
+}
+
+/* Auto-space markdown content in service detail */
+.service-detail .col-6 > p,
+.service-detail .col-6 > ul {
+  margin-top: 15px;
+}
+
+.service-detail .col-6 > h4 {
+  margin-top: 20px;
+}
+
 /* --- service page shared-section overrides
    (scoped to .service-page to avoid affecting homepage) --- */
 .clean.service-page .testimonials {

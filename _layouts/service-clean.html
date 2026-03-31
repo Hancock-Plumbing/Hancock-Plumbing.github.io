@@ -50,9 +50,9 @@ hide_why_choose_intro: true
         </div>
       </div>
 
-      {% if closing_html %}
+      {% if cta %}
       <div class="service-detail__closing">
-        {{ closing_html }}
+        {{ cta | md }}
       </div>
       {% endif %}
     </div>
