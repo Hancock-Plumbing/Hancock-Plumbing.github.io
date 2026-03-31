@@ -2,7 +2,7 @@
 title: "General Plumbing Repair | Sanford, FL | Hancock Plumbing Co. Inc."
 permalink: /services/general-plumbing-repair/
 description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional General Plumbing Repair in Sanford, FL!"
-layout: service-clean
+layout: service
 hero_title: "General Plumbing Repair"
 service_image: "/images/service-general-plumbing-repair.jpg"
 service_heading: "General Plumbing Repair in Sanford, FL"

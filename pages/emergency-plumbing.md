@@ -2,7 +2,7 @@
 title: "Emergency Plumbing | Sanford, FL | Hancock Plumbing Co. Inc."
 permalink: /emergency-plumbing/
 description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Emergency Plumbing in Sanford, FL!"
-layout: service-clean
+layout: service
 hero_title: "Emergency Plumbing"
 service_image: "/images/service-emergency-plumbing.jpg"
 service_heading: "Emergency Plumbing in Sanford, FL"

@@ -2,7 +2,7 @@
 title: "Plumbing Fixture Installation | Sanford, FL | Hancock Plumbing Co. Inc."
 permalink: /services/plumbing-fixture-installation/
 description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Plumbing Fixture Installation in Sanford, FL!"
-layout: service-clean
+layout: service
 hero_title: "Plumbing Fixture Installation"
 service_image: "/images/service-fixture-installation.jpg"
 service_heading: "Plumbing Fixture Installation in Sanford, FL"
