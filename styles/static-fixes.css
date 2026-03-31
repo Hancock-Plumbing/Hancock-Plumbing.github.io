@@ -529,7 +529,6 @@ img:not([src]) {
   font-variant: none;
 }
 
-
 /* SVG / icon colors */
 .fill-brand {
   fill: var(--color_brand);
