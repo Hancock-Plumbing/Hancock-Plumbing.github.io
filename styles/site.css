@@ -2131,8 +2131,31 @@ img:not([src]) {
   display: none !important;
 }
 
-/* --- site.css: .clean overrides (scoped utilities) --- */
-/* (Moved .template .clean .text-brand and .text-alt to Typography section above) */
+/* --- Spacing --- */
+.mt-12 { margin-top: 12px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-42 { margin-top: 42px; }
+.mb-30 { margin-bottom: 30px; }
+.my-12 { margin: 12px 0; }
+
+/* --- Alignment --- */
+.text-center { text-align: center; }
+.justify-center { justify-content: center; }
+
+/* --- Typography --- */
+.italic { font-style: italic; }
+
+/* --- Content --- */
+.content-list { margin: 12px 0; padding-left: 20px; list-style: disc; }
+
+/* --- Footer --- */
+.footer-icon { width: 20px; height: 20px; fill: rgb(245, 245, 245); padding: 10px; }
+
+/* --- Privacy page --- */
+.privacy-section { padding: 75px 0; }
+.privacy-heading { margin-top: 42px; }
 
 /* ============================================================
    9. Responsive Breakpoints

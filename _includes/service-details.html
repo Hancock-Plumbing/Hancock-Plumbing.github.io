@@ -14,15 +14,15 @@
       <div class="col-6">
         <h1>{% if service.heading_highlight %}<span class="text-brand">{{ service.heading_highlight }}</span><br />{% endif %}{{ service.heading }}</h1>
 
-        <p style="margin-top: 15px">
+        <p class="mt-15">
           {{ service.description }}
         </p>
 
-        <p style="margin-top: 15px">
+        <p class="mt-15">
           {{ service.offer_text }}
         </p>
 
-        <div class="row reliable__bullets" style="margin-top: 20px">
+        <div class="row reliable__bullets mt-20">
           {% if service.bullets_left %}
           <div class="col-6">
             <div class="reliable__bullet-box">
@@ -47,7 +47,7 @@
           {% endif %}
         </div>
 
-        <h4 style="margin-top: 20px; text-align: center">
+        <h4 class="mt-20 text-center">
           {{ service.tagline }}
         </h4>
       </div>
