@@ -7,7 +7,7 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("node_modules");
   eleventyConfig.addPassthroughCopy({
     fonts: "fonts",
-    __static: "__static",
+    images: "images",
 
     favicons: "favicons",
     styles: "styles",
