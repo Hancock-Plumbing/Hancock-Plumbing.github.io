@@ -663,9 +663,12 @@ img:not([src]) {
 
 .header .subheader__header .nav__box .nav__item-inner:hover,
 .header .subheader__header .nav__box .nav__item:hover .nav__item-inner,
-.header .subheader__header .nav__box .sub-menu__link:hover,
 .header .subheader__header .nav__box .nav__item_active .nav__item-inner {
   color: var(--header_subheader_color_active) !important;
+}
+
+.header .subheader__header .nav__box .sub-menu__link:hover {
+  color: var(--color_brand) !important;
 }
 
 .nav__box_1 .nav__item-inner:hover,
@@ -774,11 +777,6 @@ img:not([src]) {
 
 .s-wrapper_original .nav__box .nav__item_has-child {
   min-height: 100%;
-  pointer-events: none;
-}
-
-.s-wrapper_original .nav__box .nav__item_has-child .nav__item-inner {
-  pointer-events: auto;
 }
 
 .s-wrapper_original .nav__box .nav__link {
@@ -800,6 +798,15 @@ img:not([src]) {
 
 .header .subheader__header .s-wrapper_original .nav__box .sub-menu__nav {
   border-color: var(--header_subheader_color_active);
+}
+
+/* Dropdown open state — toggled by JS */
+.s-wrapper_original .nav__box .nav__item_has-child.is-open .sub-menu__nav {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: border-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease, visibility 0.15s ease;
 }
 
 .s-wrapper_original .nav__box .sub-menu__nav-background {

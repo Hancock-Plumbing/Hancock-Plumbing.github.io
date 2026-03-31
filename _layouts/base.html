@@ -53,6 +53,20 @@
   {{ content }}
   {% include "footer.html" %}
 </div>
+<script>
+  document.querySelectorAll('.nav__item_has-child').forEach(function (item) {
+    var timer;
+    item.addEventListener('mouseenter', function () {
+      clearTimeout(timer);
+      item.classList.add('is-open');
+    });
+    item.addEventListener('mouseleave', function () {
+      timer = setTimeout(function () {
+        item.classList.remove('is-open');
+      }, 150);
+    });
+  });
+</script>
 </body>
 
 </html>
