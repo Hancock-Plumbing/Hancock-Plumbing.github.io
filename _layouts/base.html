@@ -26,9 +26,13 @@
   <meta property="twitter:image" content="https://hancockplumbingco.com/images/logo.png" />
   <link href="/favicons/857e023f-98a3-419d-91e3-76f202c2402d/favicon-16x16.png" type="image/png" rel="shortcut icon" sizes="16x16">
   <link href="/favicons/857e023f-98a3-419d-91e3-76f202c2402d/favicon-32x32.png" type="image/png" rel="icon" sizes="32x32">
+  {% if isProd %}
+  <link rel="stylesheet" href="/styles/style.css">
+  {% else %}
   <link rel="stylesheet" href="/styles/theme.css">
   <link rel="stylesheet" href="/styles/fonts.css">
   <link rel="stylesheet" href="/styles/site.css">
+  {% endif %}
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9ZM8J2CRN"></script>
