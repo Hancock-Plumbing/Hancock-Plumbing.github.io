@@ -22,6 +22,7 @@ export default function (eleventyConfig) {
     favicons: "favicons",
     styles: "styles",
   });
+  eleventyConfig.addGlobalData("base_url", "https://hancockplumbingco.com");
   eleventyConfig.addGlobalData("site_title", "Hancock Plumbing Co. Inc.");
   eleventyConfig.addGlobalData("isProd", isProd);
   eleventyConfig.setIncludesDirectory("_includes");

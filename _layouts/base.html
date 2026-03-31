@@ -11,19 +11,19 @@
   <meta name="description" content="{{ description }}" />{% endif %}
   <meta property="og:site_name" content="New Web Lead">
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ permalink | prepend: "https://hancockplumbingco.com" | remove_last: "/" }}">
+  <meta property="og:url" content="{{ permalink | prepend: base_url | remove_last: "/" }}">
   <meta property="og:title" content="{{ title }}" />
   {% if description %}
   <meta property="og:description" content="{{ description }}" />{% endif %}
-  <meta property="og:image" content="https://hancockplumbingco.com/images/logo.png" />
+  <meta property="og:image" content="{{ base_url }}/images/logo.png" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:width" content="1200" />
-  <meta name="twitter:url" content="{{ permalink | prepend: "https://hancockplumbingco.com" | remove_last: "/" }}">
+  <meta name="twitter:url" content="{{ permalink | prepend: base_url | remove_last: "/" }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="{{ title }}" />
   {% if description %}
   <meta property="twitter:description" content="{{ description }}" />{% endif %}
-  <meta property="twitter:image" content="https://hancockplumbingco.com/images/logo.png" />
+  <meta property="twitter:image" content="{{ base_url }}/images/logo.png" />
   <link href="/favicons/857e023f-98a3-419d-91e3-76f202c2402d/favicon-16x16.png" type="image/png" rel="shortcut icon" sizes="16x16">
   <link href="/favicons/857e023f-98a3-419d-91e3-76f202c2402d/favicon-32x32.png" type="image/png" rel="icon" sizes="32x32">
   {% if isProd %}
