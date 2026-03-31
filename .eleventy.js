@@ -6,7 +6,7 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("tests");
   eleventyConfig.ignores.add("node_modules");
   eleventyConfig.addPassthroughCopy({
-    __fonts: "__fonts",
+    fonts: "fonts",
     __static: "__static",
 
     favicons: "favicons",

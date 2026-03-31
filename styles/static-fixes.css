@@ -529,9 +529,6 @@ img:not([src]) {
   font-variant: none;
 }
 
-.font-script {
-  font-family: Caveat, script;
-}
 
 /* SVG / icon colors */
 .fill-brand {
