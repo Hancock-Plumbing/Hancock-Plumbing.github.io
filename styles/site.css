@@ -112,6 +112,11 @@ video {
   vertical-align: baseline;
 }
 
+strong,
+b {
+  font-weight: 700;
+}
+
 article,
 aside,
 details,
@@ -661,6 +666,10 @@ img:not([src]) {
   color: var(--menu_active_color) !important;
 }
 
+.nav__box .sub-menu__link.nav__item_active {
+  color: #fff !important;
+}
+
 .header .subheader__header .nav__box .nav__item-inner:hover,
 .header .subheader__header .nav__box .nav__item:hover .nav__item-inner,
 .header .subheader__header .nav__box .nav__item_active .nav__item-inner {
@@ -668,7 +677,8 @@ img:not([src]) {
 }
 
 .header .subheader__header .nav__box .sub-menu__link:hover {
-  color: var(--color_brand) !important;
+  color: #fff !important;
+  background: #000;
 }
 
 .nav__box_1 .nav__item-inner:hover,
@@ -1201,6 +1211,7 @@ img:not([src]) {
 .template .clean .section--reliable h1 span {
   font-size: 54px !important;
   line-height: 1 !important;
+  text-transform: uppercase;
 }
 
 .template .clean .section--reliable h4 {
@@ -1213,6 +1224,31 @@ img:not([src]) {
   padding: 16px 18px;
 }
 
+.clean .reliable__bullets > :last-child .reliable__bullet-box {
+  border-right: 1px solid rgba(40, 40, 39, 0.3);
+}
+
+.clean .section--reliable ul {
+  list-style: none;
+  padding: 24px 28px;
+}
+
+.clean .section--reliable li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 4px 0;
+}
+
+.clean .section--reliable li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid rgb(197, 49, 42);
+  border-radius: 50%;
+}
+
 .clean .reliable__intro {
   margin-top: 30px;
 }
@@ -1221,6 +1257,22 @@ img:not([src]) {
   height: 1px;
   background: rgb(var(--preColor_brand));
   margin: 30px 0;
+}
+
+.clean .section--reliable a {
+  color: rgb(var(--preColor_brand));
+  text-decoration: none;
+}
+
+.clean .section--reliable a:hover {
+  text-decoration: underline;
+}
+
+.clean .reliable__tagline {
+  border-top: 1px solid rgba(var(--preColor_text), 0.3);
+  border-bottom: 1px solid rgba(var(--preColor_text), 0.3);
+  padding: 15px 0;
+  margin-top: 20px;
 }
 
 .clean .reliable__review-cta {
@@ -1241,8 +1293,8 @@ img:not([src]) {
 }
 
 /* --- section--services --- */
-.clean .section--services {
-  padding: 40px 0 32px;
+.template .clean .section--services h2 {
+  margin-bottom: 30px;
 }
 
 .template .clean .section--services h2,
@@ -1880,10 +1932,6 @@ img:not([src]) {
 
 .clean .contact__heading {
   margin-bottom: 10px;
-}
-
-.clean .contact__image {
-  display: none;
 }
 
 .clean .contact__meta {

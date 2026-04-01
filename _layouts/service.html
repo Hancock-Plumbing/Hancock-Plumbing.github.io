@@ -30,33 +30,7 @@ hide_why_choose_intro: true
     </div>
   </section>
 
-  <section class="service-detail">
-    <div class="container">
-      <h2 class="service-detail__heading">{{ service_heading }}</h2>
-
-      <div class="row">
-        <div class="col-6">
-          {{ content }}
-        </div>
-        <div class="col-6">
-          <img
-            class="service-detail__image"
-            src="{{ service_image }}"
-            alt="Plumbing Services"
-          />
-          <p class="service-detail__experience">
-            35 + years of plumbing experience
-          </p>
-        </div>
-      </div>
-
-      {% if cta %}
-      <div class="service-detail__closing">
-        {{ cta | md }}
-      </div>
-      {% endif %}
-    </div>
-  </section>
+  {% include 'service-detail.html' %}
 
   {% include 'why-choose-us.html' %}
   {% include 'reviews-heading.html' %}

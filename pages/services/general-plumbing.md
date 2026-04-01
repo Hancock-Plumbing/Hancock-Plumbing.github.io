@@ -6,14 +6,17 @@ layout: service
 hero_title: "General Plumbing"
 service_image: "/images/service-general-plumbing.jpg"
 service_heading: "General Plumbing in Sanford, FL"
-cta: "Sometimes, even the simplest of plumbing installation or repair jobs can quickly turn complicated. Don't take chances when Hancock Plumbing Co Inc is available to help. Call us today and let us handle all of your plumbing needs."
+cta: |
+  Whether the job is big or small, residential or commercial, simple or complex, a plumber from Hancock Plumbing Co Inc can help!
+
+  For more information or to [receive a free estimate](/contact/) from our team of plumbers, give us a call today.
 ---
 
-As a homeowner, the last thing you'll want is a major plumbing problem that can cause sewage leaks and even structural damage to your home. Whether it's a leaky faucet, running toilet, or a broken garbage disposal, we are committed to providing our customers with quality work and reasonable prices. We have many customers that we have served for over 35+ years. They recommend us to family and friends.
+As a homeowner, the last thing you'll want is a major plumbing problem that can cause sewage leaks and even structural damage to your home.
 
-There's a reason why Sanford, FL customers keep coming back to us for all of their plumbing needs. At Hancock Plumbing Co Inc, we offer:
+That's where we come in. At Hancock Plumbing Co Inc, we offer a full range of residential and commercial plumbing services, and we are committed to providing professional, honest and affordable service on every job.
 
-- Prompt, dependable service
-- Convenient scheduling
-- Reasonable rates
-- Courteous, well-informed plumbers who know their craft inside and out
+Don't mess around with do-it-yourself plumbing techniques - our licensed, professional, courteous plumbers can provide solutions for all of your plumbing needs, including
+
+- Sewer and drain cleaning
+- Installation of new fixtures for Jacuzzis, hot tubs, showers, sinks and toilets
