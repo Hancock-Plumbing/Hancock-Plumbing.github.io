@@ -474,7 +474,7 @@ img:not([src]) {
   align-items: center;
 }
 
-.header .navigation__box {
+.header .nav__box {
   display: flex;
   align-items: center;
 }
@@ -495,10 +495,9 @@ img:not([src]) {
   margin: 0 -15px;
 }
 
-.header .s-wrapper_collapsed,
-.header .s-wrapper_original {
+
+.header .s-wrapper {
   height: 100%;
-  max-height: 160px;
 }
 
 .header__item {
@@ -531,6 +530,103 @@ img:not([src]) {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+/* --- Header sections --- */
+.header .topbar__header {
+  background-color: transparent;
+  border-color: var(--color_brand);
+  border-width: 0;
+  position: relative;
+  height: 60px;
+}
+
+.header .topbar__header .header_fixed-background {
+  border-top-width: 0;
+  background-color: rgb(43, 43, 43);
+}
+
+.header .main__header {
+  background-color: transparent;
+  border-top-color: var(--color_brand);
+  border-bottom-color: rgb(221, 221, 221);
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  position: relative;
+  height: 145px;
+}
+
+.header .main__header .header_fixed-background {
+  border-top-width: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.header .subheader__header {
+  background-color: transparent;
+  border-top-color: var(--color_brand);
+  border-bottom-color: rgb(var(--preColor_textAlt));
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  position: relative;
+  height: 80px;
+}
+
+.header .subheader__header .header_fixed-background {
+  border-top-width: 0;
+  background-color: rgb(var(--preColor_textAlt));
+}
+
+/* --- Header CTA buttons --- */
+.header-cta {
+  text-transform: uppercase;
+  font-variant: normal;
+  border-radius: 0;
+  font-size: 17px;
+}
+
+.header-cta--phone {
+  font-size: 20px;
+}
+
+/* --- Burger (hidden on desktop, shown via media query) --- */
+.burger__box {
+  display: none;
+}
+
+/* --- Slogan --- */
+.slogan {
+  font-size: 18px;
+  font-family: var(--font_primary);
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  color: rgb(var(--preColor_brand));
+  text-decoration: none;
+}
+
+.slogan__container .icon svg {
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: 0.535em;
+  margin-right: 0.535em;
+  fill: rgb(205, 20, 21);
+}
+
+/* --- Social icon in topbar --- */
+.topbar__header .soc__icon svg {
+  fill: rgb(255, 255, 255);
+}
+
+/* --- Mobile slogan bar --- */
+.sloganCollapsed__wrapper {
+  background: rgb(var(--preColor_textAlt));
+}
+
+/* --- Mobile nav social icon --- */
+.mobile-nav__social-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 /* --- publish-clean.css: topbar --- */
