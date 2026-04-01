@@ -4,6 +4,10 @@ permalink: /services/water-heater-repair/
 description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Water Heater Repair in Sanford, FL!"
 layout: service
 hero_title: "Water Heater Repair"
+eleventyNavigation:
+  key: Water Heater Repair
+  parent: Plumbing Services
+  order: 6
 service_image: "/images/service-water-heater-repair.jpg"
 service_heading: "Water Heater Repair in Sanford, FL"
 cta: "To speak to a helpful company representative, call [Hancock Plumbing Co Inc](/about-us/) today."

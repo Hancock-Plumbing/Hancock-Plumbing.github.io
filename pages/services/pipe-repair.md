@@ -4,6 +4,10 @@ permalink: /services/pipe-repair/
 description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Pipe Repair in Sanford, FL!"
 layout: service
 hero_title: "Pipe Repair"
+eleventyNavigation:
+  key: Pipe Repair
+  parent: Plumbing Services
+  order: 3
 service_image: "/images/service-pipe-repair.jpg"
 service_heading: "Pipe Repair in Sanford, FL"
 cta: "For all your pipe repair needs at your home or office, call us - [the pipe repair experts](/services/) - today!"

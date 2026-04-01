@@ -1,0 +1,28 @@
+<ul class="nav">
+  {%- for item in collections.navItems %}
+  {%- assign is_active = false %}{% if item.url == page.url %}{% assign is_active = true %}{% endif %}{% if item.children.size > 0 and page.url contains item.url %}{% assign is_active = true %}{% endif %}
+  <li class="nav__item{% if item.children.size > 0 %} nav__item_has-child{% endif %}{% if is_active %} nav__item_active{% endif %}">
+    <div class="nav__item-inner">
+      <a class="nav__link" style="padding:0 10px" href="{{ item.url }}">
+        <span class="nav__title">{{ item.key }}</span>
+      </a>
+    </div>
+    {%- if item.children.size > 0 %}
+    <div class="sub-menu__nav" style="right:initial;left:0">
+      <div class="sub-menu__nav-background" style="pointer-events:none;background-color:rgb(var(--preColor_textAlt))"></div>
+      <div class="nav-item__native-scroll">
+        <ul>
+          {%- for child in item.children %}
+          <li class="sub-menu__item">
+            <a class="sub-menu__link{% if child.url == page.url %} nav__item_active{% endif %}" style="color:rgb(var(--function_color_altBrand_darken_20))" href="{{ child.url }}">
+              <span class="nav__title">{{ child.key }}</span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>

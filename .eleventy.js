@@ -3,12 +3,28 @@ import { minify } from "html-minifier-terser";
 import CleanCSS from "clean-css";
 import { readFile, writeFile, unlink } from "node:fs/promises";
 import { join } from "node:path";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 const md = markdownIt();
 const isProd = process.env.ELEVENTY_ENV === "production";
 
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addFilter("md", (value) => value ? md.render(value) : "");
+
+  eleventyConfig.addCollection("navItems", (collectionApi) => {
+    const all = collectionApi.getAll();
+    const entries = eleventyNavigationPlugin.navigation.find(all);
+    function toPlain(items) {
+      return items.map(item => ({
+        key: item.key,
+        title: item.title || item.key,
+        url: item.url,
+        children: item.children ? toPlain(item.children) : [],
+      }));
+    }
+    return toPlain(entries);
+  });
   eleventyConfig.ignores.add("_rendered");
   eleventyConfig.ignores.add("_cleaned");
   eleventyConfig.ignores.add("playwright-report");

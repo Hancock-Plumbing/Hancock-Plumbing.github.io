@@ -4,6 +4,10 @@ permalink: /services/toilet-repair/
 description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Toilet Repair in Sanford, FL!"
 layout: service
 hero_title: "Toilet Repair"
+eleventyNavigation:
+  key: Toilet Repair
+  parent: Plumbing Services
+  order: 5
 service_image: "/images/service-toilet-repair.jpg"
 service_heading: "Toilet Repair in Sanford, FL"
 cta: "To learn more about Hancock Plumbing Co Inc or to [schedule an estimate](/contact/), call us today."
