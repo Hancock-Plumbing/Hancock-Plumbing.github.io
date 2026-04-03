@@ -1393,6 +1393,10 @@ img:not([src]) {
 }
 
 /* --- section--services --- */
+.clean .section--services {
+  background-color: #eee;
+}
+
 .template .clean .section--services h2 {
   margin-bottom: 30px;
 }
@@ -1409,6 +1413,10 @@ img:not([src]) {
 /* --- section--logos --- */
 .clean .section--logos {
   padding: 12px 0;
+}
+
+.clean .brand-logos-img {
+  width: 100%;
 }
 
 /* --- service detail (individual service pages) --- */
