@@ -11,13 +11,13 @@
           <div class="row">
             <div class="col-10">
               <a class="btn btn_default" style="white-space: normal" href="/contact/">
-                Seminole, Orange &amp; Volusia Co.
+                {{ company.service_area_short }}
               </a>
             </div>
             <div class="col-2 text-right">
               <nav class="social__box">
                 <div class="soc soc_block">
-                  <a class="soc__link" href="https://www.facebook.com/profile.php?id=100063522322713" target="_blank" rel="noopener noreferrer">
+                  <a class="soc__link" href="{{ company.social.facebook }}" target="_blank" rel="noopener noreferrer">
                     <i class="icon soc__icon fb _dark">
                       <svg><use href="#templates/_global/social/facebook"></use></svg>
                     </i>
@@ -40,7 +40,7 @@
                   <a href="/" class="logo__link">
                     <div class="crop cropped-image image-loaded mode_contain">
                       <div class="crop__content">
-                        <img class="crop-image" alt="Hancock Plumbing" src="/images/logo.png" />
+                        <img class="crop-image" alt="{{ company.name }}" src="/images/logo.png" />
                       </div>
                     </div>
                   </a>
@@ -62,8 +62,8 @@
             <div class="col-4 header-cta-col">
               <div class="buttons__box">
                 <div class="btn__wrap">
-                  <a class="btn btn_default header-cta header-cta--phone effect-glow" href="tel:+14073223568">
-                    <span>(407)-322-3568</span>
+                  <a class="btn btn_default header-cta header-cta--phone effect-glow" href="tel:{{ company.phone_link }}">
+                    <span>{{ company.phone_display }}</span>
                   </a>
                 </div>
               </div>
@@ -102,7 +102,7 @@
                     <i class="icon">
                       <svg><use href="#icons:16634"></use></svg>
                     </i>
-                    <span>10% Discount for Veterans &amp; Seniors</span>
+                    <span>{{ company.discount }}</span>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@
               <i class="icon">
                 <svg><use href="#icons:16634"></use></svg>
               </i>
-              <span>10% Discount for Veterans &amp; Seniors</span>
+              <span>{{ company.discount }}</span>
             </div>
           </div>
         </div>
@@ -141,12 +141,12 @@
       </ul>
     </nav>
     <div class="mobile-nav__info">
-      <a href="/contact/">Seminole, Orange &amp; Volusia Co.</a>
+      <a href="/contact/">{{ company.service_area_short }}</a>
       <a href="/contact/">Call Us Today!</a>
-      <a href="tel:+14073223568">(407)-322-3568</a>
+      <a href="tel:{{ company.phone_link }}">{{ company.phone_display }}</a>
     </div>
     <div class="mobile-nav__social">
-      <a href="https://www.facebook.com/profile.php?id=100063522322713" aria-label="Facebook">
+      <a href="{{ company.social.facebook }}" aria-label="Facebook">
         <svg class="mobile-nav__social-icon"><use href="#icons:98468"></use></svg>
       </a>
     </div>

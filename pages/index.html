@@ -32,17 +32,17 @@ service:
       />
     </div>
     <div class="container">
-      <h4 class="hero__company">Hancock Plumbing Co. Inc.</h4>
+      <h4 class="hero__company">{{ company.name }}</h4>
       <h1 class="hero__title">
         Your Trusted Partner for Reliable Plumbing Services
       </h1>
       <p class="hero__subtitle">
-        Serving Sanford, FL, Volusia County, Orange &amp; Seminole County
+        Serving {{ company.service_area }}
       </p>
       <div class="hero__actions">
-        <a href="tel:+14073223568" class="btn btn--primary">
+        <a href="tel:{{ company.phone_link }}" class="btn btn--primary">
           <svg class="icon"><use href="#icons:62151"></use></svg>
-          407-322-3568
+          {{ company.phone }}
         </a>
         <a href="/services/" class="btn btn--primary">
           <svg class="icon"><use href="#icons:45865"></use></svg>
@@ -55,7 +55,7 @@ service:
   <section class="section--brand">
     <div class="container">
       <h3>
-        Second Generation Residential &amp; Commercial Plumbing Company
+        {{ company.tagline }}
       </h3>
     </div>
   </section>
@@ -133,7 +133,7 @@ service:
         Please click on the google button to leave a review
       </p>
       <a
-        href="https://g.page/r/CWMo9_RcS6ykEB0/review"
+        href="{{ company.social.google_reviews_leave }}"
         target="_blank"
         rel="noopener noreferrer"
         class="reliable__google-link"
@@ -240,7 +240,7 @@ service:
         </div>
         <div class="col-3 text-center">
           <div class="reviews-heading__badge">
-            <a href="https://g.page/r/CWMo9_RcS6ykEBM/review" target="_blank" rel="noopener">
+            <a href="{{ company.social.google_reviews }}" target="_blank" rel="noopener">
               <img src="/images/google-g.png" alt="Google Reviews" />
             </a>
           </div>
