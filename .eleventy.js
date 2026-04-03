@@ -1,6 +1,7 @@
 import markdownIt from "markdown-it";
 import { minify } from "html-minifier-terser";
 import CleanCSS from "clean-css";
+import yaml from "js-yaml";
 import { readFile, writeFile, unlink } from "node:fs/promises";
 import { join } from "node:path";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
@@ -11,6 +12,8 @@ const isProd = process.env.ELEVENTY_ENV === "production";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addFilter("md", (value) => value ? md.render(value) : "");
+
+  eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
 
   eleventyConfig.addCollection("navItems", (collectionApi) => {
     const all = collectionApi.getAll();
