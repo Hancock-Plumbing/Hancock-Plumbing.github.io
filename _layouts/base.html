@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#" style="--font_primary: Roboto, sans-serif; --font_secondary: 'Bai Jamjuree', sans-serif; --font_complementary: 'PT Sans', serif;">
+<html lang="en" prefix="og: http://ogp.me/ns#" style="--font_primary: Roboto, sans-serif; --font_secondary: 'Bai Jamjuree', sans-serif; --font_complementary: Caveat, cursive;">
 
 <head>
   <meta charset="utf-8" />
@@ -9,7 +9,7 @@
   <title>{{ title }}</title>
   {% if description %}
   <meta name="description" content="{{ description }}" />{% endif %}
-  <meta property="og:site_name" content="New Web Lead">
+  <meta property="og:site_name" content="Hancock Plumbing Co. Inc.">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ permalink | prepend: base_url | remove_last: "/" }}">
   <meta property="og:title" content="{{ title }}" />
@@ -33,18 +33,18 @@
   <link rel="stylesheet" href="/styles/fonts.css">
   <link rel="stylesheet" href="/styles/site.css">
   {% endif %}
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9ZM8J2CRN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9ZM8J2CRN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-Y9ZM8J2CRN');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-Y9ZM8J2CRN');
+  </script>
+</head>
 
 <body class="_primary-dark _secondary-light _primary_border-text-dark _primary_border-dark _secondary_border-text-dark _secondary_border-dark _primary_theme-dark _secondary_theme-dark _text_theme-dark _light-text_theme-light _theme_light-text_contrast has-scroll">
 
