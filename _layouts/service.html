@@ -32,7 +32,9 @@ hide_why_choose_intro: true
 
   {% include 'service-detail.html' %}
 
-  {% include 'why-choose-us.html' %}
+  {% unless hide_why_choose %}
+    {% include 'why-choose-us.html' %}
+  {% endunless %}
   {% include 'reviews-heading.html' %}
   {% include 'testimonial-slider.html' %}
   {% include 'contact-form.html' %}
