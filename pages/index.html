@@ -152,77 +152,20 @@ service:
         Dependable
         <span class="text-brand">Plumbing Professionals</span>
       </h2>
-      <div class="row">
+      {% for service in services %}
+      {% assign mod = forloop.index0 | modulo: 4 %}
+      {% if mod == 0 %}<div class="row{% if forloop.index0 > 0 %}{% endif %}">{% endif %}
         <div class="col-3">
-          <a href="/emergency-plumbing/" class="service-card">
+          <a href="{{ service.url }}" class="service-card">
             <svg class="service-card__icon">
-              <use href="#icons:1183403"></use>
+              <use href="{{ service.icon }}"></use>
             </svg>
-            <h5 class="service-card__title">Emergency Plumbing</h5>
+            <h5 class="service-card__title">{{ service.title }}</h5>
           </a>
         </div>
-        <div class="col-3">
-          <a href="/services/general-plumbing/" class="service-card">
-            <svg class="service-card__icon">
-              <use href="#icons:1550021"></use>
-            </svg>
-            <h5 class="service-card__title">General Plumbing</h5>
-          </a>
-        </div>
-        <div class="col-3">
-          <a href="/services/general-plumbing-repair/" class="service-card">
-            <svg class="service-card__icon">
-              <use href="#icons:81170"></use>
-            </svg>
-            <h5 class="service-card__title">General Plumbing Repair</h5>
-          </a>
-        </div>
-        <div class="col-3">
-          <a href="/services/pipe-repair/" class="service-card">
-            <svg class="service-card__icon">
-              <use href="#icons:321313"></use>
-            </svg>
-            <h5 class="service-card__title">Pipe Repair</h5>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <a
-            href="/services/plumbing-fixture-installation/"
-            class="service-card"
-          >
-            <svg class="service-card__icon">
-              <use href="#icons:703388"></use>
-            </svg>
-            <h5 class="service-card__title">Plumbing Fixture Installation</h5>
-          </a>
-        </div>
-        <div class="col-3">
-          <a href="/services/toilet-repair/" class="service-card">
-            <svg class="service-card__icon">
-              <use href="#icons:116381"></use>
-            </svg>
-            <h5 class="service-card__title">Toilet Repair</h5>
-          </a>
-        </div>
-        <div class="col-3">
-          <a href="/services/water-heater-repair/" class="service-card">
-            <svg class="service-card__icon">
-              <use href="#icons:25495"></use>
-            </svg>
-            <h5 class="service-card__title">Water Heater Repair</h5>
-          </a>
-        </div>
-        <div class="col-3">
-          <a href="/contact/" class="service-card">
-            <svg class="service-card__icon">
-              <use href="#templates/_global/popular/14"></use>
-            </svg>
-            <h5 class="service-card__title">Contact Us</h5>
-          </a>
-        </div>
-      </div>
+      {% assign next_mod = forloop.index | modulo: 4 %}
+      {% if next_mod == 0 or forloop.last %}</div>{% endif %}
+      {% endfor %}
     </div>
   </section>
 
