@@ -2068,7 +2068,7 @@ img:not([src]) {
 /* --- Typography --- */
 /*
    Font families from CSS variables: --font_primary (Roboto),
-   --font_secondary (Bai Jamjuree), --font_complementary (PT Sans)
+   --font_secondary (Bai Jamjuree), --font_complementary (Caveat)
 */
 
 /* Typography — scoped to .clean */
