@@ -31,6 +31,9 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("test-results");
   eleventyConfig.ignores.add("tests");
   eleventyConfig.ignores.add("node_modules");
+  eleventyConfig.ignores.add(".claude");
+  eleventyConfig.ignores.add(".kiro");
+  eleventyConfig.ignores.add("CLAUDE.md");
   eleventyConfig.addPassthroughCopy({
     fonts: "fonts",
     images: "images",
