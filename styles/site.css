@@ -271,28 +271,6 @@ div.template ::placeholder {
   transform: rotate(360deg);
 }
 
-/* --- static-fixes.css: section background images ---
-   bundle.js normally reads data-iesrc and sets background-image CSS
-   on the section. Without it, we need the <picture> inside .section_bg
-   to fill and display as a cover image. */
-.section_bg-img {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.section_bg-img img {
-  display: block;
-  width: 101%;
-  height: 101%;
-  top: -0.5%;
-  left: -0.5%;
-  position: absolute;
-  object-fit: cover;
-  object-position: center;
-}
-
 /* --- static-fixes.css: hide <img> without src ---
    Native loading="lazy" is used instead of JS-dependent lazy loading.
    Hide any legacy <img> without src to prevent broken image icons. */
@@ -300,13 +278,6 @@ img:not([src]) {
   display: none;
 }
 
-/* --- static-fixes.css: spacing utility ---
-   Extracted from per-page inline styles.
-   The builder uses font-size on .space__block elements as a
-   pseudo-spacing unit that scales across breakpoints. */
-.space__block {
-  font-size: 1px;
-}
 
 /* --- site.css: .clean scoped reset --- */
 .clean *,
@@ -639,11 +610,7 @@ img:not([src]) {
 
 /* --- publish-clean.css: subheader nav hover/active states --- */
 .header .subheader__header .nav__box_1 .nav__item.nav__item_active .nav__item-inner,
-.header .subheader__header .nav__box_1 .nav__item:hover .nav__item-inner,
-.header .subheader__header .nav__box_6 .nav__item.nav__item_active .nav__item-inner,
-.header .subheader__header .nav__box_6 .nav__item:hover .nav__item-inner,
-.header .subheader__header .nav__box_7 .nav__item.nav__item_active .nav__item-inner,
-.header .subheader__header .nav__box_7 .nav__item:hover .nav__item-inner {
+.header .subheader__header .nav__box_1 .nav__item:hover .nav__item-inner {
   background: var(--header_subheader_color_static);
 }
 
@@ -783,30 +750,14 @@ img:not([src]) {
 .nav__box_1 .nav__item-inner:hover,
 .nav__box_1 .nav__item:hover .nav__item-inner,
 .nav__box_1 .nav__item_active .nav__item-inner,
-.nav__box_1 .nav__item_active.sub-menu__link,
-.nav__box_6 .nav__item-inner:hover,
-.nav__box_6 .nav__item:hover .nav__item-inner,
-.nav__box_6 .nav__item_active .nav__item-inner,
-.nav__box_6 .nav__item_active.sub-menu__link,
-.nav__box_7 .nav__item-inner:hover,
-.nav__box_7 .nav__item:hover .nav__item-inner,
-.nav__box_7 .nav__item_active .nav__item-inner,
-.nav__box_7 .nav__item_active.sub-menu__link {
+.nav__box_1 .nav__item_active.sub-menu__link {
   background: var(--menu_color);
 }
 
 .header .subheader__header .nav__box_1 .nav__item-inner:hover,
 .header .subheader__header .nav__box_1 .nav__item:hover .nav__item-inner,
 .header .subheader__header .nav__box_1 .nav__item_active .nav__item-inner,
-.header .subheader__header .nav__box_1 .nav__item_active.sub-menu__link,
-.header .subheader__header .nav__box_6 .nav__item-inner:hover,
-.header .subheader__header .nav__box_6 .nav__item:hover .nav__item-inner,
-.header .subheader__header .nav__box_6 .nav__item_active .nav__item-inner,
-.header .subheader__header .nav__box_6 .nav__item_active.sub-menu__link,
-.header .subheader__header .nav__box_7 .nav__item-inner:hover,
-.header .subheader__header .nav__box_7 .nav__item:hover .nav__item-inner,
-.header .subheader__header .nav__box_7 .nav__item_active .nav__item-inner,
-.header .subheader__header .nav__box_7 .nav__item_active.sub-menu__link {
+.header .subheader__header .nav__box_1 .nav__item_active.sub-menu__link {
   background: var(--header_subheader_color_static);
 }
 
@@ -1001,8 +952,7 @@ img:not([src]) {
 }
 
 .subheader__header .slogan,
-.subheader__header + .header__slogan .slogan,
-.header_collapsed .main__header + .header__slogan .slogan {
+.subheader__header + .header__slogan .slogan {
   color: var(--header_subheader_color_static) !important;
 }
 
@@ -1179,12 +1129,6 @@ img:not([src]) {
 /* ============================================================
    5. Content Sections
    ============================================================ */
-
-/* --- publish-clean.css: section__text (kept without dead 1px rule) --- */
-.instagram-item,
-.section__text {
-  font-size: 1px !important;
-}
 
 /* --- site.css: .clean section base --- */
 .clean .section {
@@ -1913,12 +1857,6 @@ img:not([src]) {
   overflow: hidden;
 }
 
-/* Override the full-page min-height that publish.css sets on all slides —
-   only full-height slider sections should use it */
-.s-section__slider-bg:not(.s-section_full-height) .glide__slide {
-  min-height: 0;
-}
-
 /* --- Slider (site.css .clean overrides) --- */
 .clean .glide__track {
   overflow: hidden;
@@ -2268,72 +2206,26 @@ img:not([src]) {
   color: rgb(var(--preColor_brand));
 }
 
-.text-alt {
-  color: rgb(var(--preColor_textAlt));
-}
-
-.text-muted {
-  color: rgb(var(--preColor_text), 0.5);
-}
-
-/* --- static-fixes.css: typography utilities --- */
-.fw-bold {
-  font-weight: 700;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-  font-variant: none;
-}
-
-/* --- static-fixes.css: SVG / icon colors --- */
-.fill-brand {
-  fill: var(--color_brand);
-}
-
-.fill-alt {
-  fill: rgb(var(--preColor_textAlt));
-}
-
-/* --- static-fixes.css: shape backgrounds --- */
-.bg-gray-light {
-  background: rgb(245, 245, 245, 0.25);
-}
-
-.bg-gray-transparent {
-  background: rgb(245, 245, 245, 0);
-}
-
 /* --- publish-clean.css: .hidden --- */
 .hidden {
   display: none !important;
 }
 
 /* --- Spacing --- */
-.mt-12 { margin-top: 12px; }
 .mt-15 { margin-top: 15px; }
 .mt-20 { margin-top: 20px; }
 .mt-30 { margin-top: 30px; }
-.mt-42 { margin-top: 42px; }
 .mb-30 { margin-bottom: 30px; }
-.my-12 { margin: 12px 0; }
 
 /* --- Alignment --- */
 .text-center { text-align: center; }
 .justify-center { justify-content: center; }
-
-/* --- Typography --- */
-.italic { font-style: italic; }
-
-/* --- Content --- */
-.content-list { margin: 12px 0; padding-left: 20px; list-style: disc; }
 
 /* --- Footer --- */
 .footer-icon { width: 20px; height: 20px; fill: rgb(245, 245, 245); padding: 10px; }
 
 /* --- Privacy page --- */
 .privacy-section { padding: 75px 0; }
-.privacy-heading { margin-top: 42px; }
 
 /* ============================================================
    9. Responsive Breakpoints
@@ -2341,12 +2233,6 @@ img:not([src]) {
 
 /* --- >= 1921px --- */
 
-/* static-fixes.css: space__block scale-up */
-@media (width >= 1921px) {
-  .template .space__block {
-    font-size: 1.2px;
-  }
-}
 
 /* --- <= 1366px --- */
 
@@ -2367,25 +2253,6 @@ img:not([src]) {
 @media (max-width: 767px) {
   .slogan__container {
     font-size: 14px !important;
-  }
-}
-
-/* static-fixes.css: space__block responsive */
-@media (width <= 1366px) {
-  .template .space__block {
-    font-size: 0.5px;
-  }
-}
-
-@media (width <= 1024px) {
-  .template .space__block {
-    font-size: 0.5px;
-  }
-}
-
-@media (width <= 767px) {
-  .template .space__block {
-    font-size: 0.3px;
   }
 }
 
