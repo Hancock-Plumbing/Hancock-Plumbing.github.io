@@ -1307,8 +1307,8 @@ img:not([src]) {
   padding: 61px 0;
 }
 
-.template .clean .section--reliable h1,
-.template .clean .section--reliable h1 span {
+.template .clean .section--reliable h2,
+.template .clean .section--reliable h2 span {
   font-size: 54px !important;
   line-height: 1 !important;
   text-transform: uppercase;
