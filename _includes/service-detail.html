@@ -1,0 +1,32 @@
+<section class="section section--reliable">
+  <div class="container">
+    <div class="row col">
+      <h1 class="service-heading">{{ service_heading }}</h1>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <img
+          src="{{ service_image }}"
+          alt="{{ service_image_alt | default: 'Plumbing Services' }}"
+        />
+        {% if service_quotes %}
+          {{ service_quotes | md }}
+        {% endif %}
+      </div>
+      <div class="col-6">
+        {{ content }}
+        <h4 class="reliable__tagline mt-20 text-center">
+          {{ company.experience }}
+        </h4>
+      </div>
+    </div>
+
+    <div class="reliable__divider"></div>
+
+    {% if cta %}
+    <div class="mt-30 text-center">
+      {{ cta | md }}
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+title: "Toilet Repair | Sanford, FL | Hancock Plumbing Co. Inc."
+permalink: /services/toilet-repair/
+description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Toilet Repair in Sanford, FL!"
+layout: service
+hero_title: "Toilet Repair"
+eleventyNavigation:
+  key: Toilet Repair
+  parent: Plumbing Services
+  order: 5
+service_image: "/images/service-toilet-repair.jpg"
+service_heading: "Toilet Repair in Sanford, FL"
+cta: "To learn more about Hancock Plumbing Co Inc or to [schedule an estimate](/contact/), call us today."
+---
+
+Let's face it: A non-functioning toilet is something that's bound to disrupt your day to day quality of life. If you're in need of toilet repair, trust the team at Hancock Plumbing Co Inc to get the job done. As a trusted plumbing company in Sanford, FL, we'll get your toilet working again so that you can get back to your regular routine.
+
+#### ACCURATE REPAIR WORK
+
+At Hancock Plumbing Co Inc, we pride ourselves on quality service, no matter the task at hand. When you call on us for toilet repairs, we'll arrive on the scene in a timely fashion, evaluate the condition of your toilet, and come up with a solution for a fix. And if it turns out that your toilet is beyond repair, we can help you replace it in no time so that you're not left in the lurch.

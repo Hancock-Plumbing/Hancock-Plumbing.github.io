@@ -3,11 +3,29 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "dev": "eleventy --serve",
+    "build": "ELEVENTY_ENV=production eleventy",
+    "preview": "eleventy --serve --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@playwright/test": "^1.58.2",
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "jsdom": "^29.0.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "postcss-html": "^1.8.1",
+    "puppeteer": "^24.39.1",
+    "stylelint": "^17.4.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-standard": "^40.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^1.0.5"
   }
 }

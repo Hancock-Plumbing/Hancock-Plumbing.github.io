@@ -1,0 +1,93 @@
+:root {
+  /* Colors */
+  --color_brand: rgb(var(--preColor_brand));
+  --color_complementary: rgb(var(--preColor_complementary));
+  --preColor_brand: 205, 20, 21;
+  --preColor_complementary: 245, 245, 245;
+  --preColor_text: 40, 40, 39;
+  --preColor_textAlt: 255, 255, 255;
+
+  /* Fonts */
+  --font_primary: Roboto, sans-serif;
+  --font_secondary: "Bai Jamjuree", sans-serif;
+
+  /* Template */
+  --template_background: #fff;
+  --template_fill: var(--color_brand);
+
+  /* Header */
+  --header_main_background: rgb(255, 255, 255);
+  --header_subheader_color_active: rgb(var(--preColor_textAlt));
+  --header_subheader_color_static: rgb(
+    var(--function_color_altBrand_darken_20)
+  );
+  --header_topbar_color_static: rgb(var(--preColor_textAlt));
+
+  /* Menu & Navigation */
+  --menu_active_color: var(--color_brand);
+  --menu_burger_color: var(--menu_color);
+  --menu_color: var(--color_text);
+  --menu_fontFamily: var(--font_secondary);
+  --menu_fontSize: 18em;
+  --menu_fontStyle: normal;
+  --menu_fontVariant: normal;
+  --menu_fontWeight: 500;
+  --menu_padding: 10px;
+  --menu_subMenu_background: var(--header_main_background);
+  --menu_subMenu_fontSize: var(--menu_fontSize);
+  --menu_textTransform: uppercase;
+
+  /* Links */
+  --link_color: rgb(var(--preColor_brand));
+  --link_fontStyle: normal;
+  --link_fontWeight: 400;
+  --link_textDecoration: none;
+
+  /* Typography */
+  --title_color: var(--color_text);
+  --title_fontVariant: normal;
+  --title_heroHeading_color: var(--title_color);
+  --title_heroHeading_fontFamily: var(--font_secondary);
+  --title_heroHeading_fontSize: 60em;
+  --title_heroHeading_fontStyle: normal;
+  --title_heroHeading_fontVariant: normal;
+  --title_heroHeading_fontWeight: 500;
+  --title_heroHeading_lineHeight: 1em;
+  --title_heroHeading_textAlign: var(--title_textAlign);
+  --title_heroHeading_textTransform: none;
+  --title_mainHeading_color: var(--title_color);
+  --title_mainHeading_fontFamily: var(--font_secondary);
+  --title_mainHeading_fontSize: 60em;
+  --title_mainHeading_fontStyle: normal;
+  --title_mainHeading_fontVariant: var(--title_fontVariant);
+  --title_mainHeading_fontWeight: 500;
+  --title_mainHeading_lineHeight: 1em;
+  --title_mainHeading_textAlign: var(--title_textAlign);
+  --title_mainHeading_textTransform: var(--title_textTransform);
+  --title_textAlign: left;
+  --title_textTransform: none;
+
+  /* Buttons */
+  --btn_default_background: transparent;
+  --btn_default_borderRadius: 0;
+  --btn_default_color: rgb(var(--preColor_brand));
+  --btn_default_fontFamily: var(--btn_fontFamily);
+  --btn_default_fontSize: var(--btn_fontSize);
+  --btn_default_fontStyle: var(--btn_fontStyle);
+  --btn_default_fontWeight: var(--btn_fontWeight);
+  --btn_default_textTransform: var(--btn_textTransform);
+  --btn_fontFamily: var(--font_secondary);
+  --btn_fontSize: 16px;
+  --btn_fontStyle: normal;
+  --btn_fontWeight: 700;
+  --btn_primary_background: rgb(var(--preColor_brand));
+  --btn_primary_color: rgb(var(--preColor_textAlt));
+  --btn_textTransform: uppercase;
+
+  /* Computed Values */
+  --function_color_altBrand_darken_20: 32, 32, 32;
+
+  /* Other */
+  --color_text: rgb(var(--preColor_text));
+
+}

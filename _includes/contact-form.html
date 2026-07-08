@@ -1,0 +1,61 @@
+<section class="contact">
+  <div class="contact__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="contact__heading">
+            Contact <span class="text-brand">us</span>
+          </h2>
+          <img
+            class="contact__image"
+            src="/images/contact-plumber.jpg"
+            alt="Plumber working on pipes"
+          />
+        </div>
+        <div class="col-6">
+          <form class="form">
+            <div class="form__row">
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Name"
+                autocomplete="name"
+              />
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Email"
+                autocomplete="email"
+              />
+            </div>
+            <input
+              type="tel"
+              class="form-input"
+              placeholder="Phone"
+              autocomplete="tel"
+            />
+            <textarea
+              class="form-textarea"
+              placeholder="Your message"
+            ></textarea>
+            <div class="text-center">
+              <button type="submit" class="btn btn--primary">
+                Send message
+              </button>
+            </div>
+          </form>
+          <div class="contact__meta justify-center">
+            <div>
+              <strong>License Number</strong><br />
+              {{ company.license }}
+            </div>
+            <div>
+              <strong>English</strong><br />
+              Spanish
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

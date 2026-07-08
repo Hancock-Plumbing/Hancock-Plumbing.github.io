@@ -1,0 +1,70 @@
+<section class="testimonials">
+  <div class="container">
+    <div class="slider__box">
+      <div class="slider__section">
+        <div class="glide glide--ltr glide--carousel glide--swipeable">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              {% for testimonial in testimonials %}
+              <li class="glide__slide{% if forloop.first %} glide__slide--active{% endif %}">
+                <div class="testimonial-card">
+                  <div class="divider"></div>
+                  <p class="testimonial-card__rating">Review rating</p>
+                  <h2 class="testimonial-card__score">{{ testimonial.rating }}</h2>
+                  <h6 class="testimonial-card__stars">{% for i in (1..testimonial.rating) %}★{% endfor %}</h6>
+                  <p class="testimonial-card__text">
+                    {{ testimonial.text }}
+                  </p>
+                  <p class="testimonial-card__author">{{ testimonial.author }}</p>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <ul class="slick-dots" data-glide-el="controls[nav]">
+            {% for testimonial in testimonials %}
+            <li{% if forloop.first %} class="slick-active"{% endif %} data-glide-dir="={{ forloop.index0 }}">
+              <i class="icon">
+                <svg viewBox="-301 391 12 12">
+                  <path d="M-295 400.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5m0-8.5c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5"/>
+                </svg>
+              </i>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  var glide = document.querySelector('.testimonials .glide');
+  if (!glide) return;
+  var track = glide.querySelector('.glide__slides');
+  var slides = glide.querySelectorAll('.glide__slide');
+  var dots = glide.querySelectorAll('.slick-dots li');
+  var current = 0;
+  var total = slides.length;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + current * 100 + '%)';
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('slick-active', i === current);
+    }
+  }
+
+  track.style.transition = 'transform 0.4s ease';
+
+  for (var i = 0; i < dots.length; i++) {
+    (function (idx) {
+      dots[idx].addEventListener('click', function () {
+        goTo(idx);
+      });
+    })(i);
+  }
+
+  goTo(0);
+})();
+</script>

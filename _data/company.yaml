@@ -1,0 +1,32 @@
+name: Hancock Plumbing Co. Inc.
+phone: 407-322-3568
+phone_link: "+14073223568"
+phone_display: "(407)-322-3568"
+
+address:
+  street: 485 Old Western Trail
+  city: Sanford
+  state: FL
+  zip: "32773"
+
+license: CFC 1430630
+
+hours:
+  weekday: "Mon - Fri: 8:00am - 5:00pm"
+  weekend: "Weekends: Closed"
+
+service_area: Sanford, FL, Volusia County, Orange & Seminole County
+service_area_short: Seminole, Orange & Volusia Co.
+discount: 10% Discount for Veterans & Seniors
+tagline: Second Generation Residential & Commercial Plumbing Company
+experience: 35 + years of plumbing experience
+
+google_analytics_id: G-Y9ZM8J2CRN
+
+social:
+  facebook: https://www.facebook.com/profile.php?id=100063522322713
+  google_reviews: https://g.page/r/CWMo9_RcS6ykEBM/review
+  google_reviews_leave: https://g.page/r/CWMo9_RcS6ykEB0/review
+  yelp: https://www.yelp.ca/biz/hancock-plumbing-sanford-2
+
+maps_url: https://www.google.com/maps/place/485+Old+Western+Trail,+Sanford,+FL+32773
