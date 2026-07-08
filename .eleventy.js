@@ -1,6 +1,6 @@
 import markdownIt from "markdown-it";
 import { minify } from "html-minifier-terser";
-import CleanCSS from "clean-css";
+import { transform as lightningcss } from "lightningcss";
 import { readFile, writeFile, unlink } from "node:fs/promises";
 import { join } from "node:path";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
@@ -84,8 +84,13 @@ export default function (eleventyConfig) {
       for (const file of cssOrder) {
         combined.push(await readFile(join(stylesDir, file), "utf8"));
       }
-      const result = new CleanCSS({}).minify(combined.join("\n"));
-      await writeFile(join(stylesDir, "style.css"), result.styles);
+      const { code } = lightningcss({
+        filename: "style.css",
+        code: Buffer.from(combined.join("\n")),
+        minify: true,
+        errorRecovery: true,
+      });
+      await writeFile(join(stylesDir, "style.css"), code);
       for (const file of cssOrder) {
         await unlink(join(stylesDir, file));
       }
