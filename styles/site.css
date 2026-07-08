@@ -175,6 +175,7 @@ body {
 /* --- publish-clean.css: img reset --- */
 img {
   width: 100%;
+  height: auto;
   vertical-align: top;
 }
 
@@ -288,6 +289,7 @@ img:not([src]) {
 
 .clean img {
   width: 100%;
+  height: auto;
   vertical-align: top;
 }
 
