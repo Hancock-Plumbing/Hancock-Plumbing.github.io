@@ -1,7 +1,6 @@
 import markdownIt from "markdown-it";
 import { minify } from "html-minifier-terser";
 import CleanCSS from "clean-css";
-import yaml from "js-yaml";
 import { readFile, writeFile, unlink } from "node:fs/promises";
 import { join } from "node:path";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
@@ -26,8 +25,6 @@ export default function (eleventyConfig) {
       sizes: "auto",
     },
   });
-
-  eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
 
   eleventyConfig.addCollection("navItems", (collectionApi) => {
     const all = collectionApi.getAll();
