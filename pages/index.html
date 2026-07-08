@@ -24,11 +24,15 @@ service:
 ---
 <main class="clean">
 
+  
   <section class="hero">
     <div class="section__bg section__bg--dim">
       <img
         src="/images/hero-plumbing-tools.jpg"
         alt="Plumbing tools"
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
       />
     </div>
     <div class="container">
@@ -52,6 +56,7 @@ service:
     </div>
   </section>
 
+  
   <section class="section--brand">
     <div class="container">
       <h3>
@@ -60,6 +65,7 @@ service:
     </div>
   </section>
 
+  
   <section class="section section--reliable">
     <div class="container">
       <div class="row">
@@ -126,7 +132,7 @@ service:
     </div>
   </section>
 
-
+  
   <section>
     <div>
       <p class="reliable__review-cta">
@@ -146,6 +152,7 @@ service:
     </div>
   </section>
 
+  
   <section class="section section--services">
     <div class="container">
       <h2 class="text-center mb-30">
@@ -171,6 +178,7 @@ service:
 
   {% include 'why-choose-us.html' %}
 
+  
   <section class="reviews-heading">
     <div class="container">
       <div class="row">
@@ -194,6 +202,7 @@ service:
 
   {% include 'testimonial-slider.html' %}
 
+  
   <section class="section section--logos">
     <div class="container">
       <img
@@ -204,6 +213,7 @@ service:
     </div>
   </section>
 
+  
   <section class="section--dark">
     <div class="section__bg section__bg--faint">
       <img
