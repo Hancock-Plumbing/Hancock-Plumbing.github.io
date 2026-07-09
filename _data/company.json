@@ -11,8 +11,8 @@
   },
   "license": "CFC 1430630",
   "hours": {
-    "weekday": "Mon - Fri: 8:00am - 5:00pm",
-    "weekend": "Weekends: Closed"
+    "office": "Mon - Fri: 8:00am - 5:00pm",
+    "emergency": "24/7 Emergency Service"
   },
   "service_area": "Sanford, FL, Volusia County, Orange & Seminole County",
   "service_area_short": "Seminole, Orange & Volusia Co.",
