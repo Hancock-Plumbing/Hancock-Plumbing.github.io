@@ -15,9 +15,9 @@
               </a>
             </div>
             <div class="col-2 text-right">
-              <nav class="social__box">
+              <nav class="social__box" aria-label="Social">
                 <div class="soc soc_block">
-                  <a class="soc__link" href="{{ company.social.facebook }}" target="_blank" rel="noopener noreferrer">
+                  <a class="soc__link" href="{{ company.social.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i class="icon soc__icon fb _dark">
                       <svg><use href="#templates/_global/social/facebook"></use></svg>
                     </i>
@@ -87,7 +87,7 @@
         <div class="container">
           <div class="row">
             <div class="col-8 header-nav">
-              <nav class="nav__box nav__box_1">
+              <nav class="nav__box nav__box_1" aria-label="Primary">
                 <div class="s-wrapper s-wrapper_original">
                   <div class="navigation__box">
                     {% include 'nav.html' %}
@@ -132,7 +132,7 @@
   <!-- Mobile nav slide-out panel -->
   <div id="mobile-nav" class="mobile-nav">
     <button id="mobile-nav-close" class="mobile-nav__close" aria-label="Close menu">&times;</button>
-    <nav>
+    <nav aria-label="Mobile">
       <ul class="mobile-nav__links">
         <li{% if page.url == '/' %} class="active"{% endif %}><a href="/">Home</a></li>
         <li{% if page.url contains '/services/' %} class="active"{% endif %}><a href="/services/">Plumbing Services</a></li>

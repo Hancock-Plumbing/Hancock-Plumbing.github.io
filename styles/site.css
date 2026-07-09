@@ -1793,7 +1793,7 @@ img:not([src]) {
 
 .clean .form-input::placeholder,
 .clean .form-textarea::placeholder {
-  color: rgb(var(--preColor_text), 0.5);
+  color: rgb(var(--preColor_text), 0.65);
 }
 
 .template .clean .form-input,
@@ -1805,11 +1805,37 @@ img:not([src]) {
   margin: 4px 0 0;
   text-align: center;
   font-size: 16px;
-  color: rgb(34, 139, 34);
+  color: rgb(21, 110, 21);
 }
 
 .clean .form__status--error {
   color: rgb(200, 40, 40);
+}
+
+/* --- Accessibility: visible focus indicator (WCAG 2.4.7) --- */
+/* Selectors are specific enough to override the outline:none resets above. */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.clean .form-input:focus-visible,
+.clean .form-textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid rgb(0, 95, 204);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- Accessibility: visually-hidden (screen-reader-only) --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* --- Slider (publish-clean.css base) --- */
