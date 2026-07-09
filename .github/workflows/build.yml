@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history so eleventy's "git Last Modified" can read real
+          # per-file commit dates for sitemap <lastmod> (default is a shallow
+          # depth-1 clone, which collapses every date to the deploy commit).
+          fetch-depth: 0
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install Node

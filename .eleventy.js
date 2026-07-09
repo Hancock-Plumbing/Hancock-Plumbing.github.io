@@ -49,6 +49,9 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add(".kiro");
   eleventyConfig.ignores.add("CLAUDE.md");
   eleventyConfig.ignores.add("plan.md");
+  // Internal working docs — never publish to the site
+  eleventyConfig.ignores.add("SITE-REVIEW-*.md");
+  eleventyConfig.ignores.add("HANDOFF-*.md");
   eleventyConfig.addPassthroughCopy({
     fonts: "fonts",
     // Body <img> tags are optimized to /img/ by eleventy-img at build time.
