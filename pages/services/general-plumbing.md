@@ -21,7 +21,7 @@ As a homeowner, the last thing you'll want is a major plumbing problem that can 
 
 That's where we come in. At Hancock Plumbing Co Inc, we offer a full range of residential and commercial plumbing services, and we are committed to providing professional, honest and affordable service on every job.
 
-Don't mess around with do-it-yourself plumbing techniques - our licensed, professional, courteous plumbers can provide solutions for all of your plumbing needs, including
+Don't mess around with do-it-yourself plumbing techniques - our licensed, professional, courteous plumbers can provide solutions for all of your plumbing needs, including:
 
 - Sewer and drain cleaning
 - Installation of new fixtures for Jacuzzis, hot tubs, showers, sinks and toilets
