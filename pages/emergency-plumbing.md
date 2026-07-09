@@ -10,7 +10,7 @@ hero_title: "Emergency Plumbing"
 service_image: "/images/service-emergency-plumbing.jpg"
 service_image_alt: "Plumber responding to a plumbing emergency in Sanford, FL"
 service_heading: "Emergency Plumbing in Sanford, FL"
-cta: "Sometimes, even the simplest of plumbing installation or repair jobs can quickly turn complicated. Don't take chances when Hancock Plumbing Co Inc is available to help. Call us today and let us handle all of [your plumbing needs](/services/)."
+cta: "Sometimes, even the simplest of plumbing installation or repair jobs can quickly turn complicated. Don't take chances when Hancock Plumbing Co. Inc. is available to help. Call us today and let us handle all of [your plumbing needs](/services/)."
 ---
 
 As a professional plumbing repair company, we offer you quality plumbing services 24 hours a day without costing you a fortune. For your satisfaction, we provide you with honest, detail-oriented service.

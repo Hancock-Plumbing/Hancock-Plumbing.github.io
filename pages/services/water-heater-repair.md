@@ -11,10 +11,10 @@ eleventyNavigation:
 service_image: "/images/service-water-heater-repair.jpg"
 service_image_alt: "Plumber repairing a water heater in Sanford, FL"
 service_heading: "Water Heater Repair in Sanford, FL"
-cta: "To speak to a helpful company representative, call [Hancock Plumbing Co Inc](/about-us/) today."
+cta: "To speak to a helpful company representative, call [Hancock Plumbing Co. Inc.](/about-us/) today."
 ---
 
-When your water heater needs repairs, choosing the right plumbing contractors can make all the difference. At Hancock Plumbing Co Inc, our licensed technicians can often schedule an appointment and have the problem fixed the very same day. Our plumbers know all about conventional gas and electric water heaters, as well as newer tankless water heaters.
+When your water heater needs repairs, choosing the right plumbing contractors can make all the difference. At Hancock Plumbing Co. Inc., our licensed technicians can often schedule an appointment and have the problem fixed the very same day. Our plumbers know all about conventional gas and electric water heaters, as well as newer tankless water heaters.
 
 ### INVEST IN GREAT SERVICE
 

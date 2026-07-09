@@ -20,7 +20,7 @@ service_quotes: |
   >
   > **— Stephen M. in Sanford, FL**
 cta: |
-  Sometimes, even the simplest of plumbing installation or repair jobs can quickly turn complicated. Don't take chances when Hancock Plumbing Co Inc is available to help. Call us today and let us handle all of your plumbing needs.
+  Sometimes, even the simplest of plumbing installation or repair jobs can quickly turn complicated. Don't take chances when Hancock Plumbing Co. Inc. is available to help. Call us today and let us handle all of your plumbing needs.
 ---
 
 - Water Heater Sales and Repair
