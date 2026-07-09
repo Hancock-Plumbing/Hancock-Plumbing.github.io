@@ -16,7 +16,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: "html",
     formats: ["webp"],
-    widths: [400, 800, 1200, "auto"],
+    widths: [400, 800, 1200, 1600, 2000, "auto"],
     urlPath: "/img/",
     outputDir: "./_site/img/",
     defaultAttributes: {
