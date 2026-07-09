@@ -1486,6 +1486,21 @@ button.burger__box {
   padding: 0;
 }
 
+/* Privacy page heading hierarchy: markdown emits h1 (title) + h2 (sections);
+   scope the sizes so the global !important heading rules don't blow them up. */
+.template .clean .privacy-section h1,
+.template .clean .privacy-section h1 span {
+  font-size: 32px !important;
+  margin-bottom: 20px;
+}
+
+.template .clean .privacy-section h2,
+.template .clean .privacy-section h2 span {
+  font-size: 22px !important;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
 /* --- about us page --- */
 .clean .section--about {
   padding: 46px 0;

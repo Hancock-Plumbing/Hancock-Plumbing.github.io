@@ -1,14 +1,14 @@
 ---
 title: "About | Plumber | Sanford, FL | Hancock Plumbing Co. Inc."
 permalink: /about-us/
-description: "About Hancock Plumbing Co. Inc.: Call us at 407-322-3568 for exceptional Plumber service in Sanford, FL!"
+description: "Hancock Plumbing Co. — family-owned, licensed plumbers serving Sanford & Central Florida for 35+ years. Quality residential & commercial work at fair prices."
 layout: service
 hero_title: "About Us"
 eleventyNavigation:
   key: About
   order: 3
 service_image: "/images/about-us-service.jpg"
-service_image_alt: "General Plumbing"
+service_image_alt: "Hancock Plumbing plumber at work in Sanford, FL"
 service_heading: "About Hancock Plumbing in Sanford, FL"
 hide_why_choose: true
 service_quotes: |

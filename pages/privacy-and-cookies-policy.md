@@ -5,13 +5,13 @@ description: "Privacy and Cookies Policy for Hancock Plumbing Co. Inc."
 layout: privacy
 ---
 
-#### Privacy Policy
+# Privacy Policy
 
 *Last Updated May 2016.*
 
 Please read our Privacy Policy carefully so that you can understand how we collect, use and disclose the personal information that you provide to us.
 
-#### What Information Is Collected?
+## What Information Is Collected?
 
 We receive and store any information you enter on our website or give us in any other way, such as via telephone, electronic mail, online or otherwise. Here are the types of information we gather:
 
@@ -29,7 +29,7 @@ To learn more about the use of this information or choose not to have this infor
 
 **Telephone Recording and Monitoring:** To ensure our customers receive quality service, we select phone calls for recording and/or monitoring. These calls, between our customers (or potential customers) and employees, are evaluated by supervisors and/or other representatives. This is to guarantee that prompt, consistent assistance and accurate information is delivered in a professional manner. In contacting us or purchasing our products or services, you hereby consent to any such call recording and/or monitoring.
 
-#### How Personal Information Is Used
+## How Personal Information Is Used
 
 **Our Use:** We receive and store any personal information you enter on our website or give to us voluntarily in any other way and, as permitted by law, may use it to contact you from time to time. We may contact you by telephone at the number your provided on registration, and may also send you information or offers from time to time to the postal address or email address we have on file. You further acknowledge that you are not required to agree directly or indirectly or enter into an agreement regarding our telemarketing efforts as a condition of purchasing any goods or services from us or our affiliates.
 
@@ -39,6 +39,6 @@ Personal information that we collect will be stored and processed in the United 
 
 **Disclosure Required by Law:** We or our website provider may release account and other personal information when we are required to do so by law, court order, subpoena or other government or law enforcement authority or regulatory agency, in order to enforce agreements, or when we believe in good faith that disclosing this information is necessary or advisable, including for example, to protect the rights, property, or safety of us or our website provider or others. This includes exchanging information with other companies and organizations for fraud protection, credit risk reduction or other similar purposes. We may retain your information in our files after you terminate all your services with us to resolve disputes, enforce an agreement, and to adhere to the technical and legal requirements and constraints related to the security, integrity and operation of our website.
 
-#### Changes to Privacy Policy
+## Changes to Privacy Policy
 
 Due to the constantly changing nature of our business, we reserve the right to change, update or modify this Privacy Policy at any time at our sole discretion, and will post any new Privacy Policy here. Any such change, update or modification will be effective immediately upon posting on our website. By going to our website or utilizing our services you are deemed to have consented to our Privacy Policy and will be bound by its terms.

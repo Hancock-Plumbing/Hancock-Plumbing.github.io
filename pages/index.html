@@ -1,14 +1,14 @@
 ---
 title: "Hancock Plumbing Co. Inc. | Plumber | Sanford, FL"
 permalink: /
-description: "Call Hancock Plumbing Co. Inc. at 407-322-3568 for exceptional Plumber service in Sanford, FL!"
+description: "Family-owned, licensed plumbers serving Sanford & Central Florida for 35+ years. Reliable residential & commercial service. Call Hancock Plumbing: 407-322-3568."
 layout: base
 eleventyNavigation:
   key: Home
   order: 1
 service:
   image: "/images/general-plumbing-photo.jpg"
-  image_alt: "GENERAL PLUMBING"
+  image_alt: "Plumber providing general plumbing service in Sanford, FL"
   intro: "Best of all, when you work with our plumbers, you won't have to worry about getting taken for a ride. We'll give you the opportunity to approve an estimate before your job begins to ensure that you're on board with the cost and projected turnaround time at hand."
   heading_highlight: "Reliable"
   heading: "Plumber in Sanford, FL"
@@ -36,7 +36,7 @@ service:
       />
     </div>
     <div class="container">
-      <h4 class="hero__company">{{ company.name }}</h4>
+      <h4 class="hero__company" role="presentation">{{ company.name }}</h4>
       <h1 class="hero__title">
         Your Trusted Partner for Reliable Plumbing Services
       </h1>
@@ -59,7 +59,7 @@ service:
   
   <section class="section--brand">
     <div class="container">
-      <h3>
+      <h3 role="presentation">
         {{ company.tagline }}
       </h3>
     </div>
@@ -115,7 +115,7 @@ service:
             {% endif %}
           </div>
 
-          <h4 class="reliable__tagline mt-20 text-center">
+          <h4 class="reliable__tagline mt-20 text-center" role="presentation">
             {{ service.tagline }}
           </h4>
         </div>

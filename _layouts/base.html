@@ -11,7 +11,7 @@
   <meta name="description" content="{{ description }}" />{% endif %}
   <meta property="og:site_name" content="{{ company.name }}">
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ permalink | prepend: base_url | remove_last: "/" }}">
+  <meta property="og:url" content="{{ page.url | prepend: base_url }}">
   <meta property="og:title" content="{{ title }}" />
   {% if description %}
   <meta property="og:description" content="{{ description }}" />{% endif %}
@@ -20,7 +20,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="{{ company.name }} — Reliable residential & commercial plumbing in Sanford & Central Florida" />
-  <meta name="twitter:url" content="{{ permalink | prepend: base_url | remove_last: "/" }}">
+  <meta name="twitter:url" content="{{ page.url | prepend: base_url }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="{{ title }}" />
   {% if description %}
