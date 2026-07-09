@@ -1801,6 +1801,17 @@ img:not([src]) {
   font-size: 17px !important;
 }
 
+.clean .form__status {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(34, 139, 34);
+}
+
+.clean .form__status--error {
+  color: rgb(200, 40, 40);
+}
+
 /* --- Slider (publish-clean.css base) --- */
 .slider__box {
   container: block-slider / inline-size;

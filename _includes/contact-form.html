@@ -13,36 +13,66 @@
           />
         </div>
         <div class="col-6">
-          <form class="form">
+          <form
+            class="form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="3408bdea-9025-49ac-844f-2fba0ba19f89"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New contact from hancockplumbingco.com"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+              tabindex="-1"
+              autocomplete="off"
+            />
             <div class="form__row">
               <input
                 type="text"
+                name="name"
                 class="form-input"
                 placeholder="Name"
                 autocomplete="name"
+                required
               />
               <input
                 type="email"
+                name="email"
                 class="form-input"
                 placeholder="Email"
                 autocomplete="email"
+                required
               />
             </div>
             <input
               type="tel"
+              name="phone"
               class="form-input"
               placeholder="Phone"
               autocomplete="tel"
             />
             <textarea
+              name="message"
               class="form-textarea"
               placeholder="Your message"
+              required
             ></textarea>
             <div class="text-center">
               <button type="submit" class="btn btn--primary">
                 Send message
               </button>
             </div>
+            <p class="form__status" role="status" aria-live="polite" hidden></p>
           </form>
           <div class="contact__meta justify-center">
             <div>
@@ -59,3 +89,56 @@
     </div>
   </div>
 </section>
+<script>
+(function () {
+  var form = document.querySelector('.contact .form');
+  if (!form) return;
+  var status = form.querySelector('.form__status');
+  var button = form.querySelector('button[type="submit"]');
+  var defaultLabel = button ? button.textContent.trim() : 'Send message';
+
+  function setStatus(message, ok) {
+    if (!status) return;
+    status.textContent = message;
+    status.classList.toggle('form__status--error', !ok);
+    status.hidden = false;
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Sending…';
+    }
+    if (status) status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (response) {
+        return response.json().then(function (data) {
+          return { ok: response.ok, data: data };
+        });
+      })
+      .then(function (result) {
+        if (result.ok && result.data.success) {
+          setStatus('Thanks — your message has been sent. We\'ll be in touch soon.', true);
+          form.reset();
+        } else {
+          setStatus(result.data.message || 'Something went wrong. Please call us instead.', false);
+        }
+      })
+      .catch(function () {
+        setStatus('Network error. Please try again or call us instead.', false);
+      })
+      .finally(function () {
+        if (button) {
+          button.disabled = false;
+          button.textContent = defaultLabel;
+        }
+      });
+  });
+})();
+</script>
