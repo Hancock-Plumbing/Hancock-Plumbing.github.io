@@ -68,7 +68,14 @@
                 </div>
               </div>
             </div>
-            <div id="burger__box" class="burger__box nav__effect_1 left">
+            <button
+              type="button"
+              id="burger__box"
+              class="burger__box nav__effect_1 left"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+            >
               <div class="btn__burger-wrap">
                 <span class="btn__burger">
                   <span></span>
@@ -76,7 +83,7 @@
                   <span></span>
                 </span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -129,8 +136,8 @@
     </div>
   </div>
 
-  <!-- Mobile nav slide-out panel -->
-  <div id="mobile-nav" class="mobile-nav">
+  <!-- Mobile nav slide-out panel (starts closed: inert + hidden from AT) -->
+  <div id="mobile-nav" class="mobile-nav" inert aria-hidden="true">
     <button id="mobile-nav-close" class="mobile-nav__close" aria-label="Close menu">&times;</button>
     <nav aria-label="Mobile">
       <ul class="mobile-nav__links">
@@ -162,18 +169,46 @@
       function openNav() {
         nav.classList.add('is-open');
         burger.classList.add('is-open');
+        burger.setAttribute('aria-expanded', 'true');
+        nav.removeAttribute('inert');
+        nav.removeAttribute('aria-hidden');
         document.body.style.overflow = 'hidden';
+        if (close) close.focus();
       }
       function closeNav() {
         nav.classList.remove('is-open');
         burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        nav.setAttribute('inert', '');
+        nav.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        burger.focus();
       }
 
       burger.addEventListener('click', function () {
         if (nav.classList.contains('is-open')) { closeNav(); } else { openNav(); }
       });
       if (close) close.addEventListener('click', closeNav);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) { closeNav(); }
+      });
+
+      // The burger is a layout element on desktop but only functions as a menu
+      // toggle at <=1024px. Keep it out of the tab order / AT tree on desktop
+      // so it isn't a dead control there.
+      var desktop = window.matchMedia('(min-width: 1025px)');
+      function syncBurger() {
+        if (desktop.matches) {
+          if (nav.classList.contains('is-open')) closeNav();
+          burger.setAttribute('tabindex', '-1');
+          burger.setAttribute('aria-hidden', 'true');
+        } else {
+          burger.removeAttribute('tabindex');
+          burger.removeAttribute('aria-hidden');
+        }
+      }
+      syncBurger();
+      desktop.addEventListener('change', syncBurger);
     })();
   </script>
 </header>

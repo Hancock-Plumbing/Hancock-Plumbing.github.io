@@ -687,6 +687,17 @@ img:not([src]) {
   padding-left: 15px;
 }
 
+/* Burger is a <button>; strip UA chrome so it matches the old <div>. */
+button.burger__box {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
 .nav__item-inner {
   transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   color: var(--menu_color);
@@ -862,8 +873,11 @@ img:not([src]) {
   border-color: var(--header_subheader_color_active);
 }
 
-/* Dropdown open state — toggled by JS */
-.nav__box_1 .nav__item_has-child.is-open .sub-menu__nav {
+/* Dropdown open state — toggled by JS (mouse) or :focus-within (keyboard).
+   Focusing the always-visible parent link opens the submenu, so keyboard
+   users can then Tab into the now-visible child links. */
+.nav__box_1 .nav__item_has-child.is-open .sub-menu__nav,
+.nav__box_1 .nav__item_has-child:focus-within .sub-menu__nav {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
