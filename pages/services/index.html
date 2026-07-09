@@ -15,6 +15,9 @@ hide_why_choose_intro: true
       <img
         src="/images/hero-plumbing-tools.jpg"
         alt="Plumbing tools"
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
       />
     </div>
     <div class="container">
@@ -46,7 +49,7 @@ hide_why_choose_intro: true
             <svg class="service-card__icon">
               <use href="{{ service.icon }}"></use>
             </svg>
-            <h5 class="service-card__title">{{ service.title }}</h5>
+            <h2 class="service-card__title">{{ service.title }}</h2>
           </a>
         </div>
       {% assign next_mod = forloop.index | modulo: 4 %}

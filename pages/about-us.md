@@ -6,7 +6,7 @@ layout: service
 hero_title: "About Us"
 eleventyNavigation:
   key: About
-  order: 3
+  order: 4
 service_image: "/images/about-us-service.jpg"
 service_image_alt: "Hancock Plumbing plumber at work in Sanford, FL"
 service_heading: "About Hancock Plumbing in Sanford, FL"

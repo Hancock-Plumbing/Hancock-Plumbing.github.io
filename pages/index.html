@@ -70,6 +70,7 @@ service:
           <img
             src="{{ service.image }}"
             alt="{{ service.image_alt }}"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
           <p class="reliable__intro">
             {{ service.intro }}
@@ -162,7 +163,7 @@ service:
             <svg class="service-card__icon">
               <use href="{{ service.icon }}"></use>
             </svg>
-            <h5 class="service-card__title">{{ service.title }}</h5>
+            <h3 class="service-card__title">{{ service.title }}</h3>
           </a>
         </div>
       {% assign next_mod = forloop.index | modulo: 4 %}

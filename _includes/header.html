@@ -40,7 +40,7 @@
                   <a href="/" class="logo__link">
                     <div class="crop cropped-image image-loaded mode_contain">
                       <div class="crop__content">
-                        <img class="crop-image" alt="{{ company.name }}" src="/images/logo.png" />
+                        <img class="crop-image" alt="{{ company.name }}" src="/images/logo.png" loading="eager" />
                       </div>
                     </div>
                   </a>
@@ -138,7 +138,7 @@
 
   <!-- Mobile nav slide-out panel (starts closed: inert + hidden from AT) -->
   <div id="mobile-nav" class="mobile-nav" inert aria-hidden="true">
-    <button id="mobile-nav-close" class="mobile-nav__close" aria-label="Close menu">&times;</button>
+    <button type="button" id="mobile-nav-close" class="mobile-nav__close" aria-label="Close menu">&times;</button>
     <nav aria-label="Mobile">
       <ul class="mobile-nav__links">
         <li{% if page.url == '/' %} class="active"{% endif %}><a href="/">Home</a></li>

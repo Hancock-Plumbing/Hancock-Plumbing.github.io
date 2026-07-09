@@ -8,6 +8,7 @@
         <img
           src="{{ service_image }}"
           alt="{{ service_image_alt | default: 'Plumbing Services' }}"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
         {% if service_quotes %}
           {{ service_quotes | md }}

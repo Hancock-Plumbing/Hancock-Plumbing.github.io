@@ -16,6 +16,6 @@ cta: "To speak to a helpful company representative, call [Hancock Plumbing Co In
 
 When your water heater needs repairs, choosing the right plumbing contractors can make all the difference. At Hancock Plumbing Co Inc, our licensed technicians can often schedule an appointment and have the problem fixed the very same day. Our plumbers know all about conventional gas and electric water heaters, as well as newer tankless water heaters.
 
-#### INVEST IN GREAT SERVICE
+### INVEST IN GREAT SERVICE
 
 Remember, water heaters don't last forever, but staying on top of maintenance and repairs can help extend the life of your valuable investment. To learn more about our water heater repair services or to schedule an appointment, contact us today.

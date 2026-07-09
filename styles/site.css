@@ -583,14 +583,7 @@ img:not([src]) {
 .slogan__container .icon svg {
   width: 1.25em;
   height: 1.25em;
-  margin-left: 0.535em;
-  margin-right: 0.535em;
   fill: rgb(205, 20, 21);
-}
-
-/* --- Social icon in topbar --- */
-.topbar__header .soc__icon svg {
-  fill: rgb(255, 255, 255);
 }
 
 /* --- Mobile slogan bar --- */
@@ -1684,6 +1677,12 @@ button.burger__box {
   text-transform: uppercase;
 }
 
+/* Card titles are h2 (services index) / h3 (home) for correct heading
+   nesting; hold their visual size against the global !important h2/h3 rules. */
+.template .clean .service-card__title {
+  font-size: 18px !important;
+}
+
 /* --- Why Choose Us --- */
 .clean .why-choose {
   position: relative;
@@ -1712,7 +1711,8 @@ button.burger__box {
   box-shadow: rgba(32, 32, 32, 0.5) 0px 0px 7px 0px;
 }
 
-.clean .why-choose__card h5 {
+.template .clean .why-choose__card h3 {
+  font-size: 18px !important;
   font-weight: 700;
   margin-bottom: 15px;
   color: rgb(var(--preColor_brand));
