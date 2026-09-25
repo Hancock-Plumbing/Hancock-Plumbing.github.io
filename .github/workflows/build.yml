@@ -14,25 +14,25 @@ jobs:
     name: 11ty build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # Full history so eleventy's "git Last Modified" can read real
           # per-file commit dates for sitemap <lastmod> (default is a shallow
           # depth-1 clone, which collapses every date to the deploy commit).
           fetch-depth: 0
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Install Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with: 
-          node-version: 20
+          node-version: 24
           cache: 'npm'
       - name: Build HTML
         run: |
           npm ci --omit=dev
           npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
   # Deployment job
   deploy:
     environment:
@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       - name: Purge Cloudflare cache
         env:
