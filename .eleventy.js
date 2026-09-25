@@ -52,6 +52,7 @@ export default function (eleventyConfig) {
   // Internal working docs — never publish to the site
   eleventyConfig.ignores.add("SITE-REVIEW-*.md");
   eleventyConfig.ignores.add("HANDOFF-*.md");
+  eleventyConfig.ignores.add("SEO-AUDIT-*.md");
   eleventyConfig.addPassthroughCopy({
     fonts: "fonts",
     // Body <img> tags are optimized to /img/ by eleventy-img at build time.
