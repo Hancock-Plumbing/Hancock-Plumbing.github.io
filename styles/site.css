@@ -293,22 +293,8 @@ img:not([src]) {
   padding: 0 15px;
 }
 
-.s-wrapper .row__item {
-  position: relative;
-  box-sizing: border-box;
-  padding: 0 15px;
-}
-
-.s-wrapper .row__item_desktop-12 {
-  width: 100%;
-}
-
 .template .s-wrapper .row {
   margin-top: -14px;
-}
-
-.template .s-wrapper .row__item {
-  margin-top: 14px;
 }
 
 .row > .layout {
@@ -379,14 +365,6 @@ img:not([src]) {
   width: 83.3333%;
 }
 
-.col-11 {
-  width: 91.6667%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
 /* ============================================================
    3. Header & Navigation
    ============================================================ */
@@ -395,21 +373,6 @@ img:not([src]) {
 .header {
   position: relative;
   z-index: 1005;
-}
-
-.header ._left,
-.header ._center,
-.header ._right {
-  display: flex;
-  flex: 1;
-}
-
-.header ._left {
-  justify-content: flex-start;
-}
-
-.header ._right {
-  justify-content: flex-end;
 }
 
 .header .soc {
@@ -1034,12 +997,6 @@ button.burger__box {
   isolation: isolate;
 }
 
-/* Short hero for service pages */
-.clean .hero--short {
-  min-height: 546px;
-  padding: 0;
-}
-
 /* No overlay pseudo-element — container bg handles text readability */
 .clean .hero::before {
   display: none;
@@ -1069,12 +1026,6 @@ button.burger__box {
     rgb(0, 0, 0, 0.55) 70%,
     transparent 70%
   );
-}
-
-.clean .hero--short .container {
-  min-height: 546px;
-  padding-top: 62px;
-  padding-bottom: 36px;
 }
 
 .clean .hero__title,
@@ -1117,12 +1068,6 @@ button.burger__box {
   font-family: Caveat, cursive !important;
 }
 
-.clean .hero__serving {
-  font-size: 18px;
-  color: rgb(var(--preColor_textAlt));
-  margin-bottom: 10px;
-}
-
 .clean .hero__actions {
   display: flex;
   gap: 14px 30px;
@@ -1150,10 +1095,6 @@ button.burger__box {
 .clean .section {
   position: relative;
   padding: 70px 0;
-}
-
-.clean .section--no-padding {
-  padding: 0;
 }
 
 /* --- section--dark --- */
@@ -1234,11 +1175,6 @@ button.burger__box {
   margin: 0;
   font-size: 28.5px !important;
   line-height: 35.5px !important;
-}
-
-/* --- section--gray --- */
-.clean .section--gray {
-  background: rgb(245, 245, 245);
 }
 
 /* --- section__bg --- */
@@ -1387,42 +1323,6 @@ button.burger__box {
   margin: 0 auto 40px;
 }
 
-/* --- service detail (individual service pages) --- */
-.clean .service-detail {
-  padding: 88px 0;
-}
-
-.clean .service-detail__heading {
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.clean .service-detail__image {
-  display: block;
-  max-width: 100%;
-  height: 408px;
-  object-fit: cover;
-}
-
-.clean .service-detail__experience {
-  margin-top: 20px;
-  font-weight: 700;
-}
-
-.clean .service-detail__closing {
-  margin-top: 30px;
-}
-
-.clean .service-detail__closing p {
-  text-align: center;
-}
-
-/* Auto-space markdown content in service detail */
-.service-detail .col-6 > p,
-.service-detail .col-6 > ul {
-  margin-top: 15px;
-}
-
 /* --- service page shared-section overrides
    (scoped to .service-page to avoid affecting homepage) --- */
 .clean.service-page .testimonials {
@@ -1439,26 +1339,6 @@ button.burger__box {
 
 .clean.service-page .why-choose {
   padding: 94px 0;
-}
-
-/* --- publish.css overrides — section__text and section__title
-   publish.css sets font-size:1px !important on these; we must
-   override back to readable sizes inside .clean pages. --- */
-.template .clean .section__text {
-  font-size: 17px !important;
-  line-height: 27.2px !important;
-}
-
-.template .clean .section__text p {
-  font-size: 17px !important;
-  line-height: 27.2px !important;
-  margin: 0 0 14px;
-}
-
-.template .clean .section__title h4 {
-  font-size: 22px !important;
-  line-height: 28.5px !important;
-  margin-bottom: 14px;
 }
 
 /* --- privacy policy page --- */
@@ -1478,11 +1358,6 @@ button.burger__box {
   margin-left: 0;
 }
 
-.clean .s-section .row__item {
-  margin-top: 0;
-  padding: 0;
-}
-
 /* Privacy page heading hierarchy: markdown emits h1 (title) + h2 (sections);
    scope the sizes so the global !important heading rules don't blow them up. */
 .template .clean .privacy-section h1,
@@ -1496,29 +1371,6 @@ button.burger__box {
   font-size: 22px !important;
   margin-top: 28px;
   margin-bottom: 10px;
-}
-
-/* --- about us page --- */
-.clean .section--about {
-  padding: 46px 0;
-}
-
-.template .clean .section--about h2,
-.template .clean .section--about h2 span {
-  font-size: 54px !important;
-  line-height: 1.5 !important;
-  text-transform: uppercase;
-}
-
-.clean .section--about p,
-.clean .section--about li,
-.clean .section--about blockquote {
-  font-size: 17px;
-  line-height: 27.2px;
-}
-
-.clean .section--about blockquote {
-  margin: 0;
 }
 
 /* --- services grid (services index page) --- */
@@ -1568,10 +1420,6 @@ button.burger__box {
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
-}
-
-.btn.effect-fade-out {
-  transition: opacity 0.3s ease-out;
 }
 
 .btn.effect-shadow {
@@ -1642,11 +1490,6 @@ button.burger__box {
   color: var(--btn_primary_color);
 }
 
-.clean .btn--outline {
-  background: none;
-  border: 1px solid currentColor;
-}
-
 .clean .btn .icon {
   width: 1.25em;
   height: 1.25em;
@@ -1655,15 +1498,6 @@ button.burger__box {
 }
 
 /* --- Cards / shapes --- */
-.clean .card {
-  background: rgb(245, 245, 245, 0.25);
-  padding: 50px;
-  border-radius: 0;
-}
-
-.clean .card--bordered {
-  border: 1px solid rgb(var(--preColor_text), 0.3);
-}
 
 .clean .section--services .col-3 {
   display: flex;
@@ -1996,18 +1830,6 @@ button:focus-visible,
   padding: 40px 0;
 }
 
-/* --- Picture / responsive images --- */
-.clean .responsive-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.clean .responsive-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* --- Typography --- */
 
 /*
@@ -2084,10 +1906,6 @@ button:focus-visible,
 /* Preserve utility class colors inside headings */
 .template .clean .text-brand {
   color: rgb(var(--preColor_brand)) !important;
-}
-
-.template .clean .text-alt {
-  color: rgb(var(--preColor_textAlt)) !important;
 }
 
 .clean p {
@@ -2252,8 +2070,6 @@ button:focus-visible,
    9. Responsive Breakpoints
    ============================================================ */
 
-/* --- >= 1921px --- */
-
 /* --- <= 1366px --- */
 
 /* publish-clean.css: s-wrapper max-width */
@@ -2290,10 +2106,6 @@ button:focus-visible,
     padding: 0;
   }
 
-  .clean .section--about {
-    padding: 46px 0;
-  }
-
   .clean .hero {
     min-height: 585px;
   }
@@ -2304,27 +2116,8 @@ button:focus-visible,
     padding-bottom: 30px;
   }
 
-  .clean .hero--short {
-    min-height: 434px;
-    padding: 54px 0;
-  }
-
-  .clean .hero--short .container {
-    min-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   .clean .hero__title {
     font-size: 57px;
-  }
-
-  .clean .service-detail {
-    padding: 72px 0;
-  }
-
-  .clean .service-detail__image {
-    height: 345px;
   }
 
   .clean .section--brand {
@@ -2421,37 +2214,6 @@ button:focus-visible,
 @media (width <= 1024px) {
   .s-wrapper {
     padding: 0 30px;
-  }
-
-  .template .s-wrapper div[class*=" row__item_desktop"] {
-    width: 100% !important;
-  }
-
-  .template .s-wrapper div.row__item_desktop-4,
-  .template .s-wrapper div.row__item_desktop-3 {
-    width: 50% !important;
-  }
-
-  .template .s-wrapper div.row__item_desktop-4 .row__item_desktop-2,
-  .template .s-wrapper div.row__item_desktop-3 .row__item_desktop-2 {
-    width: 50% !important;
-  }
-
-  .s-wrapper div.row__item_desktop-4 .row__item_desktop-4,
-  .s-wrapper div.row__item_desktop-3 .row__item_desktop-3 {
-    width: 100% !important;
-  }
-
-  .template .s-wrapper div.row__item_desktop-2 {
-    width: 25% !important;
-  }
-
-  .template .s-wrapper div.row__item_desktop-2 .row__item_desktop-2 {
-    width: 100% !important;
-  }
-
-  .row__item_empty {
-    display: none;
   }
 }
 
@@ -2742,111 +2504,6 @@ button:focus-visible,
 @media (width <= 767px) {
   .s-wrapper {
     padding: 0 20px;
-  }
-
-  .s-wrapper .row__item_phone-1 {
-    width: 8.3333%;
-  }
-
-  .s-wrapper .row__item_phone-2 {
-    width: 16.6667%;
-  }
-
-  .s-wrapper .row__item_phone-3 {
-    width: 25%;
-  }
-
-  .s-wrapper .row__item_phone-4 {
-    width: 33.3333%;
-  }
-
-  .s-wrapper .row__item_phone-5 {
-    width: 41.6667%;
-  }
-
-  .s-wrapper .row__item_phone-6 {
-    width: 50%;
-  }
-
-  .s-wrapper .row__item_phone-7 {
-    width: 58.3333%;
-  }
-
-  .s-wrapper .row__item_phone-8 {
-    width: 66.6667%;
-  }
-
-  .s-wrapper .row__item_phone-9 {
-    width: 75%;
-  }
-
-  .s-wrapper .row__item_phone-10 {
-    width: 83.3333%;
-  }
-
-  .s-wrapper .row__item_phone-11 {
-    width: 91.6667%;
-  }
-
-  .s-wrapper .row__item_phone-12 {
-    width: 100%;
-  }
-
-  .s-wrapper .row__item_phone-offset-0 {
-    margin-left: 0%;
-  }
-
-  .s-wrapper .row__item_phone-offset-1 {
-    margin-left: 8.3333%;
-  }
-
-  .s-wrapper .row__item_phone-offset-2 {
-    margin-left: 16.6667%;
-  }
-
-  .s-wrapper .row__item_phone-offset-3 {
-    margin-left: 25%;
-  }
-
-  .s-wrapper .row__item_phone-offset-4 {
-    margin-left: 33.3333%;
-  }
-
-  .s-wrapper .row__item_phone-offset-5 {
-    margin-left: 41.6667%;
-  }
-
-  .s-wrapper .row__item_phone-offset-6 {
-    margin-left: 50%;
-  }
-
-  .s-wrapper .row__item_phone-offset-7 {
-    margin-left: 58.3333%;
-  }
-
-  .s-wrapper .row__item_phone-offset-8 {
-    margin-left: 66.6667%;
-  }
-
-  .s-wrapper .row__item_phone-offset-9 {
-    margin-left: 75%;
-  }
-
-  .s-wrapper .row__item_phone-offset-10 {
-    margin-left: 83.3333%;
-  }
-
-  .template .s-wrapper div.row__item_desktop-2 {
-    width: 50% !important;
-  }
-
-  .template .s-wrapper div.row__item_desktop-4,
-  .template .s-wrapper div.row__item_desktop-3 {
-    width: 100% !important;
-  }
-
-  .template .s-wrapper div.row__item_desktop-3 .row__item_desktop-2 {
-    width: 100% !important;
   }
 }
 
