@@ -1,0 +1,26 @@
+<section class="testimonials">
+  <div class="container">
+    <ul class="testimonials__list">
+      {% for testimonial in testimonials %}
+      <li class="testimonial-card">
+        <div class="divider"></div>
+        <p class="testimonial-card__rating">Review rating</p>
+        <p class="testimonial-card__score" aria-hidden="true">{{ testimonial.rating }}</p>
+        <p
+          class="testimonial-card__stars"
+          role="img"
+          aria-label="{{ testimonial.rating }} out of 5 stars"
+        >{% for i in (1..testimonial.rating) %}★{% endfor %}</p>
+        <figure>
+          <blockquote>
+            <p class="testimonial-card__text">
+              {{ testimonial.text }}
+            </p>
+          </blockquote>
+          <figcaption class="testimonial-card__author">{{ testimonial.author }}</figcaption>
+        </figure>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

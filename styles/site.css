@@ -927,6 +927,7 @@ button.burger__box {
 }
 
 .btn__burger-wrap {
+  display: block;
   position: relative;
   z-index: 102;
 }
@@ -1736,11 +1737,10 @@ button.burger__box {
   left: 0;
 }
 
-/* --- Testimonial slider --- */
+/* --- Testimonials --- */
 .clean .testimonials {
   background: rgb(255, 255, 255);
-  padding: 50px 0 20px;
-  min-height: 478px;
+  padding: 50px 0;
 }
 
 .clean .testimonial-card {
@@ -1891,139 +1891,12 @@ button:focus-visible,
   border: 0;
 }
 
-/* --- Slider (publish-clean.css base) --- */
-.slider__box {
-  container: block-slider / inline-size;
-}
-
-.slick-dots {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  left: 0;
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.slick-dots li {
-  display: inline-flex;
-  align-items: center;
-  height: 36px;
-  margin: 0 4px;
-  cursor: pointer;
-}
-
-.slick-dots .icon {
-  transition: 0.3s;
-  opacity: 0.5;
-}
-
-.slick-dots .slick-active .icon,
-.slick-dots > li:hover .icon {
-  opacity: 1;
-}
-
-.slick-dots .icon,
-.slick-dots .icon svg {
-  height: auto;
-}
-
-.slider__section {
-  overflow: hidden;
-}
-
-/* --- Slider (publish-clean.css: glide base) --- */
-.glide {
-  position: relative;
-  width: 100%;
-}
-
-.glide__slides {
-  display: flex;
-  position: relative;
-  flex-wrap: nowrap;
-  width: 100%;
+.clean .testimonials__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   padding: 0;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
   list-style: none;
-  white-space: nowrap;
-  touch-action: pan-y;
-  will-change: transform;
-}
-
-.glide__slide {
-  flex-shrink: 0;
-  width: 100%;
-  white-space: normal;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-/* --- static-fixes.css: carousel fixes for rendering without bundle.js ---
-   Make carousel slides lay out horizontally */
-.glide__track {
-  overflow: hidden;
-}
-
-/* --- Slider (site.css .clean overrides) --- */
-.clean .glide__track {
-  overflow: hidden;
-}
-
-.clean .glide__slides {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.clean .glide__slide {
-  flex-shrink: 0;
-  width: 100%;
-  list-style: none;
-}
-
-.clean .slider__box {
-  max-width: 66.6667%;
-  margin: 0 auto;
-}
-
-.clean .slick-dots {
-  position: static;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding: 20px 0;
-  list-style: none;
-  width: auto;
-}
-
-.clean .slick-dots li {
-  display: inline-flex;
-  align-items: center;
-  height: 36px;
-  margin: 0 4px;
-  cursor: pointer;
-}
-
-.clean .slick-dots .icon {
-  transition: 0.3s;
-  opacity: 0.5;
-  line-height: 0;
-}
-
-.clean .slick-dots li.slick-active .icon,
-.clean .slick-dots li:hover .icon {
-  opacity: 1;
-}
-
-.clean .slick-dots .icon,
-.clean .slick-dots .icon svg {
-  width: 15px;
-  height: 15px;
-  fill: #000;
 }
 
 /* --- Reviews heading --- */
@@ -2477,8 +2350,7 @@ button:focus-visible,
 
   /* Service page shared-section overrides at 1366 */
   .clean.service-page .testimonials {
-    padding: 0;
-    min-height: 528px;
+    padding: 0 0 50px;
   }
 
   .clean.service-page .contact__inner {
@@ -2567,6 +2439,12 @@ button:focus-visible,
    bundle.js normally handles this by adding/removing classes
    and toggling display. We replicate that here with CSS. */
 @media (width <= 1024px) {
+  .clean .testimonials__list {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
   /* Hide topbar row ("Seminole, Orange & Volusia Co." + Facebook) */
   .template .topbar__header {
     display: none !important;
@@ -2789,10 +2667,6 @@ button:focus-visible,
   .template .clean .reviews-heading h2,
   .template .clean .reviews-heading h2 span {
     font-size: 51px !important;
-  }
-
-  .clean .slider__box {
-    max-width: 100%;
   }
 
   .clean .section--dark {

@@ -19,7 +19,7 @@
                 <div class="soc soc_block">
                   <a class="soc__link" href="{{ company.social.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i class="icon soc__icon fb _dark">
-                      <svg><use href="#templates/_global/social/facebook"></use></svg>
+                      <svg><use href="#icon-facebook"></use></svg>
                     </i>
                   </a>
                 </div>
@@ -40,7 +40,7 @@
                   <a href="/" class="logo__link">
                     <div class="crop cropped-image image-loaded mode_contain">
                       <div class="crop__content">
-                        <img class="crop-image" alt="{{ company.name }}" src="/images/logo.png" loading="eager" />
+                        <img class="crop-image" alt="{{ company.name }}" src="/images/logo.png" loading="eager" sizes="(max-width: 767px) 180px, 280px" />
                       </div>
                     </div>
                   </a>
@@ -76,13 +76,13 @@
               aria-expanded="false"
               aria-controls="mobile-nav"
             >
-              <div class="btn__burger-wrap">
+              <span class="btn__burger-wrap">
                 <span class="btn__burger">
                   <span></span>
                   <span></span>
                   <span></span>
                 </span>
-              </div>
+              </span>
             </button>
           </div>
         </div>
