@@ -21,7 +21,7 @@ hide_why_choose_intro: true
       />
     </div>
     <div class="container">
-      <h4 class="hero__company" role="presentation">{{ company.name }}</h4>
+      <p class="hero__company">{{ company.name }}</p>
       <h1 class="hero__title">Our Services</h1>
       <p class="hero__subtitle">
         {{ company.service_area }}
@@ -49,7 +49,7 @@ hide_why_choose_intro: true
             <svg class="service-card__icon">
               <use href="{{ service.icon }}"></use>
             </svg>
-            <h2 class="service-card__title">{{ service.title }}</h2>
+            <span class="service-card__title">{{ service.title }}</span>
           </a>
         </div>
       {% assign next_mod = forloop.index | modulo: 4 %}

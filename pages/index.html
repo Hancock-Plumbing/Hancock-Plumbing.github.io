@@ -35,7 +35,7 @@ service:
       />
     </div>
     <div class="container">
-      <h4 class="hero__company" role="presentation">{{ company.name }}</h4>
+      <p class="hero__company">{{ company.name }}</p>
       <h1 class="hero__title">
         Your Trusted Partner for Reliable Plumbing Services
       </h1>
@@ -57,9 +57,9 @@ service:
 
   <section class="section--brand">
     <div class="container">
-      <h3 role="presentation">
+      <p class="brand__tagline">
         {{ company.tagline }}
-      </h3>
+      </p>
     </div>
   </section>
 
@@ -113,9 +113,9 @@ service:
             {% endif %}
           </div>
 
-          <h4 class="reliable__tagline mt-20 text-center" role="presentation">
+          <p class="reliable__tagline mt-20 text-center">
             {{ service.tagline }}
-          </h4>
+          </p>
         </div>
       </div>
 
@@ -163,7 +163,7 @@ service:
             <svg class="service-card__icon">
               <use href="{{ service.icon }}"></use>
             </svg>
-            <h3 class="service-card__title">{{ service.title }}</h3>
+            <span class="service-card__title">{{ service.title }}</span>
           </a>
         </div>
       {% assign next_mod = forloop.index | modulo: 4 %}

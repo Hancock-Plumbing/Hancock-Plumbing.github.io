@@ -1085,10 +1085,15 @@ button.burger__box {
 }
 
 .clean .hero__company {
-  font-size: 40px;
-  font-weight: 500;
   color: rgb(var(--preColor_textAlt));
   margin-bottom: 10px;
+}
+
+.template .clean .hero__company {
+  font-family: var(--font_secondary);
+  font-size: 36px !important;
+  font-weight: 500;
+  line-height: 1.25 !important;
 }
 
 .clean .hero__title {
@@ -1224,9 +1229,10 @@ button.burger__box {
   background: #fff;
 }
 
-.template .clean .section--brand h3,
-.clean .section--brand h3 {
+.template .clean .brand__tagline {
+  font-family: var(--font_secondary);
   font-weight: 500;
+  margin: 0;
   font-size: 28.5px !important;
   line-height: 35.5px !important;
 }
@@ -1270,9 +1276,11 @@ button.burger__box {
   text-transform: uppercase;
 }
 
-.template .clean .section--reliable h4 {
+.template .clean .reliable__tagline {
+  font-family: var(--font_secondary);
   font-size: 28px !important;
-  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25 !important;
 }
 
 .clean .reliable__bullet-box {
@@ -1329,6 +1337,7 @@ button.burger__box {
   border-bottom: 1px solid rgba(var(--preColor_text), 0.3);
   padding: 15px 0;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .clean .reliable__review-cta {
@@ -1413,10 +1422,6 @@ button.burger__box {
 .service-detail .col-6 > p,
 .service-detail .col-6 > ul {
   margin-top: 15px;
-}
-
-.service-detail .col-6 > h4 {
-  margin-top: 20px;
 }
 
 /* --- service page shared-section overrides
@@ -1677,10 +1682,11 @@ button.burger__box {
   text-transform: uppercase;
 }
 
-/* Card titles are h2 (services index) / h3 (home) for correct heading
-   nesting; hold their visual size against the global !important h2/h3 rules. */
 .template .clean .service-card__title {
+  display: block;
+  font-family: var(--font_secondary);
   font-size: 18px !important;
+  line-height: 1.25;
 }
 
 /* --- Why Choose Us --- */
@@ -1759,6 +1765,22 @@ button.burger__box {
   text-align: center;
 }
 
+.template .clean .testimonial-card__score,
+.template .clean .testimonial-card__stars {
+  font-family: var(--font_secondary);
+  font-weight: 500;
+  line-height: 1.25 !important;
+  margin: 0;
+}
+
+.template .clean .testimonial-card__score {
+  font-size: 60px !important;
+}
+
+.template .clean .testimonial-card__stars {
+  font-size: 14px !important;
+}
+
 .clean .testimonial-card__text {
   margin: 20px 0;
   font-size: 16px;
@@ -1766,6 +1788,8 @@ button.burger__box {
 
 .clean .testimonial-card__author {
   font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1em;
 }
 
 /* --- Divider --- */
