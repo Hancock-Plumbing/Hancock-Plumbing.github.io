@@ -132,7 +132,15 @@ section {
 }
 
 body {
+  min-width: 320px;
+  margin: 0;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
 }
 
 ol,
@@ -145,31 +153,15 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: none;
 }
 
 a {
   outline: none;
-}
-
-/* --- publish-clean.css: body defaults --- */
-body {
-  min-width: 320px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-/* --- site.css: body margin reset --- */
-body {
-  margin: 0;
 }
 
 /* --- publish-clean.css: img reset --- */
@@ -199,19 +191,16 @@ button {
 /* --- publish-clean.css: section base --- */
 .s-section {
   position: relative;
+  background: var(--template_background);
 }
 
-.s-section .s-wrapper > .layout:before {
+.s-section .s-wrapper > .layout::before {
   content: "";
   display: table;
 }
 
 .s-section > div {
   width: 100%;
-}
-
-.s-section {
-  background: var(--template_background);
 }
 
 .s-section .row {
@@ -278,7 +267,6 @@ div.template ::placeholder {
 img:not([src]) {
   display: none;
 }
-
 
 /* --- site.css: .clean scoped reset --- */
 .clean *,
@@ -507,7 +495,6 @@ img:not([src]) {
   white-space: pre;
 }
 
-
 /* --- Header sections --- */
 .header .topbar__header {
   background-color: transparent;
@@ -567,10 +554,13 @@ img:not([src]) {
 /* --- Burger (hidden on desktop, shown via media query) --- */
 .burger__box {
   display: none;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* --- Slogan --- */
 .slogan {
+  transition: color 0.15s ease;
   font-size: 18px;
   font-family: var(--font_primary);
   font-weight: 400;
@@ -581,6 +571,7 @@ img:not([src]) {
 }
 
 .slogan__container .icon svg {
+  margin: 0 !important;
   width: 1.25em;
   height: 1.25em;
   fill: rgb(205, 20, 21);
@@ -604,7 +595,11 @@ img:not([src]) {
 }
 
 /* --- publish-clean.css: subheader nav hover/active states --- */
-.header .subheader__header .nav__box_1 .nav__item.nav__item_active .nav__item-inner,
+.header
+  .subheader__header
+  .nav__box_1
+  .nav__item.nav__item_active
+  .nav__item-inner,
 .header .subheader__header .nav__box_1 .nav__item:hover .nav__item-inner {
   background: var(--header_subheader_color_static);
 }
@@ -675,11 +670,6 @@ img:not([src]) {
   font-size: 1px;
 }
 
-.burger__box {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 /* Burger is a <button>; strip UA chrome so it matches the old <div>. */
 button.burger__box {
   padding-top: 0;
@@ -692,7 +682,10 @@ button.burger__box {
 }
 
 .nav__item-inner {
-  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
   color: var(--menu_color);
   font-family: var(--menu_fontFamily);
   font-size: var(--menu_fontSize);
@@ -785,7 +778,7 @@ button.burger__box {
   color: var(--header_subheader_color_static);
 }
 
-.nav__box .sub-menu__link:before {
+.nav__box .sub-menu__link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -797,7 +790,7 @@ button.burger__box {
   background: var(--menu_color);
 }
 
-.header .subheader__header .nav__box .sub-menu__link:before {
+.header .subheader__header .nav__box .sub-menu__link::before {
   background: var(--header_subheader_color_static);
 }
 
@@ -809,7 +802,9 @@ button.burger__box {
 .sub-menu__link {
   display: inline-block;
   position: relative;
-  transition: color 0.15s ease, background 0.15s ease;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
@@ -856,7 +851,11 @@ button.burger__box {
   left: 0;
   min-width: 100%;
   transform: translateY(-10px);
-  transition: border-color 0.15s ease, transform 0s 0.15s ease, opacity 0.15s ease, visibility 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0s 0.15s ease,
+    opacity 0.15s ease,
+    visibility 0.15s ease;
   animation: eventsNo 0s forwards;
   border-color: var(--menu_active_color);
   white-space: nowrap;
@@ -875,7 +874,11 @@ button.burger__box {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
-  transition: border-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease, visibility 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    visibility 0.15s ease;
 }
 
 .nav__box_1 .sub-menu__nav-background {
@@ -916,7 +919,6 @@ button.burger__box {
   color: rgb(var(--function_color_altBrand_darken_20));
 }
 
-
 /* --- publish-clean.css: burger --- */
 .btn__burger {
   padding: 8px;
@@ -938,8 +940,8 @@ button.burger__box {
   padding-right: 20px;
 }
 
-.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title:before,
-.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title:after {
+.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title::before,
+.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -949,21 +951,17 @@ button.burger__box {
   background: currentColor;
 }
 
-.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title:before {
+.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title::before {
   right: 5px;
   transform: rotate(45deg);
 }
 
-.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title:after {
+.nav__box_1.nav__box_1 .nav__item_has-child .nav__link .nav__title::after {
   right: 0;
   transform: rotate(-45deg);
 }
 
 /* --- publish-clean.css: slogan --- */
-.slogan {
-  transition: color 0.15s ease;
-}
-
 .subheader__header .slogan,
 .subheader__header + .header__slogan .slogan {
   color: var(--header_subheader_color_static) !important;
@@ -1007,10 +1005,6 @@ button.burger__box {
   display: flex;
   flex-shrink: 0;
   width: auto;
-}
-
-.slogan__container .icon svg {
-  margin: 0 !important;
 }
 
 .slogan__container .icon + span {
@@ -1070,7 +1064,11 @@ button.burger__box {
   min-height: 695px;
   padding-top: 62px;
   padding-bottom: 36px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.55) 70%, transparent 70%);
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 0.55) 70%,
+    transparent 70%
+  );
 }
 
 .clean .hero--short .container {
@@ -1285,12 +1283,12 @@ button.burger__box {
 }
 
 .clean .reliable__bullet-box {
-  border-left: 1px solid rgba(40, 40, 39, 0.3);
+  border-left: 1px solid rgb(40, 40, 39, 0.3);
   padding: 16px 18px;
 }
 
 .clean .reliable__bullets > :last-child .reliable__bullet-box {
-  border-right: 1px solid rgba(40, 40, 39, 0.3);
+  border-right: 1px solid rgb(40, 40, 39, 0.3);
 }
 
 .clean .section--reliable ul {
@@ -1334,8 +1332,8 @@ button.burger__box {
 }
 
 .clean .reliable__tagline {
-  border-top: 1px solid rgba(var(--preColor_text), 0.3);
-  border-bottom: 1px solid rgba(var(--preColor_text), 0.3);
+  border-top: 1px solid rgb(var(--preColor_text), 0.3);
+  border-bottom: 1px solid rgb(var(--preColor_text), 0.3);
   padding: 15px 0;
   margin-top: 20px;
   margin-bottom: 0;
@@ -1545,19 +1543,27 @@ button.burger__box {
   box-sizing: border-box;
   height: 40px;
   padding: 0 25px;
-  transition: background 0.15s ease, color 0.15s ease, fill 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, visibility 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    fill 0.15s ease,
+    border-color 0.15s ease,
+    opacity 0.15s ease,
+    visibility 0.15s ease;
   border: 0;
   border-radius: 3px;
   outline: none;
   background: none;
-  font-family: -apple-system, system-ui, blinkmacsystemfont, segoe ui, helvetica neue, arial, sans-serif;
+  font-family:
+    -apple-system, system-ui, blinkmacsystemfont, "segoe ui", "helvetica neue",
+    arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  word-break: break-all;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: anywhere;
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1569,11 +1575,15 @@ button.burger__box {
 }
 
 .btn.effect-shadow {
-  transition: box-shadow 0.3s ease-out, text-shadow 0.3s ease-out;
+  transition:
+    box-shadow 0.3s ease-out,
+    text-shadow 0.3s ease-out;
 }
 
 .btn.effect-glow {
-  transition: box-shadow 0.3s ease-out, text-shadow 0.3s ease-out;
+  transition:
+    box-shadow 0.3s ease-out,
+    text-shadow 0.3s ease-out;
 }
 
 .btn .icon {
@@ -1715,7 +1725,7 @@ button.burger__box {
   flex: 1;
   background: rgb(245, 245, 245, 0.25);
   padding: 25px;
-  box-shadow: rgba(32, 32, 32, 0.5) 0px 0px 7px 0px;
+  box-shadow: rgb(32, 32, 32, 0.5) 0 0 7px 0;
 }
 
 .template .clean .why-choose__card h3 {
@@ -1744,7 +1754,7 @@ button.burger__box {
 }
 
 .clean .testimonial-card {
-  border: 1px solid rgba(40, 40, 39, 0.3);
+  border: 1px solid rgb(40, 40, 39, 0.3);
   padding: 10px 33px;
   text-align: center;
 }
@@ -1866,6 +1876,7 @@ button.burger__box {
 }
 
 /* --- Accessibility: visible focus indicator (WCAG 2.4.7) --- */
+
 /* Selectors are specific enough to override the outline:none resets above. */
 a:focus-visible,
 button:focus-visible,
@@ -1886,7 +1897,7 @@ button:focus-visible,
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -1945,6 +1956,7 @@ button:focus-visible,
 }
 
 /* --- Contact section --- */
+
 /* Contact section — production: dark bg with centered white panel (994px wide) */
 .clean .contact {
   background: rgb(40, 40, 39);
@@ -1997,6 +2009,7 @@ button:focus-visible,
 }
 
 /* --- Typography --- */
+
 /*
    Font families from CSS variables: --font_primary (Roboto),
    --font_secondary (Bai Jamjuree), --font_complementary (Caveat)
@@ -2197,20 +2210,43 @@ button:focus-visible,
 }
 
 /* --- Spacing --- */
-.mt-15 { margin-top: 15px; }
-.mt-20 { margin-top: 20px; }
-.mt-30 { margin-top: 30px; }
-.mb-30 { margin-bottom: 30px; }
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
 
 /* --- Alignment --- */
-.text-center { text-align: center; }
-.justify-center { justify-content: center; }
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
 
 /* --- Footer --- */
-.footer-icon { width: 20px; height: 20px; fill: rgb(245, 245, 245); padding: 10px; }
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: rgb(245, 245, 245);
+  padding: 10px;
+}
 
 /* --- Privacy page --- */
-.privacy-section { padding: 75px 0; }
+.privacy-section {
+  padding: 75px 0;
+}
 
 /* ============================================================
    9. Responsive Breakpoints
@@ -2218,24 +2254,23 @@ button:focus-visible,
 
 /* --- >= 1921px --- */
 
-
 /* --- <= 1366px --- */
 
 /* publish-clean.css: s-wrapper max-width */
-@media (max-width: 1366px) {
+@media (width <= 1366px) {
   .s-wrapper {
     max-width: 1024px;
   }
 }
 
 /* publish-clean.css: slogan container */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .slogan__container {
     font-size: 16px !important;
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .slogan__container {
     font-size: 14px !important;
   }
@@ -2373,7 +2408,7 @@ button:focus-visible,
 /* --- <= 1024px --- */
 
 /* publish-clean.css: header heights */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .template .main__header,
   .template .topbar__header,
   .template .subheader__header {
@@ -2383,7 +2418,7 @@ button:focus-visible,
 }
 
 /* publish-clean.css: s-wrapper tablet grid */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .s-wrapper {
     padding: 0 30px;
   }
@@ -2421,14 +2456,14 @@ button:focus-visible,
 }
 
 /* publish-clean.css: logo max-width on narrow screens */
-@media (max-width: 464px) {
+@media (width <= 464px) {
   .header:not(.logo_alone) .crop__content {
     max-width: 180px;
   }
 }
 
 /* publish-clean.css: logo link max-width on phone */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .template .logo__link:not(._text) {
     width: auto !important;
     max-width: 180px;
@@ -2493,9 +2528,17 @@ button:focus-visible,
     left: 0;
   }
 
-  .template .btn__burger span:nth-child(1) { top: 0; }
-  .template .btn__burger span:nth-child(2) { top: 7px; }
-  .template .btn__burger span:nth-child(3) { top: 14px; }
+  .template .btn__burger span:nth-child(1) {
+    top: 0;
+  }
+
+  .template .btn__burger span:nth-child(2) {
+    top: 7px;
+  }
+
+  .template .btn__burger span:nth-child(3) {
+    top: 14px;
+  }
 
   /* Show the collapsed slogan bar ("10% Discount for Veterans & Seniors") */
   .template .sloganCollapsed__wrapper {
@@ -2599,9 +2642,11 @@ button:focus-visible,
     top: 7px;
     transform: rotate(45deg);
   }
+
   .burger__box.is-open .btn__burger span:nth-child(2) {
     opacity: 0;
   }
+
   .burger__box.is-open .btn__burger span:nth-child(3) {
     top: 7px;
     transform: rotate(-45deg);
@@ -2640,7 +2685,7 @@ button:focus-visible,
     min-height: 400px;
     padding-top: 42px;
     padding-bottom: 28px;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgb(0, 0, 0, 0.55);
   }
 
   .clean .hero__title {
@@ -2694,17 +2739,17 @@ button:focus-visible,
 /* --- <= 767px --- */
 
 /* publish-clean.css: phone grid */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .s-wrapper {
     padding: 0 20px;
   }
 
   .s-wrapper .row__item_phone-1 {
-    width: 8.3333333333%;
+    width: 8.3333%;
   }
 
   .s-wrapper .row__item_phone-2 {
-    width: 16.6666666667%;
+    width: 16.6667%;
   }
 
   .s-wrapper .row__item_phone-3 {
@@ -2712,11 +2757,11 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-4 {
-    width: 33.3333333333%;
+    width: 33.3333%;
   }
 
   .s-wrapper .row__item_phone-5 {
-    width: 41.6666666667%;
+    width: 41.6667%;
   }
 
   .s-wrapper .row__item_phone-6 {
@@ -2724,11 +2769,11 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-7 {
-    width: 58.3333333333%;
+    width: 58.3333%;
   }
 
   .s-wrapper .row__item_phone-8 {
-    width: 66.6666666667%;
+    width: 66.6667%;
   }
 
   .s-wrapper .row__item_phone-9 {
@@ -2736,11 +2781,11 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-10 {
-    width: 83.3333333333%;
+    width: 83.3333%;
   }
 
   .s-wrapper .row__item_phone-11 {
-    width: 91.6666666667%;
+    width: 91.6667%;
   }
 
   .s-wrapper .row__item_phone-12 {
@@ -2752,11 +2797,11 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-offset-1 {
-    margin-left: 8.3333333333%;
+    margin-left: 8.3333%;
   }
 
   .s-wrapper .row__item_phone-offset-2 {
-    margin-left: 16.6666666667%;
+    margin-left: 16.6667%;
   }
 
   .s-wrapper .row__item_phone-offset-3 {
@@ -2764,11 +2809,11 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-offset-4 {
-    margin-left: 33.3333333333%;
+    margin-left: 33.3333%;
   }
 
   .s-wrapper .row__item_phone-offset-5 {
-    margin-left: 41.6666666667%;
+    margin-left: 41.6667%;
   }
 
   .s-wrapper .row__item_phone-offset-6 {
@@ -2776,11 +2821,11 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-offset-7 {
-    margin-left: 58.3333333333%;
+    margin-left: 58.3333%;
   }
 
   .s-wrapper .row__item_phone-offset-8 {
-    margin-left: 66.6666666667%;
+    margin-left: 66.6667%;
   }
 
   .s-wrapper .row__item_phone-offset-9 {
@@ -2788,7 +2833,7 @@ button:focus-visible,
   }
 
   .s-wrapper .row__item_phone-offset-10 {
-    margin-left: 83.3333333333%;
+    margin-left: 83.3333%;
   }
 
   .template .s-wrapper div.row__item_desktop-2 {
@@ -2832,7 +2877,7 @@ button:focus-visible,
   .clean .hero .container {
     min-height: auto;
     padding: 15px 35px;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgb(0, 0, 0, 0.55);
   }
 
   .clean .hero__title,

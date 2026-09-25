@@ -11,7 +11,7 @@ const isProd = process.env.ELEVENTY_ENV === "production";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addFilter("md", (value) => value ? md.render(value) : "");
+  eleventyConfig.addFilter("md", (value) => (value ? md.render(value) : ""));
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: "html",
@@ -30,7 +30,7 @@ export default function (eleventyConfig) {
     const all = collectionApi.getAll();
     const entries = eleventyNavigationPlugin.navigation.find(all);
     function toPlain(items) {
-      return items.map(item => ({
+      return items.map((item) => ({
         key: item.key,
         title: item.title || item.key,
         url: item.url,

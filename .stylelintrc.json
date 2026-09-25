@@ -13,6 +13,7 @@
     "font-family-no-missing-generic-family-keyword": null,
     "declaration-property-value-no-unknown": null,
     "declaration-block-no-duplicate-properties": null,
-    "property-no-unknown": null
+    "property-no-unknown": null,
+    "property-no-vendor-prefix": [true, { "ignoreProperties": ["-webkit-text-size-adjust", "-webkit-user-select", "-webkit-appearance", "-webkit-text-decoration"] }]
   }
 }
